@@ -8,9 +8,10 @@
 @import "../node_modules/bootstrap-scss/functions";
 @import "../node_modules/bootstrap-scss/variables";
 @import "../node_modules/bootstrap-scss/mixins";
+@import "../node_modules/bootstrap-scss/utilities";
 @import "../node_modules/bootstrap-scss/reboot";
 @import "../node_modules/bootstrap-scss/grid";
-@import "../node_modules/bootstrap-scss/forms";
+
 
 // --------------------------------------------------
 // Mixins
@@ -19,11 +20,20 @@
 @import "mixins/type";
 
 // --------------------------------------------------
-// partials
+// Common
+@import "utils";
+@import "type";
 
 // --------------------------------------------------
-// Elements
+// Base
 
+@import "base/buttons";
+@import "base/images";
+
+// --------------------------------------------------
+// Layout
+
+@import "layout/body";
 @import "layout/header";
 @import "layout/footer";
 
@@ -40,6 +50,4 @@
 
 // --------------------------------------------------
 // Sections
-
-
-@import "partials/IE";
+@import "sections/hero";

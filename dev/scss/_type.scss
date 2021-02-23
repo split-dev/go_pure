@@ -1,0 +1,28 @@
+.text-15px {
+  @include text-13px;
+
+  @include media-breakpoint-up(sm) {
+    @include text-15px;
+  }
+}
+
+.text-20px {
+  @include text-18px;
+
+  @include media-breakpoint-up(sm) {
+    @include text-20px;
+  }
+}
+
+.text-56px {
+  @include text-42px;
+
+  @include media-breakpoint-up(sm) {
+    @include text-56px;
+  }
+}
+
+.font-header,
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+}

@@ -1,0 +1,35 @@
+.header {
+  left: 0;
+  top: -31px;
+  z-index: 1000;
+  @include media-breakpoint-up(sm) {
+    top: -41px;
+  }
+  &__bar {
+    padding: 4px 0 5px;
+    @include media-breakpoint-up(md) {
+      padding: 9px 0 10px;
+    }
+  }
+  &__inner {
+    padding: 20px 0;
+    box-shadow: 0 4px 19px rgba(0, 0, 0, 0.08);
+    @include media-breakpoint-up(sm) {
+      padding: 23px 0;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__mob {
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 80px 0 110px;
+    transform: translateY(-100%);
+    z-index: -1;
+    transition: transform 0.2s;
+    &.open {
+      transform: translateY(0);
+    }
+  }
+}

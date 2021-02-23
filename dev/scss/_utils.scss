@@ -36,30 +36,3 @@
   object-fit: cover;
   @extend .w-100, .h-100;
 }
-
-.min-width-none {
-  min-width: auto !important;
-}
-.px-10px {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.aspect-ratio-1-1 {
-  padding-top: 100%;
-  z-index: 1;
-  @extend .position-relative;
-  img {
-    z-index: -1;
-    @extend .absolute-fill, .fit-cover;
-  }
-}
-.overlay-dark-350 {
-  z-index: 1;
-  &:after {
-    content: "";
-    background-color: rgba($text-body, 0.45);
-    z-index: -1;
-    @extend .absolute-fill;
-  }
-}

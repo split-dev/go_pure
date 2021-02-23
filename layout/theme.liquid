@@ -73,16 +73,23 @@
     }
   </script>
 
-  <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
-  <link rel="stylesheet" href="{{ 'main.min.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
+  {% if request.page_type != 'index' %}
+    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
+  {% endif %}
+  <link rel="stylesheet" href="{{ 'main.min.css' | asset_url }}" type="text/css">
 
   <style>
     {{ header_font | font_face: font_display: 'swap' }}
+    {{ header_font_medium | font_face: font_display: 'swap' }}
     {{ base_font | font_face: font_display: 'swap' }}
     {{ base_font_bold | font_face: font_display: 'swap' }}
     {{ base_font_bolder | font_face: font_display: 'swap' }}
     {{ base_font_italic | font_face: font_display: 'swap' }}
     {{ base_font_bold_italic | font_face: font_display: 'swap' }}
+
+    .ju_Con, .ju_overlay {
+      display: none !important;
+    }
   </style>
 
   <script>
@@ -147,7 +154,7 @@
   {{ content_for_header }}
 </head>
 
-<body class="template-{{ request.page_type | handle }}">
+<body class="template-{{ request.page_type | handle }} load" style="opacity: 0;">
 
   {% section 'header' %}
 
@@ -156,17 +163,17 @@
     {{ content_for_layout }}
   </main>
 
-
   {% section 'footer' %}
 
-  {%- if settings.enable_ajax -%}
-    {% include 'cart-popup' %}
-  {%- endif -%}
-
-  <ul hidden>
-    <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
-    <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
-  </ul>
+  {% comment %}
+    {%- if settings.enable_ajax -%}
+      {% include 'cart-popup' %}
+    {%- endif -%}
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+      <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+    </ul>
+  {% endcomment %}
 
   {%- render 'scripts' -%}
 </body>
