@@ -12,7 +12,7 @@ theme.Sections = function Sections() {
     this._onSectionLoad.bind(this)
   );
   document.addEventListener(
-    'shopify:section:unload',
+    'shopify:section:unloadPageContainer',
     this._onSectionUnload.bind(this)
   );
   document.addEventListener(

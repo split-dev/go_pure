@@ -63,8 +63,3 @@
     @extend .absolute-fill;
   }
 }
-
-// Used to create RETINA Friendly images
-.scale-half-size {
-  transform: scale(0.5);
-}

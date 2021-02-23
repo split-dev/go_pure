@@ -33,15 +33,9 @@ gulp.task('css', function () {
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer({ cascade : false }))
         .pipe(rename(function (path) {
-            path.basename = path.basename.replace('scss', 'min.css');
-            path.extname = '.liquid';
+            path.basename = path.basename.replace('.scss', '.min');
         }))
         .pipe(gulp.dest(assetsDir));
-    // return importResolve({
-    //     "ext": "scss",
-    //     "pathToMain": "scss/theme.scss",
-    //     "output": "../assets/theme.css.liquid"
-    // });
 });
 
 /**
@@ -62,15 +56,9 @@ gulp.task('js', function () {
         .pipe(babel({
             presets: ['es2015']
         }))
-        .pipe(rename(function (path) {
-            if (path.basename === 'common')
-                path.basename = 'theme';
-        }))
         .pipe(gulp.dest(jsDest))
         .pipe(uglify())
         .pipe(rename(function (path) {
-            if (path.basename === 'common')
-                path.basename = 'theme';
             path.basename += '.min';
         }))
         .pipe(gulp.dest(jsDest));
