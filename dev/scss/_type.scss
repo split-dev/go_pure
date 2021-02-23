@@ -1,0 +1,92 @@
+// Font Sizes
+.text-8px {
+  @include text-8px;
+
+  @include media-breakpoint-down(xs) {
+    @include text-6px;
+  }
+}
+.text-10px {
+  @include text-10px;
+}
+.text-12px {
+  @include text-12px;
+}
+.text-14px {
+  @include text-14px;
+}
+.text-15px {
+  font-size: 15px;
+}
+.text-16px {
+  @include text-16px;
+
+  @include media-breakpoint-down(xs) {
+    @include text-10px;
+  }
+}
+.text-20px {
+  @include text-20px;
+
+  @include media-breakpoint-down(xs) {
+    @include text-14px;
+  }
+}
+.text-18px {
+  @include text-18px;
+}
+.text-24px {
+  @include text-24px;
+}
+
+// Font Weights
+.font-weight-medium {
+  font-weight: 500;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+// Colors
+.bg-less-black {
+  background-color: $less-black;
+}
+.bg-body {
+  background-color: $text-body;
+}
+.text-body {
+  color: $text-body;
+}
+.text-grey {
+  color: $grey;
+}
+
+// Others
+.text-underline {
+  text-decoration: underline;
+}
+
+// Typo
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+  @include media-breakpoint-down(xs) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+  @extend .font-weight-medium;
+  @include media-breakpoint-down(xs) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+}

@@ -1,0 +1,117 @@
+.btn-primary,
+.btn-light {
+  min-width: 192px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) !important;
+  &:focus,
+  &:active {
+    outline: none !important;
+  }
+  @extend .text-uppercase;
+}
+.btn-primary {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #51B677 !important;
+  }
+}
+.btn-light {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #fbfbfb !important;
+  }
+  &:active {
+    box-shadow: none !important;
+  }
+}
+
+.btn-outline-light,
+.btn-outline-dark {
+  min-width: 96px;
+  padding: 7px 15px;
+  border: 1px solid transparent;
+  @extend .position-relative;
+  &:after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 2px;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  &:hover,
+  &:active {
+    background-color: transparent !important;
+  }
+  &:hover {
+    &:after {
+      bottom: 6px;
+      opacity: 1;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 4px 10px 3px;
+    min-width: auto;
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.btn-outline-dark {
+  border-color: $text-body;
+  @extend .text-body, .text-uppercase;
+  &:after {
+    background-color: $text-body;
+  }
+  &:hover,
+  &:active {
+    border-color: $text-body !important;
+  }
+}
+.btn-outline-light {
+  border-color: $light;
+  @extend .text-light, .text-uppercase;
+  &:after {
+    background-color: $light;
+  }
+  &:hover,
+  &:active {
+    border-color: $light !important;
+  }
+}
+
+button {
+  outline: none !important;
+}
+
+//Stamped Buttons
+span.stamped-summary-actions-newreview {
+  @extend .btn, .btn-light;
+  &:before {
+    content: none;
+  }
+}
+html {
+  div.stamped-container[data-widget-style],
+  div[data-widget-style] div.stamped-container {
+    padding: 0 #{$grid-gutter-width / 2} !important;
+    margin: 0 auto !important;
+    @extend .container;
+  }
+}
+
+//Contact Extends
+.contact__content a {
+  @extend .text-body;
+}
+
+// Stamper Extends
+div[data-load-type=continue] ul.stamped-pagination li.next a, div[data-widget-load-type=continue] ul.stamped-pagination li.next a {
+  @extend .text-body, .text-underline, .p-0, .bg-transparent, .border-0;
+}

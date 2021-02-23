@@ -1,0 +1,16 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  &.loading {
+    opacity: 0;
+    transition: opacity 0.25s;
+    &.content-loaded {
+      opacity: 1;
+    }
+  }
+}
+
+// Temporary Desiable Admin Bar
+#admin-bar-iframe {
+  @extend .d-none;
+}

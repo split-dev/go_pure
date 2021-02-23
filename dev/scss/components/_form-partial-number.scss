@@ -1,0 +1,19 @@
+.form-input-number {
+  label {
+    margin-bottom: 1px;
+  }
+  path {
+    fill: $body-color;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  input {
+    width: 50px !important;
+  }
+}

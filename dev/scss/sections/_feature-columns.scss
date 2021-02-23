@@ -1,0 +1,32 @@
+.feature-columns {
+  margin: 156px 0;
+  @include media-breakpoint-down(xs) {
+    margin: 60px 0 100px;
+  }
+  &__title {
+    margin-bottom: 70px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 32px;
+    }
+  }
+  &__link {
+    margin-top: 60px;
+    @include media-breakpoint-down(xs) {
+      margin-top: 11px;
+    }
+  }
+  &__tile {
+    &__text {
+      margin-top: 36px;
+      @include media-breakpoint-down(xs) {
+        margin-top: 21px;
+        @include text-12px;
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .row > div {
+      padding: 0 22px;
+    }
+  }
+}

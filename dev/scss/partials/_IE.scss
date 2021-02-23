@@ -1,0 +1,10 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header {
+    svg {
+      height: 24px;
+    }
+  }
+  .swiper-lazy {
+    width: 100%;
+  }
+}

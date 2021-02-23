@@ -1,0 +1,36 @@
+.cta {
+  margin: 90px 0 180px;
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 100px;
+  }
+  &__title {
+    margin-bottom: 74px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 40px;
+    }
+  }
+  &__tile {
+    height: 216px;
+    z-index: 1;
+    @include media-breakpoint-down(xs) {
+      height: 150px;
+    }
+    &:after {
+      content: "";
+      background-color: rgba($text-body, 0.5);
+      z-index: -1;
+      @extend .absolute-fill;
+    }
+    &:hover {
+      span { //Way to override BS
+        color: $light;
+      }
+      span.text-14px {
+        text-decoration: underline;
+      }
+    }
+    &__title {
+      @extend h2;
+    }
+  }
+}

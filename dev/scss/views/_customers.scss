@@ -1,0 +1,13 @@
+.form-vertical {
+  a {
+    @extend .text-secondary;
+  }
+}
+#manage-subscription-root {
+  @extend .page-template, .mb-5;
+}
+.template-customers-account {
+  .page-template a {
+    @extend .text-info, .font-weight-medium;
+  }
+}

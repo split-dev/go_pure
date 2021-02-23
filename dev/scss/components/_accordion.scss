@@ -1,0 +1,43 @@
+.accordion {
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 12px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  @include media-breakpoint-up(md) {
+    padding: 10px 25px 9px;
+    margin-bottom: 40px;
+    border-radius: 18px;
+  }
+  &__toggle {
+    cursor: pointer;
+    @include media-breakpoint-down(xs) {
+      font-size: 10px;
+      line-height: 11px;
+    }
+    &:after {
+      content: url("data:image/svg+xml,%3Csvg width='13' height='7' viewBox='0 0 13 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.538286 0.000164358C0.610594 -0.00154083 0.682535 0.0104855 0.749925 0.0355436C0.817315 0.0606018 0.878808 0.0981917 0.930828 0.146127L6.50625 5.74346L12.0817 0.146127C12.1831 0.0518367 12.3193 -0.000596641 12.4609 0.000164879C12.5322 -0.00157907 12.6031 0.010525 12.6693 0.0357406C12.7355 0.0609563 12.7956 0.0987564 12.8461 0.146841C12.8965 0.194927 12.9361 0.252291 12.9625 0.315446C12.989 0.378601 13.0017 0.446225 12.9998 0.514205C13.0001 0.583171 12.9855 0.651456 12.9569 0.714789C12.9283 0.778123 12.8863 0.835143 12.8335 0.882284L6.92541 6.82231C6.87168 6.87731 6.80686 6.9214 6.73483 6.95194C6.66281 6.98247 6.58506 6.99882 6.50625 7C6.42609 6.99919 6.34706 6.98174 6.27468 6.94886C6.2023 6.91599 6.13829 6.86847 6.0871 6.80961L0.165703 0.875937C0.0881567 0.805681 0.0345983 0.714772 0.0120086 0.615058C-0.010581 0.515345 -0.00115301 0.411453 0.0390625 0.316925C0.079278 0.222396 0.148416 0.141616 0.237464 0.0851145C0.326513 0.0286126 0.431342 -0.000990309 0.538286 0.000164358Z' fill='black'/%3E%3C/svg%3E%0A");
+      transform: rotate(0deg) translateY(-2px);
+      transition: 0.2s;
+
+      @extend .ml-auto, .d-block;
+    }
+  }
+  &__content {
+    max-height: 0;
+    padding-top: 0;
+    transition: 0.4s;
+    @include media-breakpoint-down(xs) {
+      font-size: 10px;
+      line-height: 11px;
+    }
+  }
+  &.accordion--open {
+    .accordion__toggle:after {
+      transform: rotate(180deg) translateY(-4px);
+    }
+    .accordion__content {
+      padding-top: 16px;
+      max-height: 3000px;
+    }
+  }
+}

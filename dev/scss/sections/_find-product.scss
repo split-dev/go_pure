@@ -1,0 +1,10 @@
+.find-product {
+  &__result {
+    &__title {
+      padding: 130px 0 25px;
+      @include media-breakpoint-down(sm) {
+        padding: 100px 0 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.footer {
+  margin-top: 90px;
+  &__top {
+    padding: 13px 0;
+    @include media-breakpoint-up(xs) {
+      padding: 25px 0;
+    }
+  }
+  &__bottom {
+    padding: 58px 0 49px;
+    @include media-breakpoint-down(sm) {
+      padding: 33px 0 19px;
+    }
+    &__menu {
+      li {
+        margin-right: 80px;
+        @include media-breakpoint-down(md) {
+          margin-right: 30px;
+        }
+      }
+      @include media-breakpoint-down(xs) {
+        a {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

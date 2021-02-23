@@ -1,0 +1,7 @@
+.lazy:not(.lazy--no-animation) {
+  opacity: 0;
+  transition: $lazyLoadTransition;
+  &.loaded {
+    opacity: 1;
+  }
+}

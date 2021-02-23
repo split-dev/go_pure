@@ -1,0 +1,6 @@
+.breadcrumbs {
+  padding: 40px 0 45px;
+  @include media-breakpoint-down(sm) {
+    padding: 24px 0;
+  }
+}

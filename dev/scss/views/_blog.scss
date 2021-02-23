@@ -1,0 +1,7 @@
+.template-blog {
+  &__title {
+    @include media-breakpoint-down(xs) {
+      @include text-16px;
+    }
+  }
+}

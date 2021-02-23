@@ -1,0 +1,70 @@
+.flex-center {
+  display: flex;
+  // in order to disable this class prop added via SCSS,
+  // not via @extend to disable it's rules using .d-block, .d-inline-block classes
+  @extend .justify-content-center, .align-items-center;
+}
+.bg-center {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.list-unstyled {
+  list-style: none;
+}
+
+.absolute-fill {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @extend .position-absolute;
+}
+
+.absolute-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @extend .position-absolute;
+}
+
+.bg-muted {
+  background-color: $text-muted;
+}
+.fit-cover {
+  object-fit: cover;
+  @extend .w-100, .h-100;
+}
+
+.min-width-none {
+  min-width: auto !important;
+}
+.px-10px {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.aspect-ratio-1-1 {
+  padding-top: 100%;
+  z-index: 1;
+  @extend .position-relative;
+  img {
+    z-index: -1;
+    @extend .absolute-fill, .fit-cover;
+  }
+}
+.overlay-dark-350 {
+  z-index: 1;
+  &:after {
+    content: "";
+    background-color: rgba($text-body, 0.45);
+    z-index: -1;
+    @extend .absolute-fill;
+  }
+}
+
+// Used to create RETINA Friendly images
+.scale-half-size {
+  transform: scale(0.5);
+}

@@ -1,0 +1,18 @@
+.swiper-lazy {
+  opacity: 0;
+  transition: 0.2s;
+  &.swiper-lazy-loaded {
+    opacity: 1;
+  }
+}
+.swiper-lazy-preloader {
+  border-color: $primary !important;
+  border-top-color: transparent !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: $primary !important;
+  &:focus {
+    outline: none;
+  }
+}

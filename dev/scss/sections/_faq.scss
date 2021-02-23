@@ -1,0 +1,15 @@
+.faq-section {
+  padding: 120px 0;
+  @include media-breakpoint-down(xs) {
+    padding: 60px 0 40px;
+  }
+  &__title {
+    margin-bottom: 63px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 40px;
+    }
+  }
+  &__inner {
+    max-width: 696px;
+  }
+}

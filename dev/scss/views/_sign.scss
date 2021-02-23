@@ -1,0 +1,70 @@
+.sign-template {
+  &__info {
+    max-width: 278px;
+    p {
+      font-size: 18px;
+    }
+  }
+  &__circle {
+    padding: 21px 22px;
+  }
+  &__leave {
+    top: 50px;
+    right: 50px;
+    @include media-breakpoint-down(xs) {
+      top: 31px;
+      right: 28px;
+    }
+  }
+  &__iframe {
+    margin-right: -30px;
+    @include media-breakpoint-down(xs) {
+      transform: translateX(15px);
+    }
+  }
+  &__separator {
+    margin: 40px 0 45px;
+    @include media-breakpoint-down(xs) {
+      margin: 25px 0 40px;
+    }
+    p {
+      margin-bottom: 2px;
+      @include media-breakpoint-down(xs) {
+        font-size: 14px;
+      }
+    }
+    &:before,
+    &:after {
+      content: "";
+      background-color: currentColor;
+      height: 1px;
+      flex: 1 1 auto;
+    }
+  }
+  &__heading {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  &__inner {
+    max-width: 360px;
+    padding: 60px 0;
+    @include media-breakpoint-down(xs) {
+      padding: 130px 0 44px;
+
+    }
+    #RegisterForm {
+      a {
+        font-size: 18px;
+        @include media-breakpoint-down(md) {
+          font-size: 14px;
+        }
+      }
+      button {
+        margin: 35px 0 25px;
+        @include media-breakpoint-down(md) {
+          margin: 25px 0;
+        }
+      }
+    }
+  }
+}

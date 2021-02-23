@@ -1,0 +1,58 @@
+// --------------------------------------------------
+// Grid
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+);
+
+$grid-gutter-width: 52px;
+
+// --------------------------------------------------
+// colours
+
+$primary: #4C9C82;
+$secondary: #f8f8f8;
+$text-muted: #eaebec;
+$light: #ffffff;
+$info: #eaa07a;
+$danger: #c81111;
+$dark: #8a8a8a;
+$less-black: #131313;
+$text-body: #000000;
+$grey: #454444;
+
+// --------------------------------------------------
+// Type
+
+$font-family-base: "Roboto", sans-serif;
+$link-hover-decoration: none;
+
+$btn-padding-y: 12px;
+$btn-padding-x: 23px;
+$btn-font-weight: 700;
+$btn-font-size: 14px;
+$btn-line-height: 16.41px;
+$btn-border-radius: 24px;
+$btn-border-width: 0;
+
+//Forms
+$input-color: $dark;
+$input-bg: #1B1B1B;
+$input-border-color: rgba(138, 138, 138, 0.5);
+$input-border-radius: 6px;
+
+$input-padding-y: 1rem;
+$input-padding-x: 1.5rem;
+
+
+//Others
+$box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+
+// --------------------------------------------------
+// Options
+
+$lazyLoadTransition: opacity 0.3s ease-out;
+

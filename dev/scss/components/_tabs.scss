@@ -1,0 +1,27 @@
+.tabs {
+  margin-bottom: 32px;
+  &__toggle {
+    margin-right: 40px;
+  }
+}
+.tabs__content {
+  a {
+    @extend .text-light, .text-underline;
+  }
+  hr {
+    margin: 34px 0;
+    border-color: rgba($dark, 0.5);
+  }
+}
+button.tab--active {
+  @extend .text-light, .position-relative;
+  &:after {
+    content: "";
+    background-color: $light;
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    @extend .position-absolute;
+  }
+}

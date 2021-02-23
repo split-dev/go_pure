@@ -1,0 +1,7 @@
+.form-control {
+  @extend .text-14px;
+  @include media-breakpoint-down(xs) {
+    padding: 18px 15px;
+    height: 50px;
+  }
+}
