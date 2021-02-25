@@ -1,3 +1,7 @@
+img {
+  max-width: 100%;
+}
+
 .overlay {
   z-index: 1;
   @extend .position-relative;

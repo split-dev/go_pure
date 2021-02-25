@@ -1,0 +1,39 @@
+.features {
+  &__top {
+    padding: 57px 0 48px;
+    @include media-breakpoint-up(sm) {
+      padding: 60px 0;
+    }
+    &__inner {
+      max-width: 868px;
+    }
+  }
+  &__bottom {
+    padding: 48px 0 8px;
+    @include media-breakpoint-up(sm) {
+      padding: 80px 0 10px;
+    }
+    &__image {
+      @include media-breakpoint-down(md) {
+        position: static;
+        transform: none;
+      }
+    }
+    &__column {
+      margin-bottom: 40px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 70px;
+      }
+      & > div {
+        @include media-breakpoint-up(lg) {
+          max-width: 58%;
+        }
+      }
+    }
+    &__text {
+      p {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

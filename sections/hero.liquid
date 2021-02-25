@@ -16,7 +16,7 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="hero__icons">
+    <div class="hero__icons d-none d-lg-block">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
           {%- for block in section.blocks -%}
@@ -36,6 +36,7 @@
 {% schema %}
 {
   "name": "Hero",
+  "tag": "section",
   "settings": [
     {
       "type": "image_picker",
