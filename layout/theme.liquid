@@ -13,14 +13,19 @@
   {%- assign header_font = settings.type_header_font -%}
   {%- assign base_font = settings.type_base_font -%}
 
-  {%- assign base_font_bolder = base_font | font_modify: 'weight', 'bolder' -%}
+  {%- assign header_font_bold = header_font | font_modify: 'weight', 'bold' -%}
+
+  {%- assign base_font_bolder = base_font | font_modify: 'weight', '+100' -%}
+  {%- assign base_font_medium = base_font_bolder | font_modify: 'weight', '+100' -%}
   {%- assign base_font_bold = base_font | font_modify: 'weight', 'bold' -%}
   {%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
   {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
 
   <link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style">
-  <link rel="preload" as="font" href="{{ header_font | font_url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ header_font_bold | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ base_font_bolder | font_url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ base_font_medium | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="{{ base_font_bold | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
   <link rel="preload" href="{{ 'lazysizes.js' | asset_url }}" as="script">
@@ -79,11 +84,11 @@
   <link rel="stylesheet" href="{{ 'main.min.css' | asset_url }}" type="text/css">
 
   <style>
-    {{ header_font | font_face: font_display: 'swap' }}
-    {{ header_font_medium | font_face: font_display: 'swap' }}
+    {{ header_font_bold | font_face: font_display: 'swap' }}
     {{ base_font | font_face: font_display: 'swap' }}
-    {{ base_font_bold | font_face: font_display: 'swap' }}
+    {{ base_font_medium | font_face: font_display: 'swap' }}
     {{ base_font_bolder | font_face: font_display: 'swap' }}
+    {{ base_font_bold | font_face: font_display: 'swap' }}
     {{ base_font_italic | font_face: font_display: 'swap' }}
     {{ base_font_bold_italic | font_face: font_display: 'swap' }}
 

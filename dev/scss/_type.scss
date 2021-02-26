@@ -6,6 +6,14 @@
   }
 }
 
+.text-35px {
+  @include text-32px;
+
+  @include media-breakpoint-up(sm) {
+    @include text-35px;
+  }
+}
+
 .text-24px {
   @include text-22px;
 
@@ -29,8 +37,12 @@
     @include text-15px;
   }
 }
-
-
+.font-weight-medium {
+  font-weight: 500;
+}
+.font-weight-semibold {
+  font-weight: 600;
+}
 
 .font-header,
 h1, h2, h3, h4, h5, h6 {

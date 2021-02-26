@@ -1,0 +1,8 @@
+.quotes {
+  &__single-quote {
+    padding: 80px 0;
+    @include media-breakpoint-up(sm) {
+      padding: 130px 0;
+    }
+  }
+}

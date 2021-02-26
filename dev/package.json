@@ -30,7 +30,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "import-resolve": "^0.5.1",
-    "swiper": "^6.2.0"
+    "swiper": "^6.4.15"
   },
   "browserslist": [
     "defaults"

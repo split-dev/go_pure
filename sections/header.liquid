@@ -38,17 +38,17 @@
         <nav class="d-flex justify-content-end align-items-center  pl-5">
           <div class="d-none d-{{ brp }}-block">
             {%- for link in menu offset: menu_2_size -%}
-              <a class="ml-4 text-link text-15px" href="{{ link.url }}">
+              <a class="ml-4 text-15px" href="{{ link.url }}">
                 {{- link.title | capitalize -}}
               </a>
             {%- endfor -%}
           </div>
 
-          <a class="ml-3 ml-md-4 text-link" href="{{ routes.account_url }}">
+          <a class="ml-3 ml-md-4" href="{{ routes.account_url }}">
             {%- render 'icon-login' -%}
           </a>
 
-          <a class="ml-3 ml-md-4 text-link" href="{{ routes.cart_url }}" data-cart-drawer>
+          <a class="ml-3 ml-md-4" href="{{ routes.cart_url }}" data-cart-drawer>
             {%- render 'icon-cart' -%}
           </a>
         </nav>
