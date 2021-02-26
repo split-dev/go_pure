@@ -1,0 +1,33 @@
+.social {
+  padding: 120px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include media-breakpoint-down(sm) {
+    padding: 80px 0;
+  }
+  > * {
+    max-width: 530px;
+  }
+  h2,
+  p {
+    color: #fff;
+  }
+  &__links {
+    a {
+      width: 24px;
+      margin: 0 20px;
+      svg {
+        fill: #fff;
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &__btn {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+}

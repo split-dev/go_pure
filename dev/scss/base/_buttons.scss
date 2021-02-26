@@ -36,6 +36,17 @@
     background-color: rgba($secondary, 0.8);
   }
 }
+.btn-white {
+  background-color: $light;
+  color: $secondary;
+  &:after {
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuMTY2OTkgMTBIMTUuODMzNyIgc3Ryb2tlPSIjMTY3NUJCIiBzdHJva2Utd2lkdGg9IjEuNjY2NjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTAgNC4xNjY5OUwxNS44MzMzIDEwLjAwMDNMMTAgMTUuODMzNyIgc3Ryb2tlPSIjMTY3NUJCIiBzdHJva2Utd2lkdGg9IjEuNjY2NjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
+  }
+  &:hover {
+    color: $secondary;
+    background-color: rgba($light, 0.8);
+  }
+}
 button:focus {
   outline: none;
 }
