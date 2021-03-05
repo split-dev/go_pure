@@ -1,5 +1,72 @@
-<hr>
 <div class="container">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <a href="#">
+        {{- section.settings.logo -}}
+      </a>
+
+      <div class="flex-center mt-4 mt-md-0 pt-3 pt-md-0">
+        <img class="lazyload flex-shrink-0" data-src="{{- section.settings.reward_1 | img_url: 'master' -}}" alt="{{- section.settings.reward_1.alt -}}">
+        <img class="lazyload flex-shrink-0 ml-4" data-src="{{- section.settings.reward_2 | img_url: 'master' -}}" alt="{{- section.settings.reward_2.alt -}}">
+        <img class="lazyload flex-shrink-0 ml-4" data-src="{{- section.settings.reward_3 | img_url: 'master' -}}" alt="{{- section.settings.reward_3.alt -}}">
+      </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="row">
+    {%- for block in section.blocks -%}
+      <div class="col-sm-6 col-lg-3">
+        {%- if block.type == 'menu' -%}
+          {%- assign menu = linklists[block.settings.menu] -%}
+          <nav class="text-15px text-light">
+            <p class="font-weight-bold text-uppercase">{{ menu.title }}</p>
+            {%- for link in menu.links -%}
+              <a href="{{ link.url }}"
+                 class="d-block text-light {% unless forloop.last %}mb-4{% endunless %}">{{ link.title }}</a>
+            {%- endfor -%}
+          </nav>
+        {%- endif -%}
+
+        {%- if block.type == 'newsletter' -%}
+          <p class="mb-4 text-15px font-weight-bold text-light text-uppercase">
+            {{- block.settings.text -}}
+          </p>
+
+          {% form 'contact', class: 'form form--contact' %}
+            <input type="text" name="contact[tags]" value="Subscribed" hidden>
+
+            <div class="d-flex">
+              <input class="form__input w-100"
+                     type="email"
+                     name="contact[email]"
+                     placeholder="Your email">
+              <button type="submit"
+                      class="form__submit">Join</button>
+            </div>
+          {% endform %}
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+<hr>
+
+<div class="container text-light">
+  <div class="d-flex flex-column flex-md-row text-center text-md-left justify-content-between text-15px">
+    <p class="mb-4 pb-1 mb-md-0">
+      Copyrights © {{ 'now' | date: "%Y" }} <br class="d-md-none"> All Rights Reserved by Bloc Enterprises
+    </p>
+    <p class="mb-0">
+      Drop In, Drink Up {% render 'icon-drop' %}
+    </p>
+  </div>
+</div>
+
+
+<ul class="d-none">
   {%- assign socials = "Facebook Twitter Pinterest Instagram Tumblr Snapchat YouTube Vimeo" | split: ' ' -%}
   {%- for social in socials -%}
     {%- assign social_link = social | prepend: 'social_' | append: '_link' | downcase -%}
@@ -13,14 +80,62 @@
       </li>
     {%- endif -%}
   {%- endfor -%}
-
-  {{ 'now' | date: "%Y" }}
-</div>
-<hr>
+</ul>
 
 {% schema %}
 {
   "name": "Footer",
-  "class": "footer bg-secondary pt-5 pb-4"
+  "class": "footer bg-primary pt-5 pb-4",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Top"
+    },
+    {
+      "type": "text",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "reward_1",
+      "label": "#1 Reward Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "reward_2",
+      "label": "#2 Reward Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "reward_3",
+      "label": "#3 Reward Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Create Menu",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Select menu"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "Create Newsletter",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Form heading"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}

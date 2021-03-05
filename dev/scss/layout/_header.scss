@@ -1,10 +1,7 @@
 .header {
   left: 0;
-  top: -31px;
+  top: 0;
   z-index: 1000;
-  @include media-breakpoint-up(sm) {
-    top: -41px;
-  }
   &__bar {
     padding: 4px 0 5px;
     @include media-breakpoint-up(md) {

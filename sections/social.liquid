@@ -1,20 +1,21 @@
-<div class="social" style="background-image: url('{{ section.settings.img | img_url: '1440x' }}')">
+<div class="social bg-center lazyload"
+     data-bgset="{%- render 'bgset', image: section.settings.img -%}">
   <div class="container">
-    <div class="social__inner d-flex flex-column align-items-center">
+    <div class="d-flex flex-column align-items-center">
       {%- if section.settings.icon != blank -%}
         <img class="lazyload mx-auto mb-3"
              data-src="{{ section.settings.icon | img_url: 'master' }}" alt="{{ section.settings.icon }}">
       {%- endif -%}
-      <h2 class="text-35px text-center mb-3">
+      <h2 class="text-35px text-light text-center mb-3">
         {{ section.settings.heading }}
       </h2>
-      <div class="pt-1 mb-5 pb-sm-2 text-center">
+      <div class="pt-1 mb-5 pb-sm-2 text-center text-light">
         {{ section.settings.text }}
       </div>
-      <a class="social__btn btn btn-white mb-4" href="{{ section.settings.button_link }}">
+      <a class="btn btn-white d-block d-sm-inline-block mb-4" href="{{ section.settings.button_link }}">
         {{ section.settings.button_text }}
       </a>
-      <p class="text-center mb-2">{{ section.settings.small-text }}</p>
+      <p class="text-center text-light mb-2">{{ section.settings.small-text }}</p>
       <div class="social__links d-flex align-items-center mt-4">
         {%- assign socials = "Facebook Twitter Pinterest Instagram Tumblr Snapchat YouTube Vimeo" | split: ' ' -%}
         {%- for social in socials -%}

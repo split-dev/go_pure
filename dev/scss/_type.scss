@@ -31,11 +31,7 @@
 }
 
 .text-15px {
-  @include text-13px;
-
-  @include media-breakpoint-up(sm) {
-    @include text-15px;
-  }
+  @include text-15px;
 }
 .font-weight-medium {
   font-weight: 500;

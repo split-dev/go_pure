@@ -1,0 +1,10 @@
+.footer {
+  hr {
+    border-color: rgba(255, 255, 255, 0.17);
+
+    margin: 48px 16px;
+    @include media-breakpoint-up(sm) {
+      margin: 40px 0 28px;
+    }
+  }
+}

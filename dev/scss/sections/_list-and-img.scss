@@ -1,0 +1,13 @@
+.list-and-img {
+  padding: 80px 0;
+  @include media-breakpoint-up(sm) {
+    padding: 120px 0;
+  }
+  li {
+    border-bottom: solid 1px #EAEAEA;
+    @include text-15px;
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}

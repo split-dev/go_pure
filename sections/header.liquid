@@ -1,4 +1,14 @@
 {%- if section.settings.enable_bar -%}
+  {% style %}
+    .header {
+      top: -31px;
+    }
+    @media (min-width: 576px) {
+      .header {
+        top: -41px;
+      }
+    }
+  {% endstyle %}
   <div class="header__bar bg-secondary text-light position-relative">
     <div class="container">
       <p class="mb-0 text-15px text-light text-center">

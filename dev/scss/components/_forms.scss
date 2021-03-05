@@ -1,0 +1,28 @@
+.form {
+  &__input {
+    padding: 14px 14px 14px 24px;
+    border-radius: 43px;
+    border: none;
+    @extend .bg-light, .text-body, .text-15px, .font-weight-medium;
+    &::placeholder {
+      @extend .text-body;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.form--contact {
+  .form {
+    &__input {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &__submit {
+      border-radius: 0 43px 43px 0;
+      padding: 11px 24px 11px 22px;
+      @extend .bg-info, .text-light, .border-0, .font-weight-semibold;
+    }
+  }
+}
