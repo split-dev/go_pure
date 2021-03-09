@@ -9682,9 +9682,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (innerImage) {
         var alt = image.getAttribute('data-alt');
-        var src = innerImage.hasAttribute('data-src')
-          ? innerImage.getAttribute('data-src')
-          : image.getAttribute('data-bg');
+        var src = '';
+        if (window.innerWidth <= theme.breakpoints.medium && image.getAttribute('data-bg-mobile')) {
+          src = image.getAttribute('data-bg-mobile');
+          image.style.backgroundImage = `url(${src})`;
+        } else {
+          src = innerImage.hasAttribute('data-src')
+              ? innerImage.getAttribute('data-src')
+              : image.getAttribute('data-bg');
+        }
 
         image.setAttribute('alt', alt ? alt : '');
         image.setAttribute('src', src ? src : '');

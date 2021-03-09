@@ -1,0 +1,7 @@
+.page-hero {
+  min-height: 380px;
+  padding: 54px 0;
+  @include media-breakpoint-up(sm) {
+    padding: 77px 0 100px;
+  }
+}

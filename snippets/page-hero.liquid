@@ -1,5 +1,20 @@
-<section class="page-hero lazyload bg-muted overlay" data-bgset="{%- render 'bgset', image: image -%}">
-  <div class="container">
-    <h1 class="mb-0 text-56px text-light text-center">{{ title }}</h1>
+{% comment %}
+
+  Usage:
+    title
+    image
+    mobile_image - optional
+    description - optional
+    scrollBtn - optional
+
+{% endcomment %}
+
+<div class="lazyload bg-muted overlay bg-center"
+     data-bgset="{%- render 'bgset', image: image -%}"
+     {% if mobile_image %}data-bg-mobile="{{ mobile_image | img_url: 'master' }}{% endif %}">
+  <div class="container h-100">
+    <div class="page-hero flex-center flex-column h-100">
+      <h1 class="mb-0 text-56px text-light text-center">{{ title }}</h1>
+    </div>
   </div>
-</section>
+</div>

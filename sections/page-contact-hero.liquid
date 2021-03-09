@@ -1,0 +1,23 @@
+{% render 'page-hero',
+  title: page.title,
+  image: section.settings.desktop_image,
+  mobile_image: section.settings.mobile_image %}
+
+{% schema %}
+{
+  "name": "Page Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    }
+  ]
+}
+{% endschema %}

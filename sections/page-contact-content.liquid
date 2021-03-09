@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="mb-5 text-24px text-center">
+    {{ section.settings.text }}
+  </div>
+  <div class="mb-4 text-dark text-15px text-center">
+    {{ section.settings.email }}
+  </div>
+  <div class="text-15px text-dark text-center">
+    {{ section.settings.address }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page Content",
+  "tag": "section",
+  "class": "contact-inner",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+        "type": "richtext",
+        "id": "email",
+        "label": "Email Info"
+    },
+    {
+        "type": "richtext",
+        "id": "address",
+        "label": "Address Info"
+    }
+  ]
+}
+{% endschema %}

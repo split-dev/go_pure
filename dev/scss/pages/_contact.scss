@@ -1,0 +1,6 @@
+.contact-inner {
+  padding: 60px 0 80px;
+  @include media-breakpoint-up(sm) {
+    padding: 80px 0 120px;
+  }
+}

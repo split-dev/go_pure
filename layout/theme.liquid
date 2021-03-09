@@ -78,9 +78,9 @@
     }
   </script>
 
-  {% if request.page_type != 'index' %}
+  {% comment  %}
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
-  {% endif %}
+  {% endcomment %}
   <link rel="stylesheet" href="{{ 'main.min.css' | asset_url }}" type="text/css">
 
   <style>
@@ -100,9 +100,9 @@
   <script>
     var theme = {
       breakpoints: {
-        medium: 750,
-        large: 990,
-        widescreen: 1400
+        medium: 576,
+        large: 991,
+        widescreen: 1199
       },
       strings: {
         addToCart: {{ 'products.product.add_to_cart' | t | json }},
