@@ -12,4 +12,8 @@ img {
     z-index: -1;
     @extend .absolute-fill;
   }
+
+  &.overlay--light:after {
+    background-color: #fff;
+  }
 }

@@ -1,0 +1,40 @@
+.table {
+  padding: 72px 65px 60px;
+
+  &__wrapper {
+    margin-bottom: 112px;
+  }
+
+  &__inner__column {
+    .columns {
+      @include media-breakpoint-up(md) {
+        column-count: 2;
+        column-gap: 40px;
+      }
+    }
+    div:not(.columns) {
+      display: flex;
+      justify-content: space-between;
+
+      @extend .mb-3;
+    }
+    h3 {
+      font-size: inherit;
+      margin-bottom: 12px;
+
+      @extend .font-weight-bold, .text-uppercase;
+      &:not(:first-child) {
+        margin-top: 32px;
+      }
+    }
+    span {
+      @extend .text-info, .pl-4;
+    }
+    hr {
+      background: #C1C1C1;
+      opacity: 0.3;
+      height: 1px;
+      @extend .border-0, .mt-0, .mb-3;
+    }
+  }
+}

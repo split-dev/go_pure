@@ -1,0 +1,108 @@
+{% if section.settings.enable_overlay %}
+  {% assign overlay = true %}
+  {% style %}
+    .overlay--{{ section.id }}:after {
+      opacity: {{ section.settings.overlay | divided_by: 100.0 }}
+    }
+  {% endstyle %}
+{% endif %}
+
+<div class="container">
+  <div class="table rounded-lg lazyload bg-center bg-muted {% if overlay %} overlay overlay--light overlay--{{ section.id }} {% endif %}"
+     data-bgset="{%- render 'bgset', image: section.settings.bg_image -%}">
+
+    <h2 class="mb-4 text-35px text-center">{{- section.settings.title -}}</h2>
+    <div class="text-center text-15px">
+      {{- section.settings.subheading -}}
+    </div>
+
+    <div class="table__inner mt-5">
+      <div class="row">
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {% when 'column-1' %}
+            <div class="col-lg-3 table__inner__column text-15px font-weight-medium">
+              {{ block.settings.content }}
+            </div>
+          {% when 'column-2' %}
+          <div class="col-lg-6 table__inner__column text-15px font-weight-medium">
+            {{ block.settings.content }}
+          </div>
+          {% endcase %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Table",
+  "tag": "section",
+  "class": "table__wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "BG Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "Enable"
+    },
+    {
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "id": "overlay",
+      "label": "Opacity",
+      "default": 80
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+        "type": "richtext",
+        "id": "subheading",
+        "label": "Subheading"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Column (1)",
+      "type": "column-1",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "html",
+          "id": "content",
+          "label": "Column Content"
+        }
+      ]
+    },
+    {
+      "name": "Column (2)",
+      "type": "column-2",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "html",
+          "id": "content",
+          "label": "Column Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Table",
+      "category": "New"
+    }
+  ]
+}
+{% endschema %}

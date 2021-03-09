@@ -1,7 +1,18 @@
 .page-hero {
   min-height: 380px;
+  max-width: 710px;
   padding: 54px 0;
   @include media-breakpoint-up(sm) {
     padding: 77px 0 100px;
+  }
+
+  &__scroll-down {
+    width: 44px;
+    height: 44px;
+
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
   }
 }
