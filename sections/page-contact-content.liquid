@@ -1,11 +1,13 @@
 <div class="container">
-  <div class="mb-5 text-24px text-center">
+  <div class="contact-inner__content mx-auto mb-5 text-24px text-center">
     {{ section.settings.text }}
   </div>
-  <div class="mb-4 text-dark text-15px text-center">
+  <div class="contact-inner__box mx-auto mb-4 text-dark text-15px text-center">
+    {% render 'icon-letter', class: 'mb-3' %}
     {{ section.settings.email }}
   </div>
-  <div class="text-15px text-dark text-center">
+  <div class="contact-inner__box mx-auto text-15px text-dark text-center">
+    {% render 'icon-pin', class: 'mb-3' %}
     {{ section.settings.address }}
   </div>
 </div>
