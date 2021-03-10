@@ -29,9 +29,11 @@
     @include text-20px;
   }
 }
-
 .text-15px {
   @include text-15px;
+}
+.text-11px {
+  @include text-11px;
 }
 .font-weight-medium {
   font-weight: 500;

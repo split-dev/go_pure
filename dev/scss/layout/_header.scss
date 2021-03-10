@@ -2,10 +2,6 @@
   left: 0;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 19px rgba(0, 0, 0, 0.08);
-  @include media-breakpoint-up(sm) {
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  }
   &__bar {
     padding: 4px 0 5px;
     @include media-breakpoint-up(md) {
@@ -14,8 +10,10 @@
   }
   &__inner {
     padding: 20px 0;
+    box-shadow: 0 4px 19px rgba(0, 0, 0, 0.08);
     @include media-breakpoint-up(sm) {
       padding: 23px 0;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     }
   }
 
@@ -29,6 +27,7 @@
     transition: transform 0.2s;
     &.open {
       transform: translateY(0);
+      box-shadow: 0 4px 19px rgba(0, 0, 0, 0.08);
     }
   }
 }

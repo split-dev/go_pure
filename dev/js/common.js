@@ -24,8 +24,9 @@ page.burger.addEventListener('click', () => {
 
 //* Sections
 //> Page Hero
-document.querySelector('[data-scroll-down]')
-    .addEventListener('click', (e) => {
+const scrollBtn = document.querySelector('[data-scroll-down]');
+if (scrollBtn !== null) {
+    scrollBtn.addEventListener('click', (e) => {
         let scrollHeight = e.target.closest('section').offsetHeight;
 
         // Checking for additional offset created by header
@@ -36,7 +37,8 @@ document.querySelector('[data-scroll-down]')
 
         document.documentElement.scrollTop = scrollHeight; // For Chrome, Firefox, IE and Opera
         document.body.scrollTop = scrollHeight;  // For Safari
-});
+    });
+};
 
 //> Accordions
 document.querySelectorAll('[data-accordion]')

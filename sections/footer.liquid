@@ -5,9 +5,15 @@
       </a>
 
       <div class="flex-center mt-4 mt-md-0 pt-3 pt-md-0">
-        <img class="lazyload flex-shrink-0" data-src="{{- section.settings.reward_1 | img_url: 'master' -}}" alt="{{- section.settings.reward_1.alt -}}">
-        <img class="lazyload flex-shrink-0 ml-4" data-src="{{- section.settings.reward_2 | img_url: 'master' -}}" alt="{{- section.settings.reward_2.alt -}}">
-        <img class="lazyload flex-shrink-0 ml-4" data-src="{{- section.settings.reward_3 | img_url: 'master' -}}" alt="{{- section.settings.reward_3.alt -}}">
+        <img class="lazyload flex-shrink-0"
+             data-src="{{- section.settings.reward_1 | img_url: 'master' -}}"
+             alt="{{- section.settings.reward_1.alt -}}">
+        <img class="lazyload flex-shrink-0 ml-4"
+             data-src="{{- section.settings.reward_2 | img_url: 'master' -}}"
+             alt="{{- section.settings.reward_2.alt -}}">
+        <img class="lazyload flex-shrink-0 ml-4"
+             data-src="{{- section.settings.reward_3 | img_url: 'master' -}}"
+             alt="{{- section.settings.reward_3.alt -}}">
       </div>
     </div>
 </div>
@@ -15,12 +21,12 @@
 <hr>
 
 <div class="container">
-  <div class="row">
+  <div class="row pt-2 mt-n5 mt-lg-0 pt-lg-0">
     {%- for block in section.blocks -%}
       <div class="col-sm-6 col-lg-3">
         {%- if block.type == 'menu' -%}
           {%- assign menu = linklists[block.settings.menu] -%}
-          <nav class="text-15px text-light">
+          <nav class="text-15px text-light pt-5 mt-n2 mt-lg-0 pt-lg-0">
             <p class="font-weight-bold text-uppercase">{{ menu.title }}</p>
             {%- for link in menu.links -%}
               <a href="{{ link.url }}"
@@ -30,22 +36,38 @@
         {%- endif -%}
 
         {%- if block.type == 'newsletter' -%}
-          <p class="mb-4 text-15px font-weight-bold text-light text-uppercase">
-            {{- block.settings.text -}}
-          </p>
+          <div class="d-flex flex-column h-100">
+            <p class="mb-4 text-15px font-weight-bold text-light text-uppercase pt-5 mt-n2 pt-lg-0">
+              {{- block.settings.text -}}
+            </p>
 
-          {% form 'contact', class: 'form form--contact' %}
-            <input type="text" name="contact[tags]" value="Subscribed" hidden>
+            {% form 'contact', class: 'form form--contact' %}
+              <input type="text" name="contact[tags]" value="Subscribed" hidden>
 
-            <div class="d-flex">
-              <input class="form__input w-100"
-                     type="email"
-                     name="contact[email]"
-                     placeholder="Your email">
-              <button type="submit"
-                      class="form__submit">Join</button>
-            </div>
-          {% endform %}
+              <div class="d-flex">
+                <input class="form__input w-100"
+                       type="email"
+                       name="contact[email]"
+                       placeholder="Your email">
+                <button type="submit"
+                        class="form__submit">Join</button>
+              </div>
+            {% endform %}
+
+            <div class="social__links pt-5 mt-n2 pt-lg-0 mt-lg-auto d-flex align-items-center list-unstyled">
+              {%- assign socials = "Facebook Twitter Pinterest Instagram Tumblr Snapchat YouTube Vimeo" | split: ' ' -%}
+              {%- for social in socials -%}
+                {%- assign social_link = social | prepend: 'social_' | append: '_link' | downcase -%}
+                {%- assign icon_link = social | prepend: 'icon-' | downcase -%}
+                {%- if settings[social_link] != blank -%}
+                  <a class="social-icons__link{% if forloop.first %} ml-0{% endif %}{% if forloop.last %} mr-0{% endif %}"
+                     href="{{ settings[social_link] | escape }}">
+                    {%- include icon_link -%}
+                  </a>
+                {%- endif -%}
+              {%- endfor -%}
+          </div>
+          </div>
         {%- endif -%}
       </div>
     {%- endfor -%}
@@ -65,27 +87,12 @@
   </div>
 </div>
 
-
-<ul class="d-none">
-  {%- assign socials = "Facebook Twitter Pinterest Instagram Tumblr Snapchat YouTube Vimeo" | split: ' ' -%}
-  {%- for social in socials -%}
-    {%- assign social_link = social | prepend: 'social_' | append: '_link' | downcase -%}
-    {%- assign icon_link = social | prepend: 'icon-' | downcase -%}
-    {%- if settings[social_link] != blank -%}
-      <li class="social-icons__item">
-        <a class="social-icons__link" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message">
-          {%- include icon_link -%}
-          <span class="icon__fallback-text">{{ social }}</span>
-        </a>
-      </li>
-    {%- endif -%}
-  {%- endfor -%}
-</ul>
+<img class="footer__bg-logo lazyload position-absolute" data-src="{{ 'GoPureFooterLogoBG.svg' | asset_url }}" alt="GoPureLogo">
 
 {% schema %}
 {
   "name": "Footer",
-  "class": "footer bg-primary pt-5 pb-4",
+  "class": "footer bg-primary pt-5 pb-4 position-relative overflow-hidden",
   "settings": [
     {
       "type": "header",

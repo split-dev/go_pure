@@ -1,10 +1,21 @@
 .footer {
+  z-index: 1;
   hr {
     border-color: rgba(255, 255, 255, 0.17);
-
     margin: 48px 16px;
     @include media-breakpoint-up(sm) {
       margin: 40px 0 28px;
+    }
+  }
+  &__bg-logo {
+    top: 61%;
+    right: -181px;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    @include media-breakpoint-up(md) {
+      top: 16%;
+      right: -148px;
     }
   }
 }

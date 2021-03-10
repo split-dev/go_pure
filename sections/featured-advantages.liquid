@@ -1,0 +1,72 @@
+<div class="container">
+  {%- if section.settings.title != blank -%}
+    <h2 class="text-center text-35px">{{ section.settings.title }}</h2>
+  {%- endif -%}
+
+  <div class="row justify-content-center">
+    {%- for block in section.blocks -%}
+      <div class="col-sm-6 col-lg-3">
+        <div class="mb-4 flex-center">
+          <img class="lazyload rounded-circle"
+               data-src="{{ block.settings.image | img_url: '200x200' }}"
+               alt="{{ block.settings.image.alt }}">
+        </div>
+        <p class="mb-0 text-15px font-weight-bold text-center text-uppercase">{{ block.settings.title}}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+  {%- if section.settings.link_text != blank -%}
+  <div class="text-center mt-5 pt-2">
+    <a href="{{ section.settings.link_url }}" class="btn btn-primary">{{ section.settings.link_text }}</a>
+  </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Featured Advantages",
+  "tag": "section",
+  "class": "featured-advantages",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Advantage",
+      "type": "advantage",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Advantages",
+      "category": "New"
+    }
+  ]
+}
+{% endschema %}

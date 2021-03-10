@@ -12,6 +12,7 @@
   {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
 
   :root {
+  {% comment %}
     --color-text: {{ settings.color_text }};
     --color-text-rgb: {{ settings.color_text | color_to_rgb | remove: 'rgb(' | remove: 'rgba(' | remove: ')' | remove: ', 0.0' }};
     --color-body-text: {{ settings.color_body_text }};
@@ -114,5 +115,9 @@
     {% comment %} Image placeholder {% endcomment %}
     --global-color-image-loader-primary: {{ settings.color_text | color_modify: 'alpha', 0.06 }};
     --global-color-image-loader-secondary: {{ settings.color_text | color_modify: 'alpha', 0.12 }};
+  {% endcomment %}
+
+  --font-stack-header: {{ header_font.family }}, {{ header_font.fallback_families }};
+  --font-stack-body: {{ base_font.family }}, {{ base_font.fallback_families }};
   }
 {% endstyle %}

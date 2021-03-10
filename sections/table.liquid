@@ -11,12 +11,12 @@
   <div class="table rounded-lg lazyload bg-center bg-muted {% if overlay %} overlay overlay--light overlay--{{ section.id }} {% endif %}"
      data-bgset="{%- render 'bgset', image: section.settings.bg_image -%}">
 
-    <h2 class="mb-4 text-35px text-center">{{- section.settings.title -}}</h2>
+    <h2 class="mb-4 mx-n2 mx-sm-0 text-35px text-center">{{- section.settings.title -}}</h2>
     <div class="text-center text-15px">
       {{- section.settings.subheading -}}
     </div>
 
-    <div class="table__inner mt-5">
+    <div class="table__inner mt-3">
       <div class="row">
         {%- for block in section.blocks -%}
           {% case block.type %}
@@ -32,6 +32,11 @@
         {%- endfor -%}
       </div>
     </div>
+    {%- if section.settings.ps != blank -%}
+    <p class="mt-4 mb-0 text-11px text-center">
+      {{- section.settings.ps -}}
+    </p>
+    {%- endif -%}
   </div>
 </div>
 
@@ -70,6 +75,11 @@
         "type": "richtext",
         "id": "subheading",
         "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "ps",
+      "label": "P.S."
     }
   ],
   "blocks": [

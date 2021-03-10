@@ -25,18 +25,21 @@ page.burger.addEventListener('click', function () {
 
 //* Sections
 //> Page Hero
-document.querySelector('[data-scroll-down]').addEventListener('click', function (e) {
-    var scrollHeight = e.target.closest('section').offsetHeight;
+var scrollBtn = document.querySelector('[data-scroll-down]');
+if (scrollBtn !== null) {
+    scrollBtn.addEventListener('click', function (e) {
+        var scrollHeight = e.target.closest('section').offsetHeight;
 
-    // Checking for additional offset created by header
-    var announcementBar = page.header.querySelector('.header__bar');
-    if (announcementBar) {
-        scrollHeight += announcementBar.offsetHeight;
-    }
+        // Checking for additional offset created by header
+        var announcementBar = page.header.querySelector('.header__bar');
+        if (announcementBar) {
+            scrollHeight += announcementBar.offsetHeight;
+        }
 
-    document.documentElement.scrollTop = scrollHeight; // For Chrome, Firefox, IE and Opera
-    document.body.scrollTop = scrollHeight; // For Safari
-});
+        document.documentElement.scrollTop = scrollHeight; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = scrollHeight; // For Safari
+    });
+};
 
 //> Accordions
 document.querySelectorAll('[data-accordion]').forEach(function (accordion) {

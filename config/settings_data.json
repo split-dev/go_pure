@@ -236,8 +236,115 @@
         "type": "page-contact-content",
         "settings": {
           "text": "<p>We appreciate your business and want to ensure you are satisfied with your GOpure product! Please contact us with any questions you have about the product, or if we can help you in any way.<\/p>",
-          "email": "<p>For customer support: <a title=\"mailto:contact@gopurepod.com\" href=\"mailto:contact@gopurepod.com\">contact@gopurepod.com<\/a><\/p><p>For sales inquiries: <a title=\"mailto:jim@blocenterprises.com\" href=\"mailto:jim@blocenterprises.com\">jim@blocenterprises.com<\/a><br\/><br\/>For press inquiries: <a title=\"mailto:info@blocenterprises.com\" href=\"mailto:info@blocenterprises.com\">info@blocenterprises.com<\/a><\/p>",
-          "address": "<p>Mailing Address:<\/p><p>Bloc Enterprises, LLC, 11 Grumman Hill Road, Suite 1AWilton, CT 06897<\/p>"
+          "email": "<p>For customer support: <a href=\"mailto:contact@gopurepod.com\" title=\"mailto:contact@gopurepod.com\">contact@gopurepod.com<\/a><\/p><p>For sales inquiries: <a href=\"mailto:jim@blocenterprises.com\" title=\"mailto:jim@blocenterprises.com\">jim@blocenterprises.com<\/a><\/p><p>For press inquiries: <a href=\"mailto:info@blocenterprises.com\" title=\"mailto:info@blocenterprises.com\">info@blocenterprises.com<\/a><\/p>",
+          "address": "<p>Mailing Address:<br\/>Bloc Enterprises, LLC, 11 Grumman Hill Road, Suite 1AWilton, CT 06897<\/p>"
+        }
+      },
+      "page-faq-hero": {
+        "type": "page-faq-hero",
+        "settings": {
+          "desktop_image": "shopify:\/\/shop_images\/image_31.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/image_31-2.jpg",
+          "scroll_btn": true
+        }
+      },
+      "page-faq-content": {
+        "type": "page-faq-content",
+        "blocks": {
+          "8d8ac1fd-754a-46b6-80fb-27f11ef8e66e": {
+            "type": "question",
+            "settings": {
+              "title": "What is inside the GOpure Pod?",
+              "content": "<p>The power within every Pod comes from an unlimited and renewable resource that has been trusted by Mother Nature for over 20 million years. She calls it <a href=\"#\" title=\"#\" target=\"_blank\">diatomaceous earth<\/a> (DE). We call it revolutionary technology. Every Pod features an “advanced ceramic” core made from DE and trace silver that performs like a magnet to continuously attract, bind and adsorb every heavy metal, inorganic, bacteria, impure chemicals and more.<\/p>"
+            }
+          },
+          "42529d16-2992-446b-8709-5bbb443fe8c1": {
+            "type": "question",
+            "settings": {
+              "title": "How do I use my GOpure Pod?",
+              "content": "<p><strong>Lorem ipsum<\/strong> <em>dolor sit ame<\/em>t, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "75032d0a-787e-41b3-8508-3d9e7fb308d1": {
+            "type": "question",
+            "settings": {
+              "title": "How long does it take to purify my water?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "d790a8b5-92fc-4443-b0ae-e36e93772063": {
+            "type": "question",
+            "settings": {
+              "title": "How long will my GOpure Pod last?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "8cb8c193-69f3-4cf1-935e-7ffd278f9bf0": {
+            "type": "question",
+            "settings": {
+              "title": "Where is it safe to use my GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "381cc302-49b9-4fcc-8acb-e54c8e79f091": {
+            "type": "question",
+            "settings": {
+              "title": "How do I know when it’s time to get a new GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "687f22e8-2393-44ed-a1aa-2e78d729c9c5": {
+            "type": "question",
+            "settings": {
+              "title": "What else can my Pod do?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "8d8ac1fd-754a-46b6-80fb-27f11ef8e66e",
+          "42529d16-2992-446b-8709-5bbb443fe8c1",
+          "75032d0a-787e-41b3-8508-3d9e7fb308d1",
+          "d790a8b5-92fc-4443-b0ae-e36e93772063",
+          "8cb8c193-69f3-4cf1-935e-7ffd278f9bf0",
+          "381cc302-49b9-4fcc-8acb-e54c8e79f091",
+          "687f22e8-2393-44ed-a1aa-2e78d729c9c5"
+        ],
+        "settings": {}
+      },
+      "table": {
+        "type": "table",
+        "blocks": {
+          "34019f92-28e0-4d65-aa53-920362c7e9c3": {
+            "type": "column-1",
+            "settings": {
+              "content": "<h3>Inorganics<\/h3>\n<hr>\n<div>\n  Chlorine<span>97.00%<\/span>\n<\/div>\n<div>\n  Nitrate<span>97.00%<\/span>\n<\/div>\n<div>\n  Nitrite<span>97.00%<\/span>\n<\/div>\n<div>\n  Nitrite<span>97.00%<\/span>\n<\/div>"
+            }
+          },
+          "913edc72-c44f-45ef-9fb3-6a544e67aa8a": {
+            "type": "column-1",
+            "settings": {
+              "content": "<h3>Voc<\/h3>\n<hr>\n<div>\n  trans-1, 2-Dichloroethene <span>92.40%<\/span>\n<\/div>\n<div>\n  Benzene <span>92.40%<\/span>\n<\/div>\n<div>\n  Benzene <span>92.40%<\/span>\n<\/div>\n<h3>Antibacterial<\/h3>\n<hr>\n<div>E.Coli <span>99.97%<\/span>\n<\/div>"
+            }
+          },
+          "829cea82-7694-4092-9b6b-239f553b85e8": {
+            "type": "column-2",
+            "settings": {
+              "content": "<h3>Metals<\/h3>\n<hr>\n<div class=\"columns\">\n  <div>Arsenic (+3) <span>99.31%<\/span>\n<\/div>\n  <div>Arsenic (+5) <span>99.31%<\/span>\n<\/div>\n  <div>Chromium <span>99.31%<\/span>\n<\/div>\n  <div>Copper <span>99.31%<\/span>\n<\/div>\n  <div>Lead <span>99.31%<\/span>\n<\/div>\n  <div>Manganese <span>99.31%<\/span>\n<\/div>\n  <div>Mercury <span>99.31%<\/span>\n<\/div>\n  <div>Zinc <span>99.31%<\/span>\n<\/div>\n  <div>Aluminum <span>97.00%<\/span>\n<\/div>\n  <div>Cadmium <span>99.31%<\/span>\n<\/div>\n  <div>Iron <span>99.31%<\/span>\n<\/div>\n<\/div>"
+            }
+          }
+        },
+        "block_order": [
+          "34019f92-28e0-4d65-aa53-920362c7e9c3",
+          "913edc72-c44f-45ef-9fb3-6a544e67aa8a",
+          "829cea82-7694-4092-9b6b-239f553b85e8"
+        ],
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/image_41.jpg",
+          "enable_overlay": true,
+          "overlay": 80,
+          "title": "GOpureWater Purification Capability",
+          "subheading": "<p>These figures show the quantitative removal of contaminants from water by PuriBlocadvanced ceramic technology when tested in filtration device in a laboratory setting usinga heavy load of the various chemicals\/toxins listed.<\/p>"
         }
       }
     },
