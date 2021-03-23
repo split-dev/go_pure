@@ -1,7 +1,14 @@
 .featured-advantages {
   background-color: #F7F7F7;
-  padding: 80px;
+  padding: 80px 0;
   @include media-breakpoint-up(sm) {
     padding: 120px 0;
+  }
+
+  &__heading {
+    margin-bottom: 48px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 80px;
+    }
   }
 }
