@@ -1,0 +1,18 @@
+.image-bar {
+  padding: 60px 15px 40px;
+  @include media-breakpoint-up(md) {
+    padding: 60px 0 20px;
+  }
+  &__block {
+    margin-bottom: 40px;
+  }
+  &__text {
+    max-width: 143px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #EAEAEA;
+    transform: translateY(-60px);
+  }
+}

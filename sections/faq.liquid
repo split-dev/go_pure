@@ -3,18 +3,25 @@
     {{- section.settings.title -}}
   </h2>
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-lg-5 d-none d-lg-block">
       <img class="lazyload" data-src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
     </div>
-    <div class="col-lg-7">
-      {%- for block in section.blocks -%}
-        <div class="accordion">
-          <button>{{- block.settings.title -}}</button>
-          <div>
+    <div class="col-lg-6">
+      <div class="accordion">
+        {%- for block in section.blocks -%}
+          <button class="accordion__btn d-block w-100 px-0 border-0 bg-transparent pr-5 text-left text-primary text-15px font-weight-semibold position-relative"
+                  data-accordion>
+            {{- block.settings.title -}}
+          </button>
+          <div class="accordion__panel text-15px overflow-hidden">
             {{- block.settings.content -}}
           </div>
-        </div>
-      {%- endfor -%}
+
+          {%- unless forloop.last -%}
+            <hr class="m-0">
+          {%- endunless -%}
+        {%- endfor -%}
+      </div>
     </div>
   </div>
 </div>
@@ -34,6 +41,24 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Question & Answer",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Answer"
+        }
+      ]
     }
   ],
   "presets": [
