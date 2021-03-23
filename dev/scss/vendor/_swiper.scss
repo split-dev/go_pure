@@ -1,0 +1,10 @@
+.swiper-btn {
+  width: 51px;
+  height: 51px;
+  background: rgba(255, 255, 255, 0.21);
+  opacity: 1;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.8;
+  }
+}

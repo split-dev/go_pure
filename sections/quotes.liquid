@@ -12,19 +12,24 @@
         <div class="container">
 
           {%- if rating != 0 -%}
-          <div class="quotes__single-quote__rating">
-            {%- for star in (1..rating)-%}
+          <div class="quotes__single-quote__rating mb-4 pb-2">
+            {%- for star in (1..rating) -%}
               <span class="d-inline-block mr-1">{% render 'icon-star' %}</span>
             {%- endfor -%}
           </div>
           {%- endif -%}
-          <cite class="d-block mb-3 font-weight-bold text-15px text-uppercase text-light">
+
+          <cite class="quotes__single-quote__author d-block mb-3 font-weight-bold text-15px text-uppercase text-light">
             {{- block.settings.title -}}
           </cite>
-          <q class="d-block text-24px text-light">{{- block.settings.content -}}</q>
+          <q class="quotes__single-quote__content d-block mb-5 text-24px text-light">{{- block.settings.content -}}</q>
 
-          <button class="swiper-button-prev"><</button>
-          <button class="swiper-button-next">></button>
+          <button class="swiper-btn swiper-button-prev mr-4 rounded-circle border-0">
+            {% render 'icon-arrow-left' %}
+          </button>
+          <button class="swiper-btn swiper-button-next rounded-circle border-0">
+            {% render 'icon-arrow-right' %}
+          </button>
         </div>
       </div>
     </div>
@@ -38,6 +43,7 @@
     const swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         effect: 'fade',
+        autoHeight: true,
         fadeEffect: {
             crossFade: true
         },

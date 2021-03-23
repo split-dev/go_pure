@@ -1,0 +1,46 @@
+<div class="container">
+  <h2 class="mb-5 text-primary text-35px text-center">
+    {{- section.settings.title -}}
+  </h2>
+  <div class="row">
+    <div class="col-lg-4">
+      <img class="lazyload" data-src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt }}">
+    </div>
+    <div class="col-lg-7">
+      {%- for block in section.blocks -%}
+        <div class="accordion">
+          <button>{{- block.settings.title -}}</button>
+          <div>
+            {{- block.settings.content -}}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "tag": "section",
+  "class": "faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "category": "New"
+    }
+  ]
+}
+{% endschema %}
