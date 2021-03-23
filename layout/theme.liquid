@@ -78,9 +78,9 @@
     }
   </script>
 
-  {% comment  %}
+    {% if request.page_type == 'product' %}
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
-  {% endcomment %}
+    {% endif %}
   <link rel="stylesheet" href="{{ 'main.min.css' | asset_url }}" type="text/css">
 
   <style>
