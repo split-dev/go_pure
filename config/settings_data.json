@@ -344,16 +344,108 @@
           "enable_overlay": true,
           "overlay": 80,
           "title": "GOpureWater Purification Capability",
-          "subheading": "<p>These figures show the quantitative removal of contaminants from water by PuriBlocadvanced ceramic technology when tested in filtration device in a laboratory setting usinga heavy load of the various chemicals\/toxins listed.<\/p>"
+          "subheading": "<p>These figures show the quantitative removal of contaminants from water by PuriBlocadvanced ceramic technology when tested in filtration device in a laboratory setting usinga heavy load of the various chemicals\/toxins listed.<\/p>",
+          "ps": "*Source: The Potable water & Hygiene Laboratory, Gottingen University, Germany (April 2014)."
+        }
+      },
+      "16153679533c88e9b4": {
+        "type": "features",
+        "blocks": {
+          "fe537416-d073-495d-a7fa-e5d7ca27a9f8": {
+            "type": "IconAndText",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_6a9bde0b-2f97-4f7c-9067-a4597c9ffe92.png",
+              "title": "<p><strong>Earth Friendly<\/strong><\/p><p>GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature&#x27;s &quot;perfect filter&quot;<\/p>"
+            }
+          },
+          "01b89c79-e6e0-4068-a943-3e3728d1979e": {
+            "type": "IconAndText",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_3b6a3428-0ce1-450c-b58a-87580516c677.png",
+              "title": "<p><strong>PuriBloc Technology<\/strong><\/p><p>GOpure&#x27;s innovative purification process introduces a revolutionary advanced ceramic technology<\/p>"
+            }
+          },
+          "0bd16b08-ed26-487f-96be-9c839f698953": {
+            "type": "IconAndText",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_1.png",
+              "title": "<p><strong>Works in Any Сontainer<\/strong><\/p><p>The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker<\/p>"
+            }
+          },
+          "eaa9d99d-27a9-4a3a-ad5e-8c5a4d69ceba": {
+            "type": "IconAndText",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_11e5e136-af2e-440a-9546-00c7dc9bb0e3.png",
+              "title": "<p><strong>Reduce Pollution<\/strong><\/p><p>Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "fe537416-d073-495d-a7fa-e5d7ca27a9f8",
+          "01b89c79-e6e0-4068-a943-3e3728d1979e",
+          "0bd16b08-ed26-487f-96be-9c839f698953",
+          "eaa9d99d-27a9-4a3a-ad5e-8c5a4d69ceba"
+        ],
+        "settings": {
+          "icon": "shopify:\/\/shop_images\/Icon.jpg",
+          "text": "<p>GOpure goes where other water purifiers and filters can’t go. Every faucet, sink, spigot, hose, drinking fountain, in every neighborhood, town, city, and country. Every drop of water from every potable source is now safe to drink everywhere you go with your GOpure Pod.<\/p>",
+          "heading": "Where there’s a tap, there’s purified water",
+          "image": "shopify:\/\/shop_images\/pod_1.png"
+        }
+      },
+      "1615369276a9fcbfee": {
+        "type": "featured-advantages",
+        "blocks": {
+          "fb0c6981-92d8-4fc6-a53d-08f27627a66e": {
+            "type": "advantage",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle.jpg",
+              "title": "Increases Energy"
+            }
+          },
+          "fa7f6f6a-c363-4815-a00d-ef4802e17521": {
+            "type": "advantage",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle2.jpg",
+              "title": "Supports Recovery"
+            }
+          },
+          "bb0f9449-0c8b-4196-8dde-354e9517fbbe": {
+            "type": "advantage",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle3.jpg",
+              "title": "Improves Immunity"
+            }
+          },
+          "c6b5acee-fe16-4074-9da5-06f8c0514697": {
+            "type": "advantage",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle4.jpg",
+              "title": "Helps with Digestion"
+            }
+          }
+        },
+        "block_order": [
+          "fb0c6981-92d8-4fc6-a53d-08f27627a66e",
+          "fa7f6f6a-c363-4815-a00d-ef4802e17521",
+          "bb0f9449-0c8b-4196-8dde-354e9517fbbe",
+          "c6b5acee-fe16-4074-9da5-06f8c0514697"
+        ],
+        "settings": {
+          "title": "Benefits of Daily Use",
+          "link_text": "Get Your GOpure",
+          "link_url": "#"
         }
       }
     },
     "content_for_index": [
       "1614340839c875c350",
+      "16153679533c88e9b4",
       "1614591887e99fa957",
-      "161434311727521ded",
+      "16148582662c4d52bf",
+      "1615369276a9fcbfee",
       "1614594263644fcc39",
-      "16148582662c4d52bf"
+      "161434311727521ded"
     ]
   }
 }

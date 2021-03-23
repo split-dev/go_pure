@@ -26,13 +26,24 @@
       </div>
 
       {%- for block in section.blocks -%}
-        <div class="col-lg-6 features__bottom__column">
-          <div class="d-flex align-items-start {% cycle '', ' ml-lg-auto' %}">
+        <div class="col-lg-6 features__bottom__column" data-block-id="{{ block.id }}">
+          <div class="d-flex align-items-start {% cycle '', ' ml-lg-auto' %} position-relative">
             <img class="lazyload flex-shrink-0"
                  data-src="{{ block.settings.image | img_url: '54x54' }}"
                  alt="{{ block.settings.image.alt | default: '#' }}">
-            <div class="features__bottom__text ml-3 text-15px">
+            <div class="features__bottom__text {% cycle 'pr-lg-2', ' pl-lg-2' %} ml-3 text-15px">
               {{ block.settings.title }}
+            </div>
+
+            {% style %}
+              [data-block-id="{{ block.id }}"] .features__bottom__line {
+                width: {{ block.settings.width }}%;
+                height: {{ block.settings.height }}%;
+              }
+            {% endstyle %}
+
+            <div class="features__bottom__line d-flex position-absolute">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"><defs/><circle cx="14" cy="14" r="13" stroke="#fff" stroke-width="2"/></svg>
             </div>
           </div>
         </div>
@@ -85,6 +96,30 @@
           "type": "richtext",
           "id": "title",
           "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Pointer Settings"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Width",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "height",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Height",
+          "default": 50
         }
       ]
     }

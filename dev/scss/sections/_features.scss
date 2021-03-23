@@ -23,6 +23,41 @@
       margin-bottom: 40px;
       @include media-breakpoint-up(lg) {
         margin-bottom: 70px;
+
+        &:nth-child(even) {
+          .features__bottom__line {
+            left: 100%;
+            border-right: 2px solid $light;
+
+            justify-content: flex-end;
+          }
+        }
+        &:nth-child(odd) {
+           .features__bottom__line {
+             right: 100%;
+             border-left: 2px solid $light;
+
+             justify-content: flex-start;
+           }
+         }
+        &:nth-child(2),
+        &:nth-child(3) {
+          .features__bottom__line {
+            top: 50%;
+            border-top: 2px solid $light;
+
+            align-items: flex-end;
+          }
+        }
+        &:nth-child(4),
+        &:nth-child(5) {
+          .features__bottom__line {
+            bottom: 50%;
+            border-bottom: 2px solid $light;
+
+            align-items: flex-start;
+          }
+        }
       }
       & > div {
         @include media-breakpoint-up(lg) {
@@ -33,6 +68,11 @@
     &__text {
       p {
         margin-bottom: 8px;
+      }
+    }
+    &__line {
+      svg {
+        margin: -15px;
       }
     }
   }
