@@ -9,7 +9,7 @@
         <div class="image-bar__block">
           <img class="lazyload d-block mx-auto"
                data-src="{{ block.settings.image | img_url: '48x48' }}" alt="{{ block.settings.image.alt }}">
-          <p class="image-bar__text mb-0 mt-4 mx-auto text-primary text-15px font-weight-bold text-center">{{ block.settings.title }}</p>
+          <p class="image-bar__text mb-0 mt-4 mx-auto text-primary text-15px font-weight-bold text-center">{{ block.settings.title | upcase }}</p>
         </div>
       </div>
     {%- endfor -%}

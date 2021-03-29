@@ -202,14 +202,24 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/bridget_33ec656a-6941-4b23-80f3-592c490082b3.jpg",
               "rating": 4,
-              "content": "“Sed in malesuada quam. Morbi placerat enim lacus, vitae ultricies mauris malesuada eget. Sed ut vestibulum enim. Nam tempor velit lectus, eget ornare nunc malesuada sed. Praesent viverra et massa vel interdum.”",
-              "title": "Not Bridget"
+              "content": "Sed in malesuada quam. Morbi placerat enim lacus, vitae ultricies mauris malesuada eget. Sed ut vestibulum enim. Nam tempor velit lectus, eget ornare nunc malesuada sed. Praesent viverra et massa vel interdum.",
+              "title": "Scarlet"
+            }
+          },
+          "0c9d013e-0872-4bdc-a5dc-86a005055686": {
+            "type": "quote",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/bridget_33ec656a-6941-4b23-80f3-592c490082b3.jpg",
+              "rating": 5,
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.",
+              "title": "Einstein"
             }
           }
         },
         "block_order": [
           "03ee816b-67da-4226-9bc9-960ccdc9521b",
-          "e49fa74a-eea0-4a6b-99a3-51abc853b0f5"
+          "e49fa74a-eea0-4a6b-99a3-51abc853b0f5",
+          "0c9d013e-0872-4bdc-a5dc-86a005055686"
         ],
         "settings": {}
       },
@@ -355,28 +365,36 @@
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_6a9bde0b-2f97-4f7c-9067-a4597c9ffe92.png",
-              "title": "<p><strong>Earth Friendly<\/strong><\/p><p>GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature&#x27;s &quot;perfect filter&quot;<\/p>"
+              "title": "<p><strong>Earth Friendly<\/strong><\/p><p>GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature&#x27;s &quot;perfect filter&quot;<\/p>",
+              "width": 53,
+              "height": 58
             }
           },
           "01b89c79-e6e0-4068-a943-3e3728d1979e": {
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_3b6a3428-0ce1-450c-b58a-87580516c677.png",
-              "title": "<p><strong>PuriBloc Technology<\/strong><\/p><p>GOpure&#x27;s innovative purification process introduces a revolutionary advanced ceramic technology<\/p>"
+              "title": "<p><strong>PuriBloc Technology<\/strong><\/p><p>GOpure&#x27;s innovative purification process introduces a revolutionary advanced ceramic technology<\/p>",
+              "width": 48,
+              "height": 24
             }
           },
           "0bd16b08-ed26-487f-96be-9c839f698953": {
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_1.png",
-              "title": "<p><strong>Works in Any Сontainer<\/strong><\/p><p>The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker<\/p>"
+              "title": "<p><strong>Works in Any Сontainer<\/strong><\/p><p>The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker<\/p>",
+              "width": 50,
+              "height": 30
             }
           },
           "eaa9d99d-27a9-4a3a-ad5e-8c5a4d69ceba": {
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_11e5e136-af2e-440a-9546-00c7dc9bb0e3.png",
-              "title": "<p><strong>Reduce Pollution<\/strong><\/p><p>Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles<\/p>"
+              "title": "<p><strong>Reduce Pollution<\/strong><\/p><p>Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles<\/p>",
+              "width": 61,
+              "height": 73
             }
           }
         },
@@ -436,6 +454,357 @@
           "link_text": "Get Your GOpure",
           "link_url": "#"
         }
+      },
+      "161649263130577a03": {
+        "type": "faq",
+        "blocks": {
+          "0923617a-8292-4b6d-a185-cf7d1d63a325": {
+            "type": "text",
+            "settings": {
+              "title": "What is inside the GOpure Pod?",
+              "content": "<p>The power within every Pod comes from an unlimited and renewable resource that has been trusted by Mother Nature for over 20 million years. She calls it <a href=\"#\" title=\"#\" target=\"_blank\">diatomaceous earth (DE)<\/a>. We call it revolutionary technology. Every Pod features an “advanced ceramic” core made from DE and trace silver that performs like a magnet to continuously attract, bind and adsorb every heavy metal, inorganic, bacteria, impure chemicals and more.<\/p>"
+            }
+          },
+          "814e5d42-a18c-4b94-9f2f-a31a6bdfaadf": {
+            "type": "text",
+            "settings": {
+              "title": "How do I use my GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "a9a43b3d-7aac-4c12-b17d-ede1cfa94913": {
+            "type": "text",
+            "settings": {
+              "title": "How long does it take to purify my water?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "d751f128-c70f-411a-830c-fd19e6a969c9": {
+            "type": "text",
+            "settings": {
+              "title": "How long will my GOpure Pod last?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "bf9007ba-3a48-4f55-b667-30bbc928ef29": {
+            "type": "text",
+            "settings": {
+              "title": "Where is it safe to use my GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "8f71825a-ce63-4c7f-baf4-98383aaf1ca9": {
+            "type": "text",
+            "settings": {
+              "title": "How do I know when it’s time to get a new GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "e7be7a8b-287f-4081-9a15-84a11e6af65a": {
+            "type": "text",
+            "settings": {
+              "title": "What else can my Pod do?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "0923617a-8292-4b6d-a185-cf7d1d63a325",
+          "814e5d42-a18c-4b94-9f2f-a31a6bdfaadf",
+          "a9a43b3d-7aac-4c12-b17d-ede1cfa94913",
+          "d751f128-c70f-411a-830c-fd19e6a969c9",
+          "bf9007ba-3a48-4f55-b667-30bbc928ef29",
+          "8f71825a-ce63-4c7f-baf4-98383aaf1ca9",
+          "e7be7a8b-287f-4081-9a15-84a11e6af65a"
+        ],
+        "settings": {
+          "title": "Frequently Asked Questions",
+          "image": "shopify:\/\/shop_images\/gopure-pod-water-filter-front-package_1200x1200_1.jpg"
+        }
+      },
+      "16165003181cd76676": {
+        "type": "image-bar",
+        "blocks": {
+          "92850e18-c6c9-49e8-b6e1-b04a6be11ca6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_5cc7ff4c-62ca-4ad7-9963-5bf8b8388114.jpg",
+              "title": "Eliminates Fluoride"
+            }
+          },
+          "fd25fff4-b48b-4cc8-866c-ec60f82452ba": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-2.jpg",
+              "title": "Eliminates Lead"
+            }
+          },
+          "2a2c5099-0069-4572-bdb0-03cb86bbdc2c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-3.jpg",
+              "title": "Eliminates Arsenic"
+            }
+          },
+          "46cc692e-7049-453f-a177-33dd2946265d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-4.jpg",
+              "title": "Eliminates PFOAs"
+            }
+          },
+          "6f292899-6c70-4fc6-b212-c7b4ec99d476": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-5.jpg",
+              "title": "Eliminates Microplastics"
+            }
+          },
+          "79b914b6-349a-47fc-aee3-ef5d14088447": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-6.jpg",
+              "title": "Eliminates Chlorine"
+            }
+          }
+        },
+        "block_order": [
+          "92850e18-c6c9-49e8-b6e1-b04a6be11ca6",
+          "fd25fff4-b48b-4cc8-866c-ec60f82452ba",
+          "2a2c5099-0069-4572-bdb0-03cb86bbdc2c",
+          "46cc692e-7049-453f-a177-33dd2946265d",
+          "6f292899-6c70-4fc6-b212-c7b4ec99d476",
+          "79b914b6-349a-47fc-aee3-ef5d14088447"
+        ],
+        "settings": {
+          "enable_top_separator": true
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "list",
+          "blog_show_author": true,
+          "blog_show_date": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "quotes": {
+        "type": "quotes",
+        "blocks": {
+          "4331a8ac-7e74-49a6-8d65-6ef9e9572899": {
+            "type": "quote",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/bridget.jpg",
+              "rating": 5,
+              "content": "Sed in malesuada quam. Morbi placerat enim lacus, vitae ultricies mauris malesuada eget. Sed ut vestibulum enim. Nam tempor velit lectus, eget ornare nunc malesuada sed. Praesent viverra et massa vel interdum.",
+              "title": "BRIDGET"
+            }
+          },
+          "1f005210-ea61-460b-8a18-54461bfb2f39": {
+            "type": "quote",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/bridget.jpg",
+              "rating": 3,
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "title": "Scarlet"
+            }
+          }
+        },
+        "block_order": [
+          "4331a8ac-7e74-49a6-8d65-6ef9e9572899",
+          "1f005210-ea61-460b-8a18-54461bfb2f39"
+        ],
+        "settings": {}
+      },
+      "features": {
+        "type": "features",
+        "blocks": {
+          "71b65c47-4747-4ef5-b9c8-fcb5f182c218": {
+            "type": "IconAndText",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_6a9bde0b-2f97-4f7c-9067-a4597c9ffe92.png",
+              "title": "<p><strong>Earth Friendly<\/strong><\/p><p>GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature&#x27;s &quot;perfect filter&quot;<\/p>",
+              "width": 53,
+              "height": 58
+            }
+          },
+          "654ae3f7-cf58-48b4-882e-5b440c1f34ea": {
+            "type": "IconAndText",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_3b6a3428-0ce1-450c-b58a-87580516c677.png",
+              "title": "<p><strong>PuriBloc Technology<\/strong><\/p><p>GOpure&#x27;s innovative purification process introduces a revolutionary advanced ceramic technology<\/p>",
+              "width": 48,
+              "height": 24
+            }
+          },
+          "c557e3a0-cd47-4034-bb9f-a19ed3245702": {
+            "type": "IconAndText",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_1.png",
+              "title": "<p><strong>Works in Any Сontainer<\/strong><\/p><p>The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker<\/p>",
+              "width": 50,
+              "height": 30
+            }
+          },
+          "f8827bfa-c585-44ad-96c9-79c2dfbfbfc5": {
+            "type": "IconAndText",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_11e5e136-af2e-440a-9546-00c7dc9bb0e3.png",
+              "title": "<p><strong>Reduce Pollution<\/strong><\/p><p>Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles<\/p>",
+              "width": 61,
+              "height": 73
+            }
+          }
+        },
+        "block_order": [
+          "71b65c47-4747-4ef5-b9c8-fcb5f182c218",
+          "654ae3f7-cf58-48b4-882e-5b440c1f34ea",
+          "c557e3a0-cd47-4034-bb9f-a19ed3245702",
+          "f8827bfa-c585-44ad-96c9-79c2dfbfbfc5"
+        ],
+        "settings": {
+          "icon": "shopify:\/\/shop_images\/Icon.jpg",
+          "text": "<p>GOpure goes where other water purifiers and filters can’t go. Every faucet, sink, spigot, hose, drinking fountain, in every neighborhood, town, city, and country. Every drop of water from every potable source is now safe to drink everywhere you go with your GOpure Pod.<\/p>",
+          "heading": "Where there’s a tap, there’s purified water",
+          "image": "shopify:\/\/shop_images\/pod_1.png"
+        }
+      },
+      "faq": {
+        "type": "faq",
+        "blocks": {
+          "301ffa28-2715-4aa7-83e8-cba77a434c60": {
+            "type": "text",
+            "settings": {
+              "title": "What is inside the GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "d63eb0b2-ad53-46bb-ada4-0233ec14579f": {
+            "type": "text",
+            "settings": {
+              "title": "How do I use my GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "e52bab93-6f6e-4716-adc6-1ea7bebd144c": {
+            "type": "text",
+            "settings": {
+              "title": "How long does it take to purify my water?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "f8c58542-477e-467f-ace7-5359379dc6e7": {
+            "type": "text",
+            "settings": {
+              "title": "How long will my GOpure Pod last?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "a7db338d-833d-4b03-9c47-ce263589071b": {
+            "type": "text",
+            "settings": {
+              "title": "Where is it safe to use my GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "971a174d-393d-4721-8d60-fc62c5c7e867": {
+            "type": "text",
+            "settings": {
+              "title": "How do I know when it’s time to get a new GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "54e30a93-5d26-4c23-a49b-7d01ffd2ef69": {
+            "type": "text",
+            "settings": {
+              "title": "What else can my Pod do?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "301ffa28-2715-4aa7-83e8-cba77a434c60",
+          "d63eb0b2-ad53-46bb-ada4-0233ec14579f",
+          "e52bab93-6f6e-4716-adc6-1ea7bebd144c",
+          "f8c58542-477e-467f-ace7-5359379dc6e7",
+          "a7db338d-833d-4b03-9c47-ce263589071b",
+          "971a174d-393d-4721-8d60-fc62c5c7e867",
+          "54e30a93-5d26-4c23-a49b-7d01ffd2ef69"
+        ],
+        "settings": {
+          "title": "Frequently Asked Questions",
+          "image": "shopify:\/\/shop_images\/gopure-pod-water-filter-front-package_1200x1200_1.jpg"
+        }
+      },
+      "image-bar": {
+        "type": "image-bar",
+        "blocks": {
+          "fe8fef59-7b64-4ded-87e1-fc883eda8cfb": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_5cc7ff4c-62ca-4ad7-9963-5bf8b8388114.jpg",
+              "title": "Eliminates Fluoride"
+            }
+          },
+          "7ffdf79a-3a56-44fc-8147-c80bd939504c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-2.jpg",
+              "title": "Eliminates Lead"
+            }
+          },
+          "f5dca3a5-d243-4b3a-92f0-b15f3b55d510": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-3.jpg",
+              "title": "Eliminates Arsenic"
+            }
+          },
+          "c8f57059-b886-4f20-bd79-a0781229d1ca": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-4.jpg",
+              "title": "Eliminates PFOAs"
+            }
+          },
+          "4c4ad4ad-d7d7-4ca4-ad70-9ee5d18aa564": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-5.jpg",
+              "title": "Eliminates Microplastics"
+            }
+          },
+          "d73fc9fa-c679-4946-b4e4-b512082880d1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle-6.jpg",
+              "title": "Eliminates Chlorine"
+            }
+          }
+        },
+        "block_order": [
+          "fe8fef59-7b64-4ded-87e1-fc883eda8cfb",
+          "7ffdf79a-3a56-44fc-8147-c80bd939504c",
+          "f5dca3a5-d243-4b3a-92f0-b15f3b55d510",
+          "c8f57059-b886-4f20-bd79-a0781229d1ca",
+          "4c4ad4ad-d7d7-4ca4-ad70-9ee5d18aa564",
+          "d73fc9fa-c679-4946-b4e4-b512082880d1"
+        ],
+        "settings": {
+          "enable_top_separator": true
+        }
       }
     },
     "content_for_index": [
@@ -443,6 +812,8 @@
       "16153679533c88e9b4",
       "1614591887e99fa957",
       "16148582662c4d52bf",
+      "161649263130577a03",
+      "16165003181cd76676",
       "1615369276a9fcbfee",
       "1614594263644fcc39",
       "161434311727521ded"
