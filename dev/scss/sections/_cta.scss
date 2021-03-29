@@ -3,4 +3,8 @@
   @include media-breakpoint-up(sm) {
     padding: 70px 0 80px;
   }
+
+  &__description {
+    max-width: 798px;
+  }
 }

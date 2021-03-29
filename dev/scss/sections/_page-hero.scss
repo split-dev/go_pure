@@ -15,4 +15,14 @@
     transform: translate(-50%, 50%);
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
   }
+
+  &__description {
+    max-width: 623px;
+    strong {
+      @extend .text-15px;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -15,6 +15,12 @@
   <div class="container h-100">
     <div class="page-hero mx-auto flex-center flex-column h-100">
       <h1 class="mb-0 text-56px text-light text-center">{{ title }}</h1>
+
+      {%- if description != blank -%}
+        <div class="page-hero__description mx-auto mt-3 mt-md-4 text-center text-light text-20px">
+          {{ description }}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 

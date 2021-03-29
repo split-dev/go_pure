@@ -1,0 +1,39 @@
+<div class="container text-center">
+  {%- if section.settings.content != blank -%}
+  <div class="cta__description mx-auto mb-5 text-24px">
+    {{ section.settings.content }}
+  </div>
+  {%- endif -%}
+
+  {%- if section.settings.link_text != blank -%}
+  <a href="{{ section.settings.link_url }}"
+     class="btn btn-primary btn--no-arrow d-block d-sm-inline-block">
+    {{- section.settings.link_text -}}
+  </a>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "CTA",
+  "tag": "section",
+  "class": "cta",
+  "settings": [
+    {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ]
+}
+{% endschema %}

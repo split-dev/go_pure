@@ -54,3 +54,8 @@ button:focus {
 a:hover {
   color: rgba($secondary, 0.8);
 }
+.btn.btn--no-arrow {
+  &:after {
+    content: none;
+  }
+}
