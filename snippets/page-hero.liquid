@@ -2,6 +2,7 @@
 
   Usage:
     title
+    title_override - optional
     image
     mobile_image - optional
     description - optional
@@ -9,12 +10,20 @@
 
 {% endcomment %}
 
+{% liquid
+  if title_override != blank
+    assign text_hero = title_override
+  else
+    assign text_hero = title
+  endif
+%}
+
 <div class="lazyload bg-muted overlay bg-center"
      data-bgset="{%- render 'bgset', image: image -%}"
      {% if mobile_image %}data-bg-mobile="{{ mobile_image | img_url: 'master' }}{% endif %}">
   <div class="container h-100">
     <div class="page-hero mx-auto flex-center flex-column h-100">
-      <h1 class="mb-0 text-56px text-light text-center">{{ title }}</h1>
+      <h1 class="mb-0 text-56px text-light text-center">{{ text_hero }}</h1>
 
       {%- if description != blank -%}
         <div class="page-hero__description mx-auto mt-3 mt-md-4 text-center text-light text-20px">

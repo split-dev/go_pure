@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ 'how-it-works.min.css' | asset_url }}" type="text/css">
+
+{% section 'page-works-hero' %}
+{% section 'page-works-content' %}
+{% section 'page-works-features' %}
+{% section 'page-works-video' %}
+
+{% section 'faq-no-image' %}
+{% section 'social' %}
+
+<script src="{{ 'iframe-lightbox.min.js' | asset_url }}"></script>
+<link rel="stylesheet" href="{{ 'iframe-lightbox.min.css' | asset_url }}" as="style">
+<script>
+    [].forEach.call(document.getElementsByClassName("iframe-lightbox-link"), function (el) {
+        el.lightbox = new IframeLightbox(el);
+    });
+</script>

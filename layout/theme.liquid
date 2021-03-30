@@ -159,7 +159,7 @@
   {{ content_for_header }}
 </head>
 
-<body class="template-{{ request.page_type | handle }} load" style="opacity: 0;">
+<body class="template-{{ request.page_type | handle }} template-suffix-{{ template.suffix }} load" style="opacity: 0;">
 
   {% section 'header' %}
 

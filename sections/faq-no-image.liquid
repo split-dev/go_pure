@@ -1,0 +1,61 @@
+<div class="container">
+  <h2 class="mb-5 text-primary text-35px text-center">
+    {{- section.settings.title -}}
+  </h2>
+  <div class="faq__inner mx-auto">
+    <div class="accordion">
+      {%- for block in section.blocks -%}
+        <button class="accordion__btn d-block w-100 px-0 border-0 bg-transparent pr-5 text-left text-primary text-15px font-weight-semibold position-relative"
+                data-accordion>
+          {{- block.settings.title -}}
+        </button>
+        <div class="accordion__panel text-15px overflow-hidden">
+          {{- block.settings.content -}}
+        </div>
+
+        {%- unless forloop.last -%}
+          <hr class="m-0">
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ (No Image)",
+  "tag": "section",
+  "class": "faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Question & Answer",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ (No Image)",
+      "category": "New"
+    }
+  ]
+}
+{% endschema %}

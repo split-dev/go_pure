@@ -1,0 +1,116 @@
+<div class="container text-center">
+  {%- if section.settings.subheading != blank -%}
+    <h3 class="mb-2 text-15px">{{ section.settings.subheading | upcase }}</h3>
+  {%- endif -%}
+  <h2 class="mb-5 pb-md-4 text-35px">{{ section.settings.title }}</h2>
+
+  <div class="row mb-n5 justify-content-center text-left text-md-center">
+    {% for block in section.blocks %}
+      <div class="col-sm-6 col-lg-3">
+        <div class="works-features__block mb-5 d-flex d-md-block text-15px">
+          <div class="works-features__block__image mb-4 flex-shrink-0">
+            <img class="lazyload d-block mx-auto"
+                 data-src="{{ block.settings.image | img_url: '54x' }}"
+                 alt="{{ block.settings.image.alt }}">
+          </div>
+
+          <div class="works-features__block__content pl-3 pl-md-0">
+            {{ block.settings.content }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if section.settings.primary_link_text != blank %}
+    <div class="mt-5 pt-md-4">
+      <a href="{{ section.settings.primary_link_url }}"
+         class="btn btn-primary d-block d-sm-inline-block">
+        {{- section.settings.primary_link_text -}}
+      </a>
+    </div>
+  {% endif %}
+
+  {% if section.settings.secondary_link_text != blank %}
+    <div class="mt-4 pt-2">
+      <a href="{{ section.settings.secondary_link_url }}"
+         class="font-weight-semibold">
+        {{- section.settings.secondary_link_text -}}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  .works-features {
+    background-color: {{ section.settings.bg_color }};
+  }
+</style>
+
+{% schema %}
+{
+  "name": "How It Works | Features",
+  "class": "works-features",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Bg Color"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "url",
+      "id": "primary_link_url",
+      "label": "Primary Link URL"
+    },
+    {
+      "type": "text",
+      "id": "primary_link_text",
+      "label": "Primary Link Text"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link_url",
+      "label": "Secondary Link URL"
+    },
+    {
+      "type": "text",
+      "id": "secondary_link_text",
+      "label": "Secondary Link Text"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Single Feature",
+      "type": "text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+
+      ]
+    }
+  ]
+}
+{% endschema %}

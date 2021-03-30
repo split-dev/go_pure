@@ -1,30 +1,31 @@
 <div class="container">
-  <div class="about-content__grid">
+  <div class="page-content__grid">
     {%- for block in section.blocks -%}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 
       {% capture text %}
-        <div class="about-content__grid__item">
-          <h2 class="mb-4 text-25px">{{ block.settings.title }}</h2>
-          <div class="text-15px text-dark">
+        <div class="page-content__grid__item">
+          <h3 class="mb-2 text-15px">{{ block.settings.subheading }}</h3>
+          <h2 class="mb-3 text-25px">{{ block.settings.title }}</h2>
+          <div class="mb-lg-4 text-15px text-dark">
             {{ block.settings.content }}
           </div>
         </div>
       {% endcapture %}
 
       {% capture image %}
-      <div class="about-content__grid__item">
+      <div class="page-content__grid__item">
         <img class="lazyload d-block mx-auto mx-lg-0" data-src="{{ block.settings.image | img_url: '540x' }}" alt="#">
       </div>
       {% endcapture %}
 
       {% if thecycle == 'odd' %}
-        <div class="d-flex flex-column-reverse d-lg-block">
+        <div>
           {{ text }}
           {{ image }}
         </div>
       {% else %}
-        <div>
+        <div class="d-flex flex-column-reverse d-lg-block">
           {{ image }}
           {{ text }}
         </div>
@@ -36,14 +37,19 @@
 
 {% schema %}
 {
-  "name": "About Content",
+  "name": "Works Content",
   "tag": "section",
-  "class": "about-content",
+  "class": "page-content",
   "blocks": [
     {
       "name": "Content Block",
       "type": "text",
       "settings": [
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading"
+        },
         {
           "type": "text",
           "id": "title",

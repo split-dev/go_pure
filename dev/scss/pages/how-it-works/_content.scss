@@ -1,0 +1,12 @@
+.template-suffix-how-it-works {
+  .page-content__grid {
+    max-width: 1035px;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(lg) {
+      img {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.works-features {
+  padding: 80px 0;
+  @include media-breakpoint-up(md) {
+    padding: 112px 0;
+  }
+  &__block {
+    &__content {
+      @include media-breakpoint-down(sm) {
+        p {
+          margin-bottom: 7px;
+        }
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
