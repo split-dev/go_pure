@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="about-content__grid">
+    {%- for block in section.blocks -%}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+
+      {% capture text %}
+        <div class="about-content__grid__item">
+          <h2 class="mb-4 text-25px">{{ block.settings.title }}</h2>
+          <div class="text-15px text-dark">
+            {{ block.settings.content }}
+          </div>
+        </div>
+      {% endcapture %}
+
+      {% capture image %}
+      <div class="about-content__grid__item">
+        <img class="lazyload d-block mx-auto" data-src="{{ block.settings.image | img_url: '540x' }}" alt="#">
+      </div>
+      {% endcapture %}
+
+      {% if thecycle == 'odd' %}
+        <div class="d-flex flex-column-reverse d-lg-block">
+          {{ text }}
+          {{ image }}
+        </div>
+      {% else %}
+        <div>
+          {{ image }}
+          {{ text }}
+        </div>
+      {% endif %}
+
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Content",
+  "tag": "section",
+  "class": "about-content",
+  "blocks": [
+    {
+      "name": "Content Block",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
