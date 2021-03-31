@@ -1,38 +1,67 @@
 <div class="page-form__wrapper">
   <div class="container">
     <div class="page-form__inner mx-auto">
-
       <div class="form-vertical">
 
-        <h1 class="text-center">{{ 'customer.register.title' | t }}</h1>
+        <h1 class="text-center text-35px mb-5">{{ 'customer.register.title' | t }}</h1>
 
         {%- assign formId = 'RegisterForm' -%}
         {% form 'create_customer', id: formId, novalidate: 'novalidate' %}
           {% include 'form-status', form: form, form_id: formId %}
 
-          <label for="{{ formId }}-FirstName">{{ 'customer.register.first_name' | t }}</label>
-          <input type="text" name="customer[first_name]" id="{{ formId }}-FirstName" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocomplete="given-name">
+          <div class="form-group form-group__with-icon">
+            <span class="form-control__icon">
+              {% render 'icon-user' %}
+            </span>
 
-          <label for="{{ formId }}-LastName">{{ 'customer.register.last_name' | t }}</label>
-          <input type="text" name="customer[last_name]" id="{{ formId }}-LastName" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocomplete="family-name">
+            <input type="text"
+                   class="form-control"
+                   placeholder="First Name"
+                   name="customer[first_name]"
+                   id="{{ formId }}-FirstName"
+                   {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
+                   autocomplete="given-name">
+          </div>
 
-          <label for="{{ formId }}-email">{{ 'customer.register.email' | t }}</label>
-          <input
-            type="email"
-            name="customer[email]"
-            id="{{ formId }}-email"
-            class="{% if form.errors contains 'email' %} input--error{% endif %}"
-            {% if form.email %} value="{{ form.email }}"{% endif %}
-            autocorrect="off"
-            autocapitalize="off"
-            autocomplete="email"
-            aria-required="true"
-            {%- if form.errors contains 'email' -%}
-              class="input--error"
-              aria-invalid="true"
-              aria-describedby="{{ formId }}-email-error"
-            {%- endif -%}
-          >
+          <div class="form-group form-group__with-icon">
+            <span class="form-control__icon">
+              {% render 'icon-user' %}
+            </span>
+
+            <input type="text"
+                   class="form-control"
+                   name="customer[last_name]"
+                   placeholder="Last Name"
+                   id="{{ formId }}-LastName"
+                   {% if form.last_name %}value="{{ form.last_name }}"{% endif %}
+                   autocomplete="family-name">
+          </div>
+
+        <div class="form-group form-group__with-icon">
+            <span class="form-control__icon">
+              {% render 'icon-mail' %}
+            </span>
+            <input
+              type="email"
+              name="customer[email]"
+              id="{{ formId }}-email"
+              class="form-control {% if form.errors contains 'email' %} is-invalid{% endif %}"
+              {% if form.email %} value="{{ form.email }}"{% endif %}
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+              aria-required="true"
+              placeholder="Email"
+              {%- if form.errors contains 'email' -%}
+                aria-invalid="true"
+                aria-describedby="{{ formId }}-email-error"
+              {%- endif -%}
+            >
+          <div class="invalid-feedback pl-4 pt-1">
+            Please provide a valid email.
+          </div>
+        </div>
+
           {%- if form.errors contains 'email' -%}
             <span id="{{ formId }}-email-error" class="input-error-message">
               <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
@@ -41,19 +70,28 @@
             </span>
           {%- endif -%}
 
-          <label for="{{ formId }}-password">{{ 'customer.register.password' | t }}</label>
-          <input
-            type="password"
-            name="customer[password]"
-            id="{{ formId }}-password"
-            class="{% if form.errors contains 'password' %} input--error{% endif %}"
-            aria-required="true"
-            {%- if form.errors contains 'password' -%}
-              class="input--error"
-              aria-invalid="true"
-              aria-describedby="{{ formId }}-password-error"
-            {%- endif -%}
-          >
+        <div class="form-group form-group__with-icon">
+            <span class="form-control__icon">
+              {% render 'icon-lock' %}
+            </span>
+
+            <input
+              type="password"
+              name="customer[password]"
+              id="{{ formId }}-password"
+              placeholder="Password"
+              class="form-control {% if form.errors contains 'password' %} is-invalid{% endif %}"
+              aria-required="true"
+              {%- if form.errors contains 'password' -%}
+                aria-invalid="true"
+                aria-describedby="{{ formId }}-password-error"
+              {%- endif -%}
+            >
+          <div class="invalid-feedback pl-4 pt-1">
+            Please provide a valid password.
+          </div>
+        </div>
+
           {%- if form.errors contains 'password' -%}
             <span id="{{ formId}}-password-error" class="input-error-message">
               {% include 'icon-error' %}
@@ -61,8 +99,10 @@
             </span>
           {%- endif -%}
 
-          <p class="text-center">
-            <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn">
+          <p class="text-center mt-5 mb-0">
+            <button type="submit" class="btn btn-primary d-block btn--no-arrow w-100">
+              {{ 'customer.register.submit' | t }}
+            </button>
           </p>
 
         {% endform %}

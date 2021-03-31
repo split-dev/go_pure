@@ -9,7 +9,7 @@
     {% include 'form-status', form: form, form_id: formId, success_message: post_message %}
 {% endcomment %}
 {%- if form.posted_successfully? -%}
-  <p class="form-message form-message--success" tabindex="-1" data-form-status>
+  <p class="form-message text-center text-success" tabindex="-1" data-form-status>
     {{ success_message | default: 'contact.form.post_success' | t }}
   </p>
 {%- endif -%}
@@ -20,7 +20,7 @@
 {%- if form.errors -%}
 
   {%- if form.errors.translated_fields.size == 1 and form.errors.first == 'form' -%}
-    <p class="form-message" tabindex="-1" data-form-status>
+    <p class="form-message text-danger text-center" tabindex="-1" data-form-status>
       {{ form.errors.messages['form'] }}
     </p>
 
