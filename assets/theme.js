@@ -6480,8 +6480,8 @@ theme.customerTemplates = (function() {
    */
 
   function showRecoverPasswordForm() {
-    document.getElementById('RecoverPasswordForm').classList.remove('hide');
-    document.getElementById('CustomerLoginForm').classList.add('hide');
+    document.getElementById('RecoverPasswordForm').classList.remove('d-none');
+    document.getElementById('CustomerLoginForm').classList.add('d-none');
 
     if (this.recoverEmail.getAttribute('aria-invalid') === 'true') {
       this.recoverEmail.focus();
@@ -6489,8 +6489,8 @@ theme.customerTemplates = (function() {
   }
 
   function hideRecoverPasswordForm() {
-    document.getElementById('RecoverPasswordForm').classList.add('hide');
-    document.getElementById('CustomerLoginForm').classList.remove('hide');
+    document.getElementById('RecoverPasswordForm').classList.add('d-none');
+    document.getElementById('CustomerLoginForm').classList.remove('d-none');
   }
 
   /**
@@ -6508,7 +6508,7 @@ theme.customerTemplates = (function() {
 
     // show success message
     var resetSuccess = document.getElementById('ResetSuccess');
-    resetSuccess.classList.remove('hide');
+    resetSuccess.classList.remove('d-none');
     resetSuccess.focus();
   }
 
@@ -6558,7 +6558,7 @@ theme.customerTemplates = (function() {
         var isExpanded =
           newAddressFormButton.getAttribute('aria-expanded') === 'true';
 
-        newAddressForm.classList.toggle('hide');
+        newAddressForm.classList.toggle('d-none');
         newAddressFormButton.setAttribute('aria-expanded', !isExpanded);
         newAddressFormButton.focus();
       });
@@ -6571,7 +6571,7 @@ theme.customerTemplates = (function() {
         var editAddress = document.getElementById('EditAddress_' + formId);
         var isExpanded = editButton.getAttribute('aria-expanded') === 'true';
 
-        editAddress.classList.toggle('hide');
+        editAddress.classList.toggle('d-none');
         editButton.setAttribute('aria-expanded', !isExpanded);
         editButton.focus();
       });

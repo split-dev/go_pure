@@ -1,0 +1,19 @@
+.form-group {
+  &__with-icon {
+    position: relative;
+    .form-control {
+      padding-left: 68px;
+
+      &__icon {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+      }
+    }
+  }
+}
+.form-control {
+  &.is-invalid {
+    background-position: right 18px center;
+  }
+}

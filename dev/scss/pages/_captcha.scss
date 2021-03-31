@@ -1,0 +1,9 @@
+.shopify-challenge__container {
+  padding: 80px 15px;
+  @include media-breakpoint-up(md) {
+    padding: 100px 15px;
+  }
+}
+.shopify-challenge__button {
+  @extend .btn-primary, .btn--no-arrow, .mt-4;
+}

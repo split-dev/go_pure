@@ -54,6 +54,9 @@ button:focus {
 a:hover {
   color: rgba($secondary, 0.8);
 }
+.text-underline {
+  text-decoration: underline;
+}
 .btn.btn--no-arrow {
   &:after {
     content: none;

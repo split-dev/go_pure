@@ -82,6 +82,9 @@
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
     {% endif %}
   <link rel="stylesheet" href="{{ 'main.min.css' | asset_url }}" type="text/css">
+  {%- if request.page_type contains 'customers/' -%}
+    <link rel="stylesheet" href="{{ 'customers.min.css' | asset_url }}" type="text/css">
+  {%- endif -%}
 
   <style>
     {{ header_font_bold | font_face: font_display: 'swap' }}
