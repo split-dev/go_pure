@@ -1,4 +1,5 @@
-.shopify-challenge__container {
+.shopify-challenge__container,
+#manage-subscription-root {
   padding: 80px 15px;
   @include media-breakpoint-up(md) {
     padding: 100px 15px;

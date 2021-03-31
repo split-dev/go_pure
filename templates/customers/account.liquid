@@ -1,8 +1,38 @@
-<div class="page-width">
-  <div class="section-header text-center">
-    <h1>{{ 'customer.account.title' | t }}</h1>
-    {{ 'layout.customer.log_out' | t | customer_logout_link }}
+<section class="bg-primary text-light py-3">
+  <div class="container">
+    <div class="d-flex">
+      <div class="pr-4 border-right flex-shrink-0" style="border-color: rgba(255, 255, 255, 0.3)">
+        <h1 class="mb-1 text-20px text-light">{{ 'customer.account.title' | t }}</h1>
+        <a href="{{ routes.account_logout_url }}" class="text-light d-inline-flex align-items-center">
+          {% render 'icon-logout', class: 'mr-1' %}
+          {{ 'layout.customer.log_out' | t }}
+        </a>
+      </div>
+
+      <div class="flex-fill flex-center">
+        <a href="#" class="p-2 text-light text-15px font-weight-semibold">
+          Order History
+        </a>
+      </div>
+      <div class="flex-fill flex-center">
+        <a href="#" class="p-2 text-light text-15px font-weight-semibold">
+          Your Addresses
+        </a>
+      </div>
+      <div class="flex-fill flex-center">
+        <a href="/tools/checkout/front_end/login" class="p-2 text-light text-15px font-weight-semibold">
+          Manage Subscription
+        </a>
+      </div>
+    </div>
   </div>
+</section>
+
+<section class="account-body">
+
+</section>
+
+<div class="page-width d-none">
 
   <div class="grid myaccount">
     <div class="grid__item myaccount__order-history">
