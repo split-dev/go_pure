@@ -1,3 +1,22 @@
+.account-header {
+  &__link {
+    color: #d9d9d9;
+    transition: color 0.2s;
+    &:hover,
+    &.active {
+      color: #fff;
+    }
+  }
+}
 .account-body {
   min-height: calc(100vh - 200px);
+}
+.orders {
+  &__wrapper {
+    padding: 46px 0 82px;
+    max-width: 856px;
+    @include media-breakpoint-up(md) {
+      padding: 62px 0 140px;
+    }
+  }
 }

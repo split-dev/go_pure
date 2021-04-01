@@ -10,17 +10,17 @@
       </div>
 
       <div class="flex-fill flex-center">
-        <a href="#" class="p-2 text-light text-15px font-weight-semibold">
+        <a href="{{ routes.account_url }}" class="p-2 account-header__link active text-15px font-weight-semibold">
           Order History
         </a>
       </div>
       <div class="flex-fill flex-center">
-        <a href="#" class="p-2 text-light text-15px font-weight-semibold">
+        <a href="{{ routes.account_addresses_url }}" class="p-2 account-header__link text-15px font-weight-semibold">
           Your Addresses
         </a>
       </div>
       <div class="flex-fill flex-center">
-        <a href="/tools/checkout/front_end/login" class="p-2 text-light text-15px font-weight-semibold">
+        <a href="/tools/checkout/front_end/login" class="p-2 account-header__link text-15px font-weight-semibold">
           Manage Subscription
         </a>
       </div>
@@ -29,7 +29,52 @@
 </section>
 
 <section class="account-body">
+  <div class="container h-100">
+    <div class="orders__wrapper mx-auto h-100">
+      <h2 class="mb-4 text-35px">Your orders</h2>
 
+      {% paginate customer.orders by 20 %}
+        {% if customer.orders.size != 0 %}
+
+          <table class="responsive-table">
+            <thead>
+            <tr>
+              <th scope="col">{{ 'customer.orders.order_number' | t }}</th>
+              <th scope="col">{{ 'customer.orders.date' | t }}</th>
+              <th scope="col">{{ 'customer.orders.payment_status' | t }}</th>
+              <th scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
+              <th scope="col">{{ 'customer.orders.total' | t }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for order in customer.orders %}
+              <tr>
+                <th data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
+                  <a href="{{ order.customer_url }}" class="btn btn--secondary btn--small" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }}</a>
+                </th>
+                <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+
+        {% else %}
+
+          <p>{{ 'customer.orders.none' | t }}</p>
+
+        {% endif %}
+        {%- if paginate.pages > 1 -%}
+          {% include 'pagination', paginate: paginate %}
+        {%- endif -%}
+      {% endpaginate %}
+
+    </div>
+
+    <div class="addresses__wrapper h-100 d-none"></div>
+  </div>
 </section>
 
 <div class="page-width d-none">
