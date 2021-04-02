@@ -1,0 +1,37 @@
+{% render 'page-hero',
+  title: page.title,
+  image: section.settings.desktop_image,
+  description: section.settings.description,
+  mobile_image: section.settings.mobile_image,
+  scroll_btn: section.settings.scroll_btn %}
+
+{% schema %}
+{
+  "name": "Privacy Policy Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "info": "Optional"
+    },
+    {
+       "type": "checkbox",
+       "id": "scroll_btn",
+       "label": "Enable Scroll Button",
+       "default": false
+    }
+  ]
+}
+{% endschema %}
