@@ -1,5 +1,6 @@
 .page-theme {
   &__content {
+    overflow: hidden;
     padding: 82px 0 100px;
     @include media-breakpoint-down(xs) {
       padding: 80px 0 50px;
