@@ -78,13 +78,13 @@
     }
   </script>
 
-    {% if request.page_type == 'product' %}
+  {% if request.page_type == 'product' %}
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
-    {% endif %}
+  {% endif %}
+
   <link rel="stylesheet" href="{{ 'main.min.css' | asset_url }}" type="text/css">
   {%- if request.page_type contains 'customers/' -%}
     <link rel="stylesheet" href="{{ 'customers.min.css' | asset_url }}" type="text/css">
-    <script href="{{ 'customers.min.css' | asset_url }}"></script>
   {%- endif -%}
 
   <style>

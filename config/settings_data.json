@@ -365,7 +365,7 @@
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_6a9bde0b-2f97-4f7c-9067-a4597c9ffe92.png",
-              "title": "<p><strong>Earth Friendly<\/strong><\/p><p>GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature&#x27;s &quot;perfect filter&quot;<\/p>",
+              "title": "<p><strong>EARTH FRIENDLY<\/strong><\/p><p>GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature&#x27;s &quot;perfect filter&quot;<\/p>",
               "width": 53,
               "height": 58
             }
@@ -374,7 +374,7 @@
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_3b6a3428-0ce1-450c-b58a-87580516c677.png",
-              "title": "<p><strong>PuriBloc Technology<\/strong><\/p><p>GOpure&#x27;s innovative purification process introduces a revolutionary advanced ceramic technology<\/p>",
+              "title": "<p><strong>PURIBLOC TECHNOLOGY<\/strong><\/p><p>GOpure&#x27;s innovative purification process introduces a revolutionary advanced ceramic technology<\/p>",
               "width": 48,
               "height": 24
             }
@@ -383,7 +383,7 @@
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_1.png",
-              "title": "<p><strong>Works in Any Сontainer<\/strong><\/p><p>The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker<\/p>",
+              "title": "<p><strong>WORKS IN ANY CONTAINER<\/strong><\/p><p>The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker<\/p>",
               "width": 50,
               "height": 30
             }
@@ -392,7 +392,7 @@
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_11e5e136-af2e-440a-9546-00c7dc9bb0e3.png",
-              "title": "<p><strong>Reduce Pollution<\/strong><\/p><p>Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles<\/p>",
+              "title": "<p><strong>REDUCE POLLUTION<\/strong><\/p><p>Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles<\/p>",
               "width": 61,
               "height": 73
             }
@@ -804,6 +804,222 @@
         ],
         "settings": {
           "enable_top_separator": true
+        }
+      },
+      "page-about-hero": {
+        "type": "page-about-hero",
+        "settings": {
+          "desktop_image": "shopify:\/\/shop_images\/about-hero-mobile_034bb26f-9f2d-46e2-a613-a89df0185401.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/about-hero-desktop_848a67ee-eac0-46ec-bc6d-0c4706a2104f.jpg",
+          "description": "<p><strong>LABOR OF LOVE<\/strong><\/p><p>After two years of formulation refinements and lab testing, the most innovative water purification technology for personal daily use in over 50 years was born!<\/p>",
+          "scroll_btn": true
+        }
+      },
+      "page-about-cta": {
+        "type": "page-about-cta",
+        "settings": {
+          "content": "<p>We appreciate your business and want to ensure you are satisfied with your GOpure product! Please contact us with any questions you have about the product, or if we can help you in any way.<\/p>",
+          "link_text": "Contact Us",
+          "link_url": "shopify:\/\/pages\/contact-us"
+        }
+      },
+      "page-about-founder": {
+        "type": "page-about-founder",
+        "settings": {
+          "bg-color": "#f7f7f7",
+          "title": "About Our Founder",
+          "description": "<p>GOpure was introduced to the world in the USA through the guidance, creative vision and inspiration of Kent Atherton and his team. Kent has enjoyed great success as a senior media executive at CBS and DIRECTV, along with his vast experience as sports marketing entrepreneur and major event owner\/producer. He is now focused on contributing his leadership skills to launching consumer products that can improve people’s health and help sustain our environment.<\/p>",
+          "image_1": "shopify:\/\/shop_images\/image_16.jpg",
+          "image_2": "shopify:\/\/shop_images\/image_18.jpg"
+        }
+      },
+      "page-about-content": {
+        "type": "page-about-content",
+        "blocks": {
+          "28982884-9b62-4064-a115-1f5e1b192248": {
+            "type": "text",
+            "settings": {
+              "title": "Our Company",
+              "content": "<p>GOpure was launched by Bloc Enterprises, a specialized distribution &amp; marketing company introducing consumer products distinguished by innovation, technology and disruptive solutions to everyday problems that improve the health and well-being of people and pets. The company strives to practice sustainability principles in all operations and be a good steward of the earth.<\/p><p>Like many amazing innovations, the inspiration for the GOpure Pod happened the instant its inventor in Ireland was determined to find a better solution after removing many dozens of used plastic water bottles from his car, most over half full. He was ashamed and disgusted by this wasteful consumption and inefficiency so he sought out world-renowned microbiologist, Dr Ronald Russell at Trinity College in Dublin, to help realize his vision of introducing a portable water purifier for everyday use and eliminate the need for single use plastic water bottles.<\/p>",
+              "image": "shopify:\/\/shop_images\/photos_right.jpg"
+            }
+          },
+          "10259103-577a-495f-a8c7-2efd7b00061f": {
+            "type": "text",
+            "settings": {
+              "title": "About PuriBloc",
+              "content": "<p>PuriBloc is the innovative water purification, preservation technology inside GOpure, a portable, environmentally friendly Pod that keeps drinking water clean and safe, while also greatly improving taste. Within seconds, contaminants found in ordinary tap water are neutralized and the pH balance is optimized for healthy hydration. Unlike carbon water filters that only work once, PuriBloc technology works continuously through a natural process known as ionic exchange and keeps pure water fresh and great tasting for months.<\/p><p><\/p><p>The adsorptive power of GOpure’s advanced microporous ceramic core is mind-boggling due to the enormous surface area for its volume with which water can react. This high porosity surface area carries millions of negatively charged binding sites, which attract and adsorb heavy metals along with other chemical or organic impurities, including bacteria.<\/p><p><\/p><p>The GOpure Pod is changing the way the world drinks water by continually purifying and enhancing your drinking water on the go while also helping to save our planet: using one GOpure Pod in a personal re-usable bottle replaces 2,000 single-use water bottles with zero plastic waste.<\/p>",
+              "image": "shopify:\/\/shop_images\/photos_left.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "28982884-9b62-4064-a115-1f5e1b192248",
+          "10259103-577a-495f-a8c7-2efd7b00061f"
+        ],
+        "settings": {}
+      },
+      "page-works-hero": {
+        "type": "page-works-hero",
+        "settings": {
+          "desktop_image": "shopify:\/\/shop_images\/Rectangle_c310290b-cb80-4a8a-a3e4-56b24588a68b.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/Rectangle-2_25af3640-3088-4be1-881c-101f517f92d1.jpg",
+          "heading_override": "How Diatomaceous Earth & The GOpure Pod Work",
+          "description": "",
+          "scroll_btn": true
+        }
+      },
+      "faq-no-image": {
+        "type": "faq-no-image",
+        "blocks": {
+          "95ee0c80-d67d-4ada-8553-7530bcb490b2": {
+            "type": "text",
+            "settings": {
+              "title": "What is inside the GOpure Pod?",
+              "content": "<p>The power within every Pod comes from an unlimited and renewable resource that has been trusted by Mother Nature for over 20 million years. She calls it <a href=\"#\" title=\"#\" target=\"_blank\">diatomaceous earth (DE)<\/a>. We call it revolutionary technology. Every Pod features an “advanced ceramic” core made from DE and trace silver that performs like a magnet to continuously attract, bind and adsorb every heavy metal, inorganic, bacteria, impure chemicals and more.<\/p>"
+            }
+          },
+          "9bb3879d-32c2-487d-b45d-67ff5ac3ddf9": {
+            "type": "text",
+            "settings": {
+              "title": "How do I use my GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "0ab30630-b4ee-4539-8646-8dea6691a08d": {
+            "type": "text",
+            "settings": {
+              "title": "How long does it take to purify my water?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "aab91840-00eb-428d-b9e9-827b35e8ff57": {
+            "type": "text",
+            "settings": {
+              "title": "How long will my GOpure Pod last?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "a47d31bf-26ef-4b55-8f0f-fbecc7e0e800": {
+            "type": "text",
+            "settings": {
+              "title": "Where is it safe to use my GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "ff792674-7704-4dac-b4e7-ae18a2d6a517": {
+            "type": "text",
+            "settings": {
+              "title": "How do I know when it’s time to get a new GOpure Pod?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          },
+          "52d6c7fa-e634-42af-957e-dc17d770866e": {
+            "type": "text",
+            "settings": {
+              "title": "What else can my Pod do?",
+              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "95ee0c80-d67d-4ada-8553-7530bcb490b2",
+          "9bb3879d-32c2-487d-b45d-67ff5ac3ddf9",
+          "0ab30630-b4ee-4539-8646-8dea6691a08d",
+          "aab91840-00eb-428d-b9e9-827b35e8ff57",
+          "a47d31bf-26ef-4b55-8f0f-fbecc7e0e800",
+          "ff792674-7704-4dac-b4e7-ae18a2d6a517",
+          "52d6c7fa-e634-42af-957e-dc17d770866e"
+        ],
+        "settings": {
+          "title": "Frequently Asked Questions"
+        }
+      },
+      "page-works-content": {
+        "type": "page-works-content",
+        "blocks": {
+          "25c41ef2-9866-4480-96c6-ddd4680ef336": {
+            "type": "text",
+            "settings": {
+              "subheading": "POWERFUL FILTRATION",
+              "title": "Achieve the Perfect Balance",
+              "content": "<p>When you drop the GOpure Pod into tap water, millions of microscopic pores go to work. The ceramic pod acts as a magnet to attract impurities, while releasing valuable trace minerals.<\/p>",
+              "image": "shopify:\/\/shop_images\/image_19_21b81d72-d44c-4670-9e38-f159def205d0.jpg"
+            }
+          },
+          "d38f0928-ed5d-4900-a8a2-b44be0e4e5e7": {
+            "type": "text",
+            "settings": {
+              "subheading": "NATURE'S FILTER",
+              "title": "Positively Charged Material",
+              "content": "<p>This filtration power comes from an unlimited, renewable resource that has served as “nature’s filter” for 20 million years: diatomaceous earth. Because diatomaceous earth is a natural, positively charged material, it attracts and neutralizes contaminants present in the water.<\/p>",
+              "image": "shopify:\/\/shop_images\/image_20_47316604-9ab5-4225-ba1a-778465a2a5e5.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "25c41ef2-9866-4480-96c6-ddd4680ef336",
+          "d38f0928-ed5d-4900-a8a2-b44be0e4e5e7"
+        ],
+        "settings": {}
+      },
+      "page-works-features": {
+        "type": "page-works-features",
+        "blocks": {
+          "1b7af674-c476-4b70-8441-f1a5cf678bfb": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/planet-earth_1.png",
+              "content": "<p><strong>EARTH FRIENDLY<\/strong><\/p><p>GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature&#x27;s &quot;perfect filter&quot;.<\/p>"
+            }
+          },
+          "85bb2381-625e-4be0-af58-da2776da8155": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/clean.png",
+              "content": "<p><strong>PURIBLOC TECHNOLOGY<\/strong><\/p><p>GOpure&#x27;s innovative purification process introduces a revolutionary advanced ceramic technology.<\/p>"
+            }
+          },
+          "1e2af8f2-bc96-4591-843e-f2cac4a916b1": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/plastic.png",
+              "content": "<p><strong>WORKS IN ANY СONTAINER<\/strong><\/p><p>The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker<\/p>"
+            }
+          },
+          "41b143fb-263c-409b-945d-454b41598de3": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/whales.png",
+              "content": "<p><strong>REDUCE POLLUTION<\/strong><\/p><p>Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1b7af674-c476-4b70-8441-f1a5cf678bfb",
+          "85bb2381-625e-4be0-af58-da2776da8155",
+          "1e2af8f2-bc96-4591-843e-f2cac4a916b1",
+          "41b143fb-263c-409b-945d-454b41598de3"
+        ],
+        "settings": {
+          "bg_color": "#fafafa",
+          "subheading": "POWERFUL FILTRATION",
+          "title": "Drop In, Drink Up.",
+          "primary_link_url": "shopify:\/\/products\/gopure-pod-water-purifier",
+          "primary_link_text": "Shop Now",
+          "secondary_link_url": "#",
+          "secondary_link_text": "See It In Action"
+        }
+      },
+      "page-works-video": {
+        "type": "page-works-video",
+        "settings": {
+          "subheading": "SAVE OVER 2000 PLASTIC BOTTLES",
+          "title": "Football Fields of Lasting Power",
+          "content": "<p>At the heart of the GOpure Pod is an advanced ceramic, which has a doubly porous structure by virtue of its composition and design. This creates an enormous exposed filtering surface area, equivalent to six football fields. By physical movement, convection currents and Brownian motion, the water remains in ongoing contact with the core, so the pod purifies continuously for up to six months.<\/p><p><\/p><p>Each pod can purify, protect and preserve up to 264 gallons of water, which is the equivalent of 2,000 refills of a standard size reusable water bottle.<\/p><p>A silver element within the GOpure Pod maintains the hygiene of the ceramic over the course of its usage.<\/p><p>Simply drop the GOpure Pod into any water container — your water bottle, coffee maker, jug or pitcher — to begin the purification process.<\/p>",
+          "video_url": "https:\/\/www.youtube.com\/embed\/KK9bwTlAvgo?autoplay=1",
+          "poster_desktop": "shopify:\/\/shop_images\/image_21-2.jpg",
+          "poster_mobile": "shopify:\/\/shop_images\/image_21.jpg"
         }
       }
     },
