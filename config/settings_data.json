@@ -29,13 +29,13 @@
           "db23e760-8ee5-4afb-9d8c-51ffefb8f8ff": {
             "type": "menu",
             "settings": {
-              "menu": "company"
+              "menu": "company-new"
             }
           },
           "34e61fbd-5252-4a5a-ba5f-04eb662323b3": {
             "type": "menu",
             "settings": {
-              "menu": "account"
+              "menu": "account-new"
             }
           },
           "14029d78-a14c-49ad-a0cc-c31ef3e3e69d": {
@@ -1020,6 +1020,35 @@
           "video_url": "https:\/\/www.youtube.com\/embed\/KK9bwTlAvgo?autoplay=1",
           "poster_desktop": "shopify:\/\/shop_images\/image_21-2.jpg",
           "poster_mobile": "shopify:\/\/shop_images\/image_21.jpg"
+        }
+      },
+      "page-privacy-hero": {
+        "type": "page-privacy-hero",
+        "settings": {
+          "desktop_image": "shopify:\/\/shop_images\/image_31_220c4e00-fddb-4dcc-9185-4916e0f1d859.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/image_32.jpg",
+          "description": "",
+          "scroll_btn": true
+        }
+      },
+      "page-store-locator-hero": {
+        "type": "page-store-locator-hero",
+        "settings": {
+          "desktop_image": "shopify:\/\/shop_images\/image_31_62d6256f-a74a-480c-92fa-40cb2f1d3572.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/image_32_16772f9c-55f2-4969-9089-1b0027df3a95.jpg",
+          "heading_override": "Store Locator",
+          "description": "",
+          "scroll_btn": true
+        }
+      },
+      "page-shipping-hero": {
+        "type": "page-shipping-hero",
+        "settings": {
+          "desktop_image": "shopify:\/\/shop_images\/image_31_a61c75c3-3c71-41c2-bff4-156f8300bd2a.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/image_31_de513a7e-8523-4aa6-91ca-acc68ee3482e.jpg",
+          "heading_override": "Shipping and Returns",
+          "description": "",
+          "scroll_btn": true
         }
       }
     },

@@ -1,5 +1,6 @@
 {% render 'page-hero',
   title: page.title,
+  title_override: section.settings.heading_override,
   image: section.settings.desktop_image,
   description: section.settings.description,
   mobile_image: section.settings.mobile_image,
@@ -7,7 +8,7 @@
 
 {% schema %}
 {
-  "name": "Shipping Hero",
+  "name": "Shipping | Hero",
   "tag": "section",
   "settings": [
     {
@@ -19,6 +20,12 @@
       "type": "image_picker",
       "id": "mobile_image",
       "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_override",
+      "label": "Heading Override",
+      "info": "Optional"
     },
     {
       "type": "richtext",
