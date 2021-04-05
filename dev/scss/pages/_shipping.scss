@@ -1,0 +1,11 @@
+.page-shipping {
+  &__content {
+    padding: 80px 0 100px;
+    @include media-breakpoint-down(xs) {
+      padding: 80px 0 65px;
+    }
+    p {
+      @include text-15px;
+    }
+  }
+}

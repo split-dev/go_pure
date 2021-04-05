@@ -1,0 +1,100 @@
+.page-store-locator {
+  &__content {
+    padding: 82px 0 110px;
+    @include media-breakpoint-down(xs) {
+      padding: 80px 0 80px;
+    }
+    .stockist-search-field {
+      height: 50px !important;
+      border-bottom-left-radius: 43px;
+      border-top-left-radius: 43px;
+      border: 1px solid $info !important;
+      padding: 0 15px 0 24px !important;
+      color: $body-color !important;
+      &::placeholder {
+        color: $body-color !important;
+      }
+    }
+    .stockist-search-button {
+      button {
+        width: 70px !important;
+        height: 50px !important;
+        border-bottom-right-radius: 43px !important;
+        border-top-right-radius: 43px !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+        margin-left: 0 !important;
+        background-color: $info !important;
+        &:hover {
+          background-color: #0093bf !important;
+        }
+      }
+    }
+    .stockist-icon {
+      color: $info;
+    }
+    .stockist-icon-search {
+      color: #fff !important;
+    }
+    .stockist-result.stockist-list-result.stockist-selected {
+      border-left-color: $info !important;
+    }
+    .stockist-widget {
+      @include media-breakpoint-down(sm) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .stockist-map {
+      left: 410px !important;
+      @include media-breakpoint-down(md) {
+        left: 340px !important;
+      }
+      @include media-breakpoint-down(sm) {
+        order: 3;
+      }
+    }
+    .stockist-horizontal {
+      @include media-breakpoint-down(sm) {
+        order: 2;
+        margin-bottom: 40px !important;
+      }
+    }
+    .stockist-side-panel {
+      width: 380px !important;
+      @include media-breakpoint-down(md) {
+        width: 320px !important;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100% !important;
+        height: 500px;
+        overflow: scroll;
+      }
+    }
+    .stockist-search-form {
+      margin-bottom: 36px !important;
+      @include media-breakpoint-down(sm) {
+        order: 1;
+      }
+    }
+    .stockist-result-name {
+      color: $primary;
+      padding-left: 46px !important;
+    }
+    .stockist-result-address,
+    .stockist-result-details {
+      padding-left: 46px !important;
+    }
+    .stockist-result-distance {
+      width: 40px !important;
+      top: 23px !important;
+    }
+    .stockist-powered-by-link {
+      display: none !important;
+    }
+    .stockist-list-result {
+      border-top: 1px solid #eaeaea !important;
+      padding: 24px 0 !important;
+    }
+  }
+}
