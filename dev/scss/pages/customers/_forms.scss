@@ -17,3 +17,12 @@
     background-position: right 18px center;
   }
 }
+.form-group {
+  label {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  select {
+    appearance:none;
+  }
+}

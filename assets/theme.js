@@ -6571,6 +6571,11 @@ theme.customerTemplates = (function() {
         var editAddress = document.getElementById('EditAddress_' + formId);
         var isExpanded = editButton.getAttribute('aria-expanded') === 'true';
 
+        newAddressForm.classList.toggle('d-none');
+        newAddressFormButton.setAttribute('aria-expanded', !isExpanded);
+        newAddressFormButton.focus();
+        newAddressFormButton.classList.toggle('d-none');
+
         editAddress.classList.toggle('d-none');
         editButton.setAttribute('aria-expanded', !isExpanded);
         editButton.focus();
