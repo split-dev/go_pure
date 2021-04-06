@@ -25,4 +25,28 @@
       margin-bottom: 0;
     }
   }
+  &__label {
+    background-color: $info;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 48px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+  }
+}
+.template-blog {
+  .page-hero {
+    min-height: 510px;
+    max-width: 530px;
+    &__link {
+      &:hover {
+        svg {
+          path {
+            stroke: #d9d9d9 !important;
+          }
+        }
+      }
+    }
+  }
 }
