@@ -22,6 +22,10 @@
     tabBtn.forEach((btn) => {
        btn.addEventListener('click', (e) => {
            e.preventDefault();
+
+           if (window.innerWidth < 767 && btn.hasAttribute('data-dropdown-trigger-mobile'))
+               return;
+
            resetTabs();
            let tabSelector = document.querySelector(`[data-tab=${btn.dataset.tabTrigger}]`);
            tabSelector.classList.remove('d-none');

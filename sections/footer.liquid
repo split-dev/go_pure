@@ -37,19 +37,29 @@
 
         {%- if block.type == 'newsletter' -%}
           <div class="d-flex flex-column h-100">
-            <p class="mb-4 text-15px font-weight-bold text-light text-uppercase pt-5 mt-n2 pt-lg-0">
+            <p class="mb-4 text-15px font-weight-bold text-light text-uppercase pt-5 mt-n2 pt-lg-0 mt-lg-0">
               {{- block.settings.text -}}
             </p>
 
-            {% form 'contact', class: 'form form--contact' %}
-              <input type="text" name="contact[tags]" value="Subscribed" hidden>
-
+            {% form 'customer', novalidate: 'novalidate', class: 'form form--contact' %}
+              <input type="hidden" name="contact[tags]" value="Subscribed">
+              <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="d-flex">
                 <input class="form__input w-100"
                        type="email"
                        name="contact[email]"
-                       placeholder="Your email">
+                       aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+                       aria-required="true"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Your email"
+                      {% if form.errors %}
+                        aria-invalid="true"
+                        aria-describedby="{{ formId }}-email-error"
+                      {% endif %}
+                       required>
                 <button type="submit"
+                        name="commit"
                         class="form__submit">Join</button>
               </div>
             {% endform %}
