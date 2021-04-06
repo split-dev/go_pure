@@ -1,40 +1,50 @@
-{%- style -%}
-  {% assign cart_popup_box_shadow = settings.color_borders | color_modify: 'alpha', 0.5 %}
+<div class="cart-popup-wrapper position-fixed d-flex w-100 justify-content-end cart-popup-wrapper--hidden critical-hidden" role="dialog" aria-modal="true" aria-labelledby="CartPopupHeading" data-cart-popup-wrapper>
+  <div class="cart-popup p-0" data-cart-popup tabindex="-1">
 
-  .cart-popup {
-    box-shadow: 1px 1px 10px 2px {{ cart_popup_box_shadow }};
-  }
-{%- endstyle -%}
-
-<div class="cart-popup-wrapper cart-popup-wrapper--hidden critical-hidden" role="dialog" aria-modal="true" aria-labelledby="CartPopupHeading" data-cart-popup-wrapper>
-  <div class="cart-popup" data-cart-popup tabindex="-1">
-    <div class="cart-popup__header">
-      <h2 id="CartPopupHeading" class="cart-popup__heading">{{ 'cart.popup.added_to_cart' | t }}</h2>
-      <button class="cart-popup__close" aria-label="{{ 'general.accessibility.close_modal' | t }}" data-cart-popup-close>{% include 'icon-close' %}</button>
-    </div>
-    <div class="cart-popup-item">
-      <div class="cart-popup-item__image-wrapper hide" data-cart-popup-image-wrapper data-image-loading-animation></div>
-      <div class="cart-popup-item__description">
-        <div>
-          <h3 class="cart-popup-item__title" data-cart-popup-title></h3>
-          <ul class="product-details" aria-label="{{ 'cart.popup.product_details' | t }}" data-cart-popup-product-details></ul>
-        </div>
-        <div class="cart-popup-item__quantity">
-          <span class="visually-hidden" data-cart-popup-quantity-label></span>
-          <span aria-hidden="true">{{ 'cart.popup.quantity' | t }}:</span>
-          <span aria-hidden="true" data-cart-popup-quantity></span>
-        </div>
-      </div>
-    </div>
-
-    <a href="{{ routes.cart_url }}" class="cart-popup__cta-link btn btn--secondary-accent">
-      {{ 'products.product.view_cart' | t }} (<span data-cart-popup-cart-quantity></span>)
-    </a>
-
-    <div class="cart-popup__dismiss">
-      <button class="cart-popup__dismiss-button text-link text-link--accent" data-cart-popup-dismiss>
-        {{ 'cart.general.continue_shopping' | t }}
+    <div class="cart-popup__header d-flex align-items-center justify-content-between">
+      <h2 id="CartPopupHeading" class="cart-popup__heading mb-0 text-20px text-secondary">Shopping Cart</h2>
+      <button class="cart-popup__close border-0 bg-transparent text-primary" aria-label="{{ 'general.accessibility.close_modal' | t }}" data-cart-popup-close>
+        {% render 'icon-close' %}
       </button>
     </div>
+
+    <form action="{{ routes.cart_url }}" method="post" novalidate class="cart d-flex flex-column">
+      {%- for item in cart.items -%}
+      <div class="cart-popup-item" data-cart-item data-cart-item-key="{{ item.key }}" data-cart-item-url="{{ item.url }}" data-cart-item-title="{{ item.title }}" data-cart-item-index="{{ forloop.index }}" data-cart-item-quantity="{{ item.quantity }}">
+        <div class="cart-popup-item__image-wrapper" data-cart-popup-image-wrapper>
+          <img class="cart__image lazyload {% if item.image == null %} d-none{% endif %}" data-src="{{ item | img_url: '102x102' }}" alt="{{ item.image.alt | escape }}" data-cart-item-image>
+        </div>
+        <div class="cart-popup-item__description">
+          <div>
+            <h3 class="cart-popup-item__title" data-cart-popup-title>
+              {{ item.product.title }}
+            </h3>
+            <ul class="product-details" aria-label="{{ 'cart.popup.product_details' | t }}" data-cart-popup-product-details></ul>
+          </div>
+          <div class="cart-popup-item__quantity">
+            <span class="visually-hidden" data-cart-popup-quantity-label></span>
+            <span aria-hidden="true">{{ 'cart.popup.quantity' | t }}:</span>
+            <span aria-hidden="true" data-cart-popup-quantity></span>
+          </div>
+          <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="text-link text-link--accent" aria-label="{{ 'cart.label.remove' | t: product: item.title }}" data-cart-remove data-role="product-remove">{{ 'cart.general.remove' | t }}</a>
+        </div>
+      </div>
+      {% endfor %}
+
+      <a href="{{ routes.cart_url }}" class="cart-popup__cta-link btn btn--secondary-accent">
+        {{ 'products.product.view_cart' | t }} (<span data-cart-popup-cart-quantity></span>)
+      </a>
+
+      <div class="cart-popup__footer mt-auto">
+        <div class="cart-popup__subtotal mb-4 d-flex align-items-center justify-content-between">
+          <h3 class="mb-0 text-20px text-primary">Subtotal</h3>
+          <h3 class="mb-0 text-20px text-primary" data-cart-subtotal>{{ cart.total_price | money_without_trailing_zeros }}</h3>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 mb-4">Checkout</button>
+        <p class="mb-0 text-11px text-body text-center">
+          Taxes and shipping calculated at checkout
+        </p>
+      </div>
+    </form>
   </div>
 </div>

@@ -4,6 +4,9 @@ page.body = document.body;
 page.header = document.querySelector('.header');
 page.burger = document.querySelector('[data-menu-toggle]');
 page.mobMenu = document.querySelector('[data-mob-menu]');
+page.cartToggle = document.querySelector('[data-cart-popup-toggle]');
+page.cartClose = document.querySelector('[data-cart-popup-close]');
+page.cartWrapper = document.querySelector('[data-cart-popup-wrapper]');
 
 //Lazyload page
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,6 +23,16 @@ page.burger.addEventListener('click', () => {
         .forEach((icon) => {
             icon.classList.toggle('d-none');
         });
+});
+
+// Slide Cart
+page.cartToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    page.cartWrapper.classList.toggle('cart-popup-wrapper--hidden');
+});
+page.cartClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    page.cartWrapper.classList.add('cart-popup-wrapper--hidden');
 });
 
 //* Sections

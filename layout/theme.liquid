@@ -78,10 +78,9 @@
     }
   </script>
 
-  {% if request.page_type == 'product' %}
+  {% if request.page_type == 'cart' %}
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
   {% endif %}
-
   <link rel="stylesheet" href="{{ 'main.min.css' | asset_url }}" type="text/css">
   {%- if request.page_type contains 'customers/' -%}
     <link rel="stylesheet" href="{{ 'customers.min.css' | asset_url }}" type="text/css">
@@ -174,15 +173,13 @@
 
   {% section 'footer' %}
 
-  {% comment %}
-    {%- if settings.enable_ajax -%}
-      {% include 'cart-popup' %}
-    {%- endif -%}
-    <ul hidden>
-      <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
-      <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
-    </ul>
-  {% endcomment %}
+
+  {% render 'cart-popup' %}
+
+  <ul hidden>
+    <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+    <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+  </ul>
 
   {%- render 'scripts' -%}
 </body>

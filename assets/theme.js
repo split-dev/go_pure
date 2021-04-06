@@ -7953,6 +7953,7 @@ theme.Product = (function() {
       cartCountBubble: '[data-cart-count-bubble]',
       cartPopup: '[data-cart-popup]',
       cartPopupCartQuantity: '[data-cart-popup-cart-quantity]',
+      cartPopupOpen: '[data-cart-drawer]',
       cartPopupClose: '[data-cart-popup-close]',
       cartPopupDismiss: '[data-cart-popup-dismiss]',
       cartPopupImage: '[data-cart-popup-image]',
@@ -8043,6 +8044,8 @@ theme.Product = (function() {
       this.selectors.imageZoomWrapper
     );
 
+    // this.initCart();
+
     // Stop parsing if we don't have the product json script tag when loading
     // section in the Theme Editor
     var productJson = document.getElementById('ProductJson-' + sectionId);
@@ -8089,6 +8092,25 @@ theme.Product = (function() {
   }
 
   Product.prototype = Object.assign({}, Product.prototype, {
+    // initCart: function() {
+    //   var thisProduct = this;
+    //
+    //   fetch('/cart.js')
+    //       .then(function(response) {
+    //         return response.json();
+    //       })
+    //       .then(function(json) {
+    //         json.items.map(function (item) {
+    //           thisProduct._setupCartPopup(item);
+    //         });
+    //
+    //         thisProduct._setCartQuantity(json.item_count);
+    //       })
+    //       .catch(function(error) {
+    //         console.log(error);
+    //       });
+    // },
+
     _stringOverrides: function() {
       theme.productStrings = theme.productStrings || {};
       theme.strings = Object.assign({}, theme.strings, theme.productStrings);
@@ -8321,7 +8343,7 @@ theme.Product = (function() {
             throw error;
           }
           self._hideErrorMessage();
-          self._setupCartPopup(json);
+          self._showCartPopup();
         })
         .catch(function(error) {
           self.previouslyFocusedElement.focus();
@@ -8402,6 +8424,9 @@ theme.Product = (function() {
       this.cartPopupQuantityLabel =
         this.cartPopupQuantityLabel ||
         document.querySelector(this.selectors.cartPopupQuantityLabel);
+      this.cartPopupOpen =
+          this.cartPopupOpen ||
+          document.querySelector(this.selectors.cartPopupOpen);
       this.cartPopupClose =
         this.cartPopupClose ||
         document.querySelector(this.selectors.cartPopupClose);
@@ -8442,17 +8467,14 @@ theme.Product = (function() {
         selling_plan_name
       );
 
-      fetch('/cart.js', { credentials: 'same-origin' })
+      fetch('/cart.js')
         .then(function(response) {
           return response.json();
         })
         .then(function(cart) {
           self._setCartQuantity(cart.item_count);
-          self._setCartCountBubble(cart.item_count);
-          self._showCartPopup();
         })
         .catch(function(error) {
-          // eslint-disable-next-line no-console
           console.log(error);
         });
     },
@@ -8461,12 +8483,17 @@ theme.Product = (function() {
       this.eventHandlers.cartPopupWrapperKeyupHandler = this._cartPopupWrapperKeyupHandler.bind(
         this
       );
+      this.eventHandlers.openCartPopup = this._showCartPopup.bind(this);
       this.eventHandlers.hideCartPopup = this._hideCartPopup.bind(this);
       this.eventHandlers.onBodyClick = this._onBodyClick.bind(this);
 
       this.cartPopupWrapper.addEventListener(
         'keyup',
         this.eventHandlers.cartPopupWrapperKeyupHandler
+      );
+      this.cartPopupOpen.addEventListener(
+          'click',
+          this.eventHandlers.openCartPopup
       );
       this.cartPopupClose.addEventListener(
         'click',
@@ -8476,7 +8503,6 @@ theme.Product = (function() {
         'click',
         this.eventHandlers.hideCartPopup
       );
-      document.body.addEventListener('click', this.eventHandlers.onBodyClick);
     },
 
     _cartPopupWrapperKeyupHandler: function(event) {
@@ -8626,7 +8652,11 @@ theme.Product = (function() {
       this.cartCount.textContent = quantity;
     },
 
-    _showCartPopup: function() {
+    _showCartPopup: function(e) {
+      if (e !== undefined) {
+        e.preventDefault();
+      }
+
       theme.Helpers.prepareTransition(this.cartPopupWrapper);
 
       this.cartPopupWrapper.classList.remove(
@@ -8646,40 +8676,12 @@ theme.Product = (function() {
       theme.Helpers.prepareTransition(this.cartPopupWrapper);
       this.cartPopupWrapper.classList.add(this.classes.cartPopupWrapperHidden);
 
-      var cartPopupImage = document.querySelector(
-        this.selectors.cartPopupImage
-      );
-      if (cartPopupImage) {
-        cartPopupImage.remove();
-      }
-      this.cartPopupImagePlaceholder.setAttribute(
-        'data-image-loading-animation',
-        ''
-      );
-
       slate.a11y.removeTrapFocus({
         container: this.cartPopupWrapper,
         namespace: 'cartPopupFocus'
       });
 
       if (setFocus) this.previouslyFocusedElement.focus();
-
-      this.cartPopupWrapper.removeEventListener(
-        'keyup',
-        this.eventHandlers.cartPopupWrapperKeyupHandler
-      );
-      this.cartPopupClose.removeEventListener(
-        'click',
-        this.eventHandlers.hideCartPopup
-      );
-      this.cartPopupDismiss.removeEventListener(
-        'click',
-        this.eventHandlers.hideCartPopup
-      );
-      document.body.removeEventListener(
-        'click',
-        this.eventHandlers.onBodyClick
-      );
     },
 
     _onBodyClick: function(event) {
