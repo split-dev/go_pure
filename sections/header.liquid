@@ -1,5 +1,12 @@
 {%- if section.settings.enable_bar -%}
-  {% style %}
+  <div class="header__bar bg-secondary text-light position-relative">
+    <div class="container">
+      <p class="mb-0 text-15px text-light text-center">
+        {{- section.settings.bar_text -}}
+      </p>
+    </div>
+  </div>
+    {% style %}
     .header {
       top: -31px;
     }
@@ -9,13 +16,6 @@
       }
     }
   {% endstyle %}
-  <div class="header__bar bg-secondary text-light position-relative">
-    <div class="container">
-      <p class="mb-0 text-15px text-light text-center">
-        {{- section.settings.bar_text -}}
-      </p>
-    </div>
-  </div>
 {%- endif -%}
 
 {%- assign menu = linklists[section.settings.menu].links -%}
