@@ -887,7 +887,7 @@ slate.Variants = (function() {
 })();
 
 this.Shopify = this.Shopify || {};
-this.Shopify.theme = this.Shopify.theme || {};
+this.Shopify.theme = this.Shopify.Stheme || {};
 this.Shopify.theme.PredictiveSearch = (function() {
   'use strict';
 
@@ -8575,7 +8575,7 @@ theme.Product = (function() {
       variantOptions.forEach(function(variantOption) {
         variantOptionListHTML =
           variantOptionListHTML +
-          '<li class="product-details__item product-details__item--variant-option">' +
+          '<li>' +
           variantOption.name +
           ': ' +
           variantOption.value +
@@ -8649,7 +8649,7 @@ theme.Product = (function() {
       if (e !== undefined) {
         e.preventDefault();
       }
-
+      console.log(this.cartPopupWrapper);
       theme.Helpers.prepareTransition(this.cartPopupWrapper);
 
       this.cartPopupWrapper.classList.remove(

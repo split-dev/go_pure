@@ -1,3 +1,5 @@
+@import "./cart-popup-item";
+
 .cart-popup-wrapper {
   top: 0;
   left: 0;
@@ -25,8 +27,11 @@
   }
 
   &__header {
-    padding: 36px 32px 32px;
+    padding: 34px 16px;
     background: #F7F7F7;
+    @include media-breakpoint-up(md) {
+      padding: 36px 32px 32px;
+    }
   }
   &__footer {
     padding: 40px 32px 84px;
@@ -34,6 +39,11 @@
   }
 
   .cart {
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 96px - 224px);
+    overflow-y: auto;
+    padding: 44px 16px;
+    @include media-breakpoint-up(md) {
+      padding: 36px 32px;
+    }
   }
 }

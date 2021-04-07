@@ -27,14 +27,68 @@ page.burger.addEventListener('click', function () {
 });
 
 // Slide Cart
-page.cartToggle.addEventListener('click', function (e) {
-    e.preventDefault();
-    page.cartWrapper.classList.toggle('cart-popup-wrapper--hidden');
-});
-page.cartClose.addEventListener('click', function (e) {
-    e.preventDefault();
-    page.cartWrapper.classList.add('cart-popup-wrapper--hidden');
-});
+(function () {
+    var cartSubtotal = document.querySelector('[data-cart-subtotal]');
+
+    page.cartToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        page.cartWrapper.classList.toggle('cart-popup-wrapper--hidden');
+    });
+    page.cartClose.addEventListener('click', function (e) {
+        e.preventDefault();
+        page.cartWrapper.classList.add('cart-popup-wrapper--hidden');
+    });
+    if (window.location.href.includes('#open-cart')) page.cartWrapper.classList.toggle('cart-popup-wrapper--hidden');
+
+    function removeItem(btn) {
+        var parent = btn.closest('[data-cart-item]');
+        parent.classList.add('cart-popup-item__remove-anim');
+
+        setTimeout(function () {
+            parent.remove();
+        }, 800);
+    }
+
+    function reRenderCart(state) {
+        cartSubtotal.textContent = '$' + state.items_subtotal_price;
+    }
+
+    function initRemoveLineItemBtns() {
+        var btns = document.querySelectorAll('[data-cart-remove]');
+
+        if (btns === null) return;
+
+        btns.forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                var lineString = btn.getAttribute('href');
+                lineString = lineString.split('?')[1];
+                lineString = lineString.split('&')[0];
+                lineString = parseInt(lineString.replace('line=', ''));
+
+                fetch('/cart/change.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;'
+                    },
+                    body: JSON.stringify({
+                        line: lineString,
+                        quantity: 0
+                    })
+                }).then(function (response) {
+                    return response.json();
+                }).then(function (state) {
+                    console.log(state);
+                    reRenderCart(state);
+                });
+
+                removeItem(btn);
+            });
+        });
+    }
+    initRemoveLineItemBtns();
+})();
 
 //* Sections
 //> Page Hero

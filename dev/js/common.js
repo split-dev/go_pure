@@ -26,14 +26,69 @@ page.burger.addEventListener('click', () => {
 });
 
 // Slide Cart
-page.cartToggle.addEventListener('click', (e) => {
-    e.preventDefault();
-    page.cartWrapper.classList.toggle('cart-popup-wrapper--hidden');
-});
-page.cartClose.addEventListener('click', (e) => {
-    e.preventDefault();
-    page.cartWrapper.classList.add('cart-popup-wrapper--hidden');
-});
+(function () {
+    let cartSubtotal = document.querySelector('[data-cart-subtotal]');
+
+    page.cartToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        page.cartWrapper.classList.toggle('cart-popup-wrapper--hidden');
+    });
+    page.cartClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        page.cartWrapper.classList.add('cart-popup-wrapper--hidden');
+    });
+    if (window.location.href.includes('#open-cart'))
+        page.cartWrapper.classList.toggle('cart-popup-wrapper--hidden');
+
+    function removeItem(btn) {
+        let parent = btn.closest('[data-cart-item]');
+        parent.classList.add('cart-popup-item__remove-anim');
+
+        setTimeout(() => {
+            parent.remove();
+        }, 800);
+    }
+
+    function reRenderCart(state) {
+        cartSubtotal.textContent = '$' + state.items_subtotal_price;
+    }
+
+    function initRemoveLineItemBtns() {
+        let btns = document.querySelectorAll('[data-cart-remove]');
+
+        if (btns === null) return;
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+
+                let lineString = btn.getAttribute('href');
+                lineString = lineString.split('?')[1];
+                lineString = lineString.split('&')[0];
+                lineString = parseInt(lineString.replace('line=', ''));
+
+                fetch('/cart/change.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;'
+                    },
+                    body: JSON.stringify({
+                        line: lineString,
+                        quantity: 0
+                    })
+                }).then((response) => {
+                    return response.json();
+                }).then(state => {
+                    console.log(state);
+                    reRenderCart(state);
+                });
+
+                removeItem(btn);
+            })
+        });
+    }
+    initRemoveLineItemBtns();
+}());
 
 //* Sections
 //> Page Hero

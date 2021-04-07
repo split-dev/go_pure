@@ -1,0 +1,13 @@
+<div>
+  {% unless item.original_line_price != item.final_line_price %}
+  <s data-cart-item-original-price>
+    <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price_2" data-item-key="{{ item.key }}" style="display:none !important;"></span>
+    {{ item.original_line_price | money_without_trailing_zeros }}
+  </s>
+  {% endunless %}
+
+  <span data-cart-item-final-price>
+    <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price_2" data-item-key="{{ item.key }}" style="display:none !important;"></span>
+    <span>{{ item.final_line_price | money_without_trailing_zeros }}</span>
+  </span>
+</div>

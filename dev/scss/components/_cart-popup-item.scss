@@ -1,0 +1,16 @@
+.cart-popup-item {
+  transition: 0.7s;
+  &__image-wrapper {
+    width: 86px;
+    @include media-breakpoint-up(md) {
+      width: 102px;
+    }
+  }
+  &__remove {
+    right: 0;
+    top: 1px;
+  }
+  &__remove-anim {
+    transform: translateX(150%);
+  }
+}
