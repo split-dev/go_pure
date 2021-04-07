@@ -43,6 +43,7 @@ body .bold-ro {
       border-bottom: 1px solid #F7F7F7;
     }
   }
+
   &__recurring-lbl,
   &__one-time-purchase,
   &__recurring-text {
@@ -52,6 +53,7 @@ body .bold-ro {
     color: $primary;
     cursor: pointer;
   }
+
   &__one-time-price,
   &__initial-discount-price {
     margin-left: auto;
@@ -59,11 +61,15 @@ body .bold-ro {
     color: $primary;
     @include text-20px;
   }
+
   &__fixed-frequency-text {
     display: block !important;
     @include text-11px;
   }
   &__frequency-label {
     padding-top: 0;
+  }
+  &__initial-discount-percent {
+    margin-left: 5px;
   }
 }

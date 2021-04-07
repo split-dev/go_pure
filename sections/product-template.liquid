@@ -18,17 +18,12 @@
 
   <div class="container product-single">
     <div class="row">
-      <div class="col-lg-7 product-single__media-group" data-product-single-media-group>
+      <div class="col-lg-7 product-single__media-group mb-0" data-product-single-media-group>
         {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
 
         {%- for media in product.media -%}
           {% include 'media', media: media, featured_media: featured_media, height: height, enable_image_zoom: enable_image_zoom, image_zoom_size: product_image_zoom_size, image_scale: product_image_scale %}
         {%- endfor -%}
-
-        <noscript>
-          {% capture product_image_size %}{{ height }}x{% endcapture %}
-          <img src="{{ featured_media | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media" style="max-width: {{ height }}px;">
-        </noscript>
 
         {% assign first_3d_model = product.media | where: "media_type", "model" | first %}
 
@@ -52,7 +47,7 @@
           {% endif %}
 
           <div data-thumbnail-slider>
-            <div class="thumbnails-wrapper{% if enable_thumbnail_slides == true %} slider-active{% endif %}" data-slider>
+            <div class="thumbnails-wrapper mt-4 mt-md-0 mb-2 {% if enable_thumbnail_slides == true %} slider-active{% endif %}" data-slider>
               {% if enable_thumbnail_slides == true %}
                 <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__prev thumbnails-slider__prev--{{ section.id }}" data-slider-button>
                   {% include 'icon-chevron-left' %}
@@ -60,13 +55,13 @@
                 </button>
               {% endif %}
 
-              <ul class="product-single__thumbnails product-single__thumbnails-{{ section.id }}" data-slider-container>
+              <ul class="product-single__thumbnails justify-content-center product-single__thumbnails-{{ section.id }}" data-slider-container>
                 {% if enable_thumbnail_slides == true %}
                 <div class="product-single__thumbnails-slider-track" data-slider-track>
                   {% endif %}
 
                   {% for media in product.media %}
-                    <li class="product-single__thumbnails-item product-single__thumbnails-item--{{ section.settings.media_size }} {% if enable_thumbnail_slides == true %} product-single__thumbnails-item-slide{% endif %} js"{% if enable_thumbnail_slides == true %} data-slider-slide-index="{{ forloop.index0 }}" data-slider-item{% endif %}>
+                    <li class="product-single__thumbnails-item {% if enable_thumbnail_slides == true %} product-single__thumbnails-item-slide{% endif %} js"{% if enable_thumbnail_slides == true %} data-slider-slide-index="{{ forloop.index0 }}" data-slider-item{% endif %}>
                       <a href="{{ media.preview_image | img_url: product_image_zoom_size, scale: product_image_scale }}"
                          class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}"
                          data-thumbnail-id="{{ section.id }}-{{ media.id }}"
@@ -102,6 +97,7 @@
                 </div>
                 {% endif %}
               </ul>
+
               {% if enable_thumbnail_slides == true %}
                 <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__next thumbnails-slider__next--{{ section.id }}" data-slider-button data-slider-button-next>
                   {% include 'icon-chevron-right' %}
@@ -117,6 +113,11 @@
 
           <h1 class="product-single__title mb-2 text-35px text-center text-lg-left">{{ product.title }}</h1>
           <script>window.performance.mark('debut:product:title_visible');</script>
+
+          <!-- Reviews Badge -->
+          <div class="product-single__reviews-badge">
+            <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+          </div>
 
           <div class="product-single__description text-15px mt-3 mb-4 rte overflow-hidden position-relative">
             {{ product.description }}
