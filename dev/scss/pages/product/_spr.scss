@@ -44,6 +44,12 @@ body {
       @include text-35px;
     }
   }
+  .spr-summary-actions {
+    @include media-breakpoint-down(sm) {
+      display: block;
+      margin-top: 15px;
+    }
+  }
   .spr-summary-actions-newreview {
     text-decoration: underline;
     color: $primary;
