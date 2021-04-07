@@ -55,7 +55,7 @@
                 </button>
               {% endif %}
 
-              <ul class="product-single__thumbnails justify-content-center product-single__thumbnails-{{ section.id }}" data-slider-container>
+              <ul class="product-single__thumbnails list-unstyled justify-content-center product-single__thumbnails-{{ section.id }}" data-slider-container>
                 {% if enable_thumbnail_slides == true %}
                 <div class="product-single__thumbnails-slider-track" data-slider-track>
                   {% endif %}
@@ -116,7 +116,7 @@
 
           <!-- Reviews Badge -->
           <div class="product-single__reviews-badge">
-            <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+            <span class="shopify-product-reviews-badge d-block" data-id="{{ product.id }}"></span>
           </div>
 
           <div class="product-single__description text-15px mt-3 mb-4 rte overflow-hidden position-relative">

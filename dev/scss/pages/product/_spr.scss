@@ -1,0 +1,123 @@
+@import "../../../node_modules/bootstrap-scss/functions";
+@import "../../../node_modules/bootstrap-scss/variables";
+@import "../../../node_modules/bootstrap-scss/mixins";
+
+@import "../../variables";
+
+@import "../../../node_modules/bootstrap-scss/forms";
+@import "../../../node_modules/bootstrap-scss/input-group";
+
+
+body {
+  .spr-reviews-section {
+    padding: 50px 0 80px;
+    @include media-breakpoint-up(md) {
+      padding: 80px 0 110px;
+    }
+  }
+  .spr-icon-star {
+    &:before {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='19' fill='none'%3E%3Cdefs/%3E%3Cpath fill='%23FFBA00' d='M21 7.353l-6.694 4.383L16.5 19l-6.301-4.563-6.677 4.408 2.8-7.204L0 7.101l8.031.11L10.802 0l2.165 7.272 8.033.08z'/%3E%3C/svg%3E");
+    }
+  }
+  .spr-badge {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+    }
+  }
+  .spr-pagination-next {
+    display: none;
+  }
+  .spr-badge-caption {
+    font-weight: 600;
+    margin-left: 9px;
+    color: $primary;
+    text-decoration: underline;
+    @include text-15px;
+  }
+  .spr-header-title {
+    @include text-32px;
+
+    @include media-breakpoint-up(sm) {
+      @include text-35px;
+    }
+  }
+  .spr-summary-actions-newreview {
+    text-decoration: underline;
+    color: $primary;
+    font-weight: 600;
+  }
+  .spr-review-footer {
+    display: none;
+  }
+  .comment__top {
+    & > span {
+      display: none;
+    }
+  }
+  .spr-review-header-byline {
+    opacity: 1;
+    font-style: normal;
+    margin-top: 10px;
+  }
+  .spr-review-content-body {
+    color: $dark;
+  }
+  .comment__top-name {
+    display: flex;
+    align-items: center;
+    p {
+      margin-bottom: 0;
+      color: $info;
+      @include text-15px;
+    }
+    span {
+      padding-left: 12px;
+      color: $dark;
+      @include text-11px;
+    }
+  }
+  .spr-pagination {
+    margin-top: 25px;
+  }
+  .spr-pagination-page {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    color: $primary;
+    padding: 4px;
+    margin: 0 4px;
+    font-weight: 500;
+    &.is-active {
+      background-color: $primary;
+      color: $light;
+      font-weight: 600;
+    }
+  }
+
+  .spr-form-review-title,
+  .spr-form-contact-name,
+  .spr-form-contact-email,
+  .spr-form-review-body {
+    @extend .form-group;
+  }
+  .spr-form-title {
+    @include text-20px;
+  }
+  .spr-form-label {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .spr-form-review-title,
+  .spr-form-contact {
+    .spr-form-input {
+      @extend .form-control;
+    }
+  }
+  .spr-form-input-textarea {
+    @extend .form-control;
+  }
+}
