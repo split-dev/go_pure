@@ -65,3 +65,32 @@ document.querySelectorAll('[data-accordion]')
         });
     }
 );
+
+//> Product Template - Read More
+(function () {
+    let readMoreBtn = document.querySelector('[data-read-more]');
+    if (readMoreBtn === null) return;
+
+    let readMoreParent = readMoreBtn.parentElement;
+    readMoreBtn.addEventListener('click', e => {
+        e.preventDefault();
+        readMoreParent.classList.toggle('open');
+        readMoreBtn.classList.add('d-none');
+    })
+}());
+
+//> Product Template - Variants
+(function () {
+    let variantInputs = document.querySelectorAll('[data-variant-change]');
+    let grantSelect = document.querySelector('#SingleOptionSelector-0');
+    if (variantInputs === null) return;
+
+    variantInputs.forEach(input => {
+        input.addEventListener('change', () => {
+            grantSelect.value = input.value;
+            grantSelect.dispatchEvent(
+                new CustomEvent('change')
+            );
+        });
+    })
+}());

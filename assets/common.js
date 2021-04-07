@@ -62,3 +62,30 @@ document.querySelectorAll('[data-accordion]').forEach(function (accordion) {
         panel.style.maxHeight ? panel.style.maxHeight = null : panel.style.maxHeight = panel.scrollHeight + "px";
     });
 });
+
+//> Product Template - Read More
+(function () {
+    var readMoreBtn = document.querySelector('[data-read-more]');
+    if (readMoreBtn === null) return;
+
+    var readMoreParent = readMoreBtn.parentElement;
+    readMoreBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        readMoreParent.classList.toggle('open');
+        readMoreBtn.classList.add('d-none');
+    });
+})();
+
+//> Product Template - Variants
+(function () {
+    var variantInputs = document.querySelectorAll('[data-variant-change]');
+    var grantSelect = document.querySelector('#SingleOptionSelector-0');
+    if (variantInputs === null) return;
+
+    variantInputs.forEach(function (input) {
+        input.addEventListener('change', function () {
+            grantSelect.value = input.value;
+            grantSelect.dispatchEvent(new CustomEvent('change'));
+        });
+    });
+})();

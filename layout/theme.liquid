@@ -78,8 +78,9 @@
     }
   </script>
 
-  {% if request.page_type == 'cart' %}
+  {% if request.page_type == 'product' or request.page_type == 'cart' %}
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
+    <link rel="stylesheet" href="{{ 'product.min.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';">
   {% endif %}
   <link rel="stylesheet" href="{{ 'main.min.css' | asset_url }}" type="text/css">
   {%- if request.page_type contains 'customers/' -%}
@@ -160,6 +161,8 @@
   </script>
 
   {{ content_for_header }}
+  {%- render 'bold-common' -%}
+  {%- render 'bold-ro-init' -%}
 </head>
 
 <body class="template-{{ request.page_type | handle }} template-suffix-{{ template.suffix }} load" style="opacity: 0;">
@@ -180,7 +183,6 @@
     <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
     <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
   </ul>
-
   {%- render 'scripts' -%}
 </body>
 </html>

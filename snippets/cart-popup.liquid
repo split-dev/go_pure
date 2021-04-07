@@ -8,7 +8,7 @@
       </button>
     </div>
 
-    <form action="{{ routes.cart_url }}" method="post" novalidate class="cart d-flex flex-column">
+    <div class="cart d-flex flex-column">
       {%- for item in cart.items -%}
       <div class="cart-popup-item" data-cart-item data-cart-item-key="{{ item.key }}" data-cart-item-url="{{ item.url }}" data-cart-item-title="{{ item.title }}" data-cart-item-index="{{ forloop.index }}" data-cart-item-quantity="{{ item.quantity }}">
         <div class="cart-popup-item__image-wrapper" data-cart-popup-image-wrapper>
@@ -40,11 +40,13 @@
           <h3 class="mb-0 text-20px text-primary">Subtotal</h3>
           <h3 class="mb-0 text-20px text-primary" data-cart-subtotal>{{ cart.total_price | money_without_trailing_zeros }}</h3>
         </div>
-        <button type="submit" class="btn btn-primary w-100 mb-4">Checkout</button>
-        <p class="mb-0 text-11px text-body text-center">
+        <a href="{{ routes.cart_url }}/checkout" class="btn btn-primary w-100 mb-4">Checkout</a>
+        <p class="mb-0 text-11px text-dark text-center">
           Taxes and shipping calculated at checkout
         </p>
       </div>
-    </form>
+    </div>
+
   </div>
+  <button class="d-none" data-cart-popup-dismiss>Dismiss</button>
 </div>

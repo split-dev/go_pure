@@ -1,0 +1,69 @@
+@import "./bold";
+
+.product-template {
+  &__container {
+    padding: 40px 0 80px;
+    @include media-breakpoint-up(md) {
+      padding: 110px 0;
+    }
+  }
+}
+
+.product-single {
+  &__description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    &.open {
+      display: block;
+    }
+    h4 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      @include text-15px;
+    }
+    p {
+      margin-bottom: 16px;
+      @include text-15px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    &__read-more {
+      text-decoration: none;
+      background-color: $light;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.product-form {
+  &__variant-inner {
+    margin: -1px;
+  }
+  &__variant-wrapper {
+    border: 1px solid $primary;
+    border-radius: 5px;
+    input {
+      display: none;
+    }
+    label {
+      flex-basis: 100%;
+      padding: 17px 0;
+      text-align: center;
+      border: 1px solid $primary;
+      font-weight: 600;
+      margin: 0 -1px -1px 0;
+      @include text-15px;
+
+      @include media-breakpoint-up(md) {
+        flex-basis: calc(50% + 1px);
+      }
+    }
+    input:checked + label {
+      background-color: $primary;
+      color: $light;
+    }
+  }
+}

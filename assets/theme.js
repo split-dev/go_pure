@@ -7953,7 +7953,6 @@ theme.Product = (function() {
       cartCountBubble: '[data-cart-count-bubble]',
       cartPopup: '[data-cart-popup]',
       cartPopupCartQuantity: '[data-cart-popup-cart-quantity]',
-      cartPopupOpen: '[data-cart-drawer]',
       cartPopupClose: '[data-cart-popup-close]',
       cartPopupDismiss: '[data-cart-popup-dismiss]',
       cartPopupImage: '[data-cart-popup-image]',
@@ -8081,6 +8080,7 @@ theme.Product = (function() {
 
     this.initMobileBreakpoint();
     this.initDesktopBreakpoint();
+    this.initCart();
     this._stringOverrides();
     this._initVariants();
     this._initMediaSwitch();
@@ -8092,24 +8092,24 @@ theme.Product = (function() {
   }
 
   Product.prototype = Object.assign({}, Product.prototype, {
-    // initCart: function() {
-    //   var thisProduct = this;
-    //
-    //   fetch('/cart.js')
-    //       .then(function(response) {
-    //         return response.json();
-    //       })
-    //       .then(function(json) {
-    //         json.items.map(function (item) {
-    //           thisProduct._setupCartPopup(item);
-    //         });
-    //
-    //         thisProduct._setCartQuantity(json.item_count);
-    //       })
-    //       .catch(function(error) {
-    //         console.log(error);
-    //       });
-    // },
+    initCart: function() {
+      var thisProduct = this;
+
+      fetch('/cart.js')
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(json) {
+            json.items.map(function (item) {
+              thisProduct._setupCartPopup(item);
+            });
+
+            thisProduct._setCartQuantity(json.item_count);
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+    },
 
     _stringOverrides: function() {
       theme.productStrings = theme.productStrings || {};
@@ -8424,9 +8424,6 @@ theme.Product = (function() {
       this.cartPopupQuantityLabel =
         this.cartPopupQuantityLabel ||
         document.querySelector(this.selectors.cartPopupQuantityLabel);
-      this.cartPopupOpen =
-          this.cartPopupOpen ||
-          document.querySelector(this.selectors.cartPopupOpen);
       this.cartPopupClose =
         this.cartPopupClose ||
         document.querySelector(this.selectors.cartPopupClose);
@@ -8490,10 +8487,6 @@ theme.Product = (function() {
       this.cartPopupWrapper.addEventListener(
         'keyup',
         this.eventHandlers.cartPopupWrapperKeyupHandler
-      );
-      this.cartPopupOpen.addEventListener(
-          'click',
-          this.eventHandlers.openCartPopup
       );
       this.cartPopupClose.addEventListener(
         'click',
