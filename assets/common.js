@@ -29,6 +29,7 @@ page.burger.addEventListener('click', function () {
 // Slide Cart
 (function () {
     var cartSubtotal = document.querySelector('[data-cart-subtotal]');
+    var cartEmpty = document.querySelector('[data-cart-empty]');
 
     page.cartToggle.addEventListener('click', function (e) {
         e.preventDefault();
@@ -40,6 +41,47 @@ page.burger.addEventListener('click', function () {
     });
     if (window.location.href.includes('#open-cart')) page.cartWrapper.classList.toggle('cart-popup-wrapper--hidden');
 
+    function initQtyBtns() {
+        var qtyBtns = document.querySelectorAll('[data-qty]');
+
+        if (qtyBtns === null) return;
+
+        qtyBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var inputQty = btn.parentElement.querySelector('input');
+
+                if (btn.dataset.qty === '-') {
+                    if (inputQty.value === inputQty.getAttribute('min')) return;
+                    inputQty.value -= 1;
+                } else if (btn.dataset.qty === '+') {
+                    inputQty.value = parseInt(inputQty.value) + 1;
+                }
+
+                var lineItemIndex = btn.closest('[data-cart-item-index]').dataset.cartItemIndex;
+                updateCart(lineItemIndex, inputQty.value);
+            });
+        });
+    }
+
+    function updateCart(lineString) {
+        var qty = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+
+        fetch('/cart/change.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;'
+            },
+            body: JSON.stringify({
+                line: lineString,
+                quantity: qty
+            })
+        }).then(function (response) {
+            return response.json();
+        }).then(function (state) {
+            reRenderCart(state);
+        });
+    }
+
     function removeItem(btn) {
         var parent = btn.closest('[data-cart-item]');
         parent.classList.add('cart-popup-item__remove-anim');
@@ -50,7 +92,21 @@ page.burger.addEventListener('click', function () {
     }
 
     function reRenderCart(state) {
-        cartSubtotal.textContent = '$' + state.items_subtotal_price;
+        var state_old = state;
+        var cartItems = document.querySelectorAll('[data-cart-item]');
+
+        state = BOLD.common.cartDoctor.fix(state);
+        cartSubtotal.textContent = window.BOLD.common.Shopify.formatMoney(state.items_subtotal_price);
+        BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded', state);
+
+        cartItems.forEach(function (item, index) {
+            var priceWithoutSubscription = item.querySelector('[data-without-subscription]');
+            priceWithoutSubscription.textContent = window.BOLD.common.Shopify.formatMoney(state_old.items[index].final_line_price);
+        });
+        console.log(state_old);
+        console.log(state);
+
+        state.item_count === 0 ? cartEmpty.classList.remove('d-none') : cartEmpty.classList.add('d-none');
     }
 
     function initRemoveLineItemBtns() {
@@ -67,26 +123,13 @@ page.burger.addEventListener('click', function () {
                 lineString = lineString.split('&')[0];
                 lineString = parseInt(lineString.replace('line=', ''));
 
-                fetch('/cart/change.js', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json;'
-                    },
-                    body: JSON.stringify({
-                        line: lineString,
-                        quantity: 0
-                    })
-                }).then(function (response) {
-                    return response.json();
-                }).then(function (state) {
-                    console.log(state);
-                    reRenderCart(state);
-                });
+                updateCart(lineString);
 
                 removeItem(btn);
             });
         });
     }
+    initQtyBtns();
     initRemoveLineItemBtns();
 })();
 

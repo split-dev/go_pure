@@ -8,9 +8,9 @@
       </button>
     </div>
 
-    <div class="cart d-flex flex-column">
+    <div class="cart d-flex flex-column position-relative">
       {%- for item in cart.items -%}
-      <div class="cart-popup-item d-flex" data-cart-item data-cart-item-key="{{ item.key }}" data-cart-item-url="{{ item.url }}" data-cart-item-title="{{ item.title }}" data-cart-item-index="{{ forloop.index }}" data-cart-item-quantity="{{ item.quantity }}">
+        <div class="cart-popup-item d-flex" data-cart-item data-cart-item-key="{{ item.key }}" data-cart-item-url="{{ item.url }}" data-cart-item-title="{{ item.title }}" data-cart-item-index="{{ forloop.index }}" data-cart-item-quantity="{{ item.quantity }}">
         <div class="cart-popup-item__image-wrapper" data-cart-popup-image-wrapper>
           <img class="cart__image lazyload {% if item.image == null %} d-none{% endif %}" data-src="{{ item | img_url: '102x102' }}" alt="{{ item.image.alt | escape }}" data-cart-item-image>
         </div>
@@ -26,11 +26,12 @@
             {% endif %}
           </ul>
 
-          <div class="d-flex">
-            <div class="cart-popup-item__quantity d-none">
+          <div class="d-flex align-items-center">
+            <div class="cart-popup-item__quantity d-flex">
               <span class="visually-hidden" data-cart-popup-quantity-label></span>
-              <span aria-hidden="true">{{ 'cart.popup.quantity' | t }}:</span>
-              <span aria-hidden="true" data-cart-popup-quantity></span>
+              <button data-qty="-">-</button>
+              <input class="cart-popup-item__quantity__input" min="1" type="number" aria-hidden="true" value="{{ item.quantity }}" data-cart-popup-quantity>
+              <button data-qty="+">+</button>
             </div>
 
             {% render 'cart-popup-price', item:item %}
@@ -46,7 +47,15 @@
           </a>
         </div>
       </div>
+
+        {%- unless forloop.last -%}
+          <hr class="my-0 mx-n5">
+        {%- endunless -%}
       {% endfor %}
+
+      <div class="absolute-center text-nowrap {% if cart.item_count != 0 %} d-none{% endif %}" data-cart-empty>
+        <h3 class="mb-0 text-35px text-secondary">Cart is Empty</h3>
+      </div>
     </div>
 
     <div class="cart-popup__footer mt-auto">

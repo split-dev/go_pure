@@ -39,11 +39,18 @@
   }
 
   .cart {
-    min-height: calc(100vh - 96px - 224px);
+    max-height: calc(100vh - 96px - 224px);
+    height: 100%;
     overflow-y: auto;
     padding: 44px 16px;
     @include media-breakpoint-up(md) {
-      padding: 36px 32px;
+      padding: 0 32px;
+    }
+
+    hr {
+      border-color: #EAEAEA;
+      opacity: 0.3;
+      border-bottom: none;
     }
   }
 }

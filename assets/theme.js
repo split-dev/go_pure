@@ -8080,7 +8080,7 @@ theme.Product = (function() {
 
     this.initMobileBreakpoint();
     this.initDesktopBreakpoint();
-    this.initCart();
+    // this.initCart();
     this._stringOverrides();
     this._initVariants();
     this._initMediaSwitch();
@@ -8089,27 +8089,28 @@ theme.Product = (function() {
     this._initProductVideo();
     this._initModelViewerLibraries();
     this._initShopifyXrLaunch();
+    this._setupCartPopup();
   }
 
   Product.prototype = Object.assign({}, Product.prototype, {
-    initCart: function() {
-      var thisProduct = this;
-
-      fetch('/cart.js')
-          .then(function(response) {
-            return response.json();
-          })
-          .then(function(json) {
-            json.items.map(function (item) {
-              thisProduct._setupCartPopup(item);
-            });
-
-            thisProduct._setCartQuantity(json.item_count);
-          })
-          .catch(function(error) {
-            console.log(error);
-          });
-    },
+    // initCart: function() {
+    //   var thisProduct = this;
+    //
+    //   fetch('/cart.js')
+    //       .then(function(response) {
+    //         return response.json();
+    //       })
+    //       .then(function(json) {
+    //         json.items.map(function (item) {
+    //           thisProduct._setupCartPopup(item);
+    //         });
+    //
+    //         thisProduct._setCartQuantity(json.item_count);
+    //       })
+    //       .catch(function(error) {
+    //         console.log(error);
+    //       });
+    // },
 
     _stringOverrides: function() {
       theme.productStrings = theme.productStrings || {};
@@ -8409,7 +8410,7 @@ theme.Product = (function() {
       }
     },
 
-    _setupCartPopup: function(item) {
+    _setupCartPopup: function() {
       this.cartPopup =
         this.cartPopup || document.querySelector(this.selectors.cartPopup);
       this.cartPopupWrapper =
@@ -8434,9 +8435,9 @@ theme.Product = (function() {
         this.cartPopupImagePlaceholder ||
         document.querySelector(this.selectors.cartPopupImagePlaceholder);
 
-      this._setupCartPopupEventListeners();
+      // this._setupCartPopupEventListeners();
 
-      this._updateCartPopupContent(item);
+      // this._updateCartPopupContent(item);
     },
 
     _updateCartPopupContent: function(item) {

@@ -1,13 +1,12 @@
-<div>
-  {% unless item.original_line_price != item.final_line_price %}
-  <s data-cart-item-original-price>
-    <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price_2" data-item-key="{{ item.key }}" style="display:none !important;"></span>
-    {{ item.original_line_price | money_without_trailing_zeros }}
+<div class="text-15px text-primary ml-auto">
+  {% if item.original_line_price != item.final_line_price or item.properties['frequency_num'] != blank %}
+  <s class="mr-2" data-cart-item-original-price data-without-subscription>
+    <span>{{ item.original_line_price | money_without_trailing_zeros }}</span>
   </s>
-  {% endunless %}
+  {% endif %}
 
-  <span data-cart-item-final-price>
-    <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price_2" data-item-key="{{ item.key }}" style="display:none !important;"></span>
+  <span class="font-weight-semibold" data-cart-item-final-price>
+    <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>
     <span>{{ item.final_line_price | money_without_trailing_zeros }}</span>
   </span>
 </div>

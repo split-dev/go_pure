@@ -1,5 +1,9 @@
 .cart-popup-item {
+  padding: 32px 0;
   transition: 0.7s;
+  @include media-breakpoint-up(md) {
+    padding: 35px 0 40px;
+  }
   &__image-wrapper {
     width: 86px;
     @include media-breakpoint-up(md) {
@@ -12,5 +16,19 @@
   }
   &__remove-anim {
     transform: translateX(150%);
+  }
+  &__quantity {
+    button {
+      @extend .text-primary, .px-2, .bg-transparent, .border-0, .font-weight-semibold;
+    }
+    &__input {
+      width: 30px;
+      @extend .border-0, .text-primary, .text-center, .p-0;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
   }
 }

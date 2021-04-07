@@ -28,6 +28,7 @@ page.burger.addEventListener('click', () => {
 // Slide Cart
 (function () {
     let cartSubtotal = document.querySelector('[data-cart-subtotal]');
+    let cartEmpty = document.querySelector('[data-cart-empty]');
 
     page.cartToggle.addEventListener('click', (e) => {
         e.preventDefault();
@@ -40,6 +41,45 @@ page.burger.addEventListener('click', () => {
     if (window.location.href.includes('#open-cart'))
         page.cartWrapper.classList.toggle('cart-popup-wrapper--hidden');
 
+    function initQtyBtns() {
+        let qtyBtns = document.querySelectorAll('[data-qty]');
+
+        if (qtyBtns === null) return;
+
+        qtyBtns.forEach(btn => {
+           btn.addEventListener('click', () => {
+               let inputQty = btn.parentElement.querySelector('input');
+
+               if (btn.dataset.qty === '-') {
+                   if (inputQty.value === inputQty.getAttribute('min')) return;
+                   inputQty.value -= 1;
+               } else if (btn.dataset.qty === '+') {
+                   inputQty.value = parseInt(inputQty.value) + 1;
+               }
+
+               let lineItemIndex = btn.closest('[data-cart-item-index]').dataset.cartItemIndex;
+               updateCart(lineItemIndex, inputQty.value);
+           })
+        });
+    }
+
+    function updateCart(lineString, qty = 0) {
+        fetch('/cart/change.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;'
+            },
+            body: JSON.stringify({
+                line: lineString,
+                quantity: qty,
+            })
+        }).then((response) => {
+            return response.json();
+        }).then(state => {
+            reRenderCart(state);
+        });
+    }
+
     function removeItem(btn) {
         let parent = btn.closest('[data-cart-item]');
         parent.classList.add('cart-popup-item__remove-anim');
@@ -50,7 +90,23 @@ page.burger.addEventListener('click', () => {
     }
 
     function reRenderCart(state) {
-        cartSubtotal.textContent = '$' + state.items_subtotal_price;
+        let state_old = state;
+        let cartItems = document.querySelectorAll('[data-cart-item]');
+
+        state = BOLD.common.cartDoctor.fix(state);
+        cartSubtotal.textContent = window.BOLD.common.Shopify.formatMoney(state.items_subtotal_price);
+        BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded', state);
+
+        cartItems.forEach((item, index) => {
+            let priceWithoutSubscription = item.querySelector('[data-without-subscription]');
+            priceWithoutSubscription.textContent = window.BOLD.common.Shopify.formatMoney(state_old.items[index].final_line_price);
+        });
+        console.log(state_old);
+        console.log(state);
+
+        state.item_count === 0
+           ? cartEmpty.classList.remove('d-none')
+           : cartEmpty.classList.add('d-none');
     }
 
     function initRemoveLineItemBtns() {
@@ -67,26 +123,13 @@ page.burger.addEventListener('click', () => {
                 lineString = lineString.split('&')[0];
                 lineString = parseInt(lineString.replace('line=', ''));
 
-                fetch('/cart/change.js', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json;'
-                    },
-                    body: JSON.stringify({
-                        line: lineString,
-                        quantity: 0
-                    })
-                }).then((response) => {
-                    return response.json();
-                }).then(state => {
-                    console.log(state);
-                    reRenderCart(state);
-                });
+                updateCart(lineString);
 
                 removeItem(btn);
             })
         });
     }
+    initQtyBtns();
     initRemoveLineItemBtns();
 }());
 
