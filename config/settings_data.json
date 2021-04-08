@@ -29,13 +29,13 @@
           "db23e760-8ee5-4afb-9d8c-51ffefb8f8ff": {
             "type": "menu",
             "settings": {
-              "menu": "company-new"
+              "menu": "company"
             }
           },
           "34e61fbd-5252-4a5a-ba5f-04eb662323b3": {
             "type": "menu",
             "settings": {
-              "menu": "account-new"
+              "menu": "account"
             }
           },
           "14029d78-a14c-49ad-a0cc-c31ef3e3e69d": {
@@ -221,7 +221,8 @@
           "e49fa74a-eea0-4a6b-99a3-51abc853b0f5",
           "0c9d013e-0872-4bdc-a5dc-86a005055686"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "social": {
         "type": "social",
@@ -320,7 +321,8 @@
           "381cc302-49b9-4fcc-8acb-e54c8e79f091",
           "687f22e8-2393-44ed-a1aa-2e78d729c9c5"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "table": {
         "type": "table",
@@ -591,11 +593,7 @@
       "product-template": {
         "type": "product-template",
         "settings": {
-          "show_quantity_selector": false,
-          "show_vendor": false,
           "enable_payment_button": true,
-          "show_share_buttons": true,
-          "media_size": "medium",
           "enable_image_zoom": true,
           "enable_video_looping": false
         }
@@ -626,7 +624,8 @@
           "4331a8ac-7e74-49a6-8d65-6ef9e9572899",
           "1f005210-ea61-460b-8a18-54461bfb2f39"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "features": {
         "type": "features",
@@ -857,7 +856,8 @@
           "28982884-9b62-4064-a115-1f5e1b192248",
           "10259103-577a-495f-a8c7-2efd7b00061f"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "page-works-hero": {
         "type": "page-works-hero",
@@ -961,7 +961,8 @@
           "25c41ef2-9866-4480-96c6-ddd4680ef336",
           "d38f0928-ed5d-4900-a8a2-b44be0e4e5e7"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "page-works-features": {
         "type": "page-works-features",
@@ -1020,35 +1021,6 @@
           "video_url": "https:\/\/www.youtube.com\/embed\/KK9bwTlAvgo?autoplay=1",
           "poster_desktop": "shopify:\/\/shop_images\/image_21-2.jpg",
           "poster_mobile": "shopify:\/\/shop_images\/image_21.jpg"
-        }
-      },
-      "page-privacy-hero": {
-        "type": "page-privacy-hero",
-        "settings": {
-          "desktop_image": "shopify:\/\/shop_images\/image_31_220c4e00-fddb-4dcc-9185-4916e0f1d859.jpg",
-          "mobile_image": "shopify:\/\/shop_images\/image_32.jpg",
-          "description": "",
-          "scroll_btn": true
-        }
-      },
-      "page-store-locator-hero": {
-        "type": "page-store-locator-hero",
-        "settings": {
-          "desktop_image": "shopify:\/\/shop_images\/image_31_62d6256f-a74a-480c-92fa-40cb2f1d3572.jpg",
-          "mobile_image": "shopify:\/\/shop_images\/image_32_16772f9c-55f2-4969-9089-1b0027df3a95.jpg",
-          "heading_override": "Store Locator",
-          "description": "",
-          "scroll_btn": true
-        }
-      },
-      "page-shipping-hero": {
-        "type": "page-shipping-hero",
-        "settings": {
-          "desktop_image": "shopify:\/\/shop_images\/image_31_a61c75c3-3c71-41c2-bff4-156f8300bd2a.jpg",
-          "mobile_image": "shopify:\/\/shop_images\/image_31_de513a7e-8523-4aa6-91ca-acc68ee3482e.jpg",
-          "heading_override": "Shipping and Returns",
-          "description": "",
-          "scroll_btn": true
         }
       }
     },

@@ -8,6 +8,7 @@
         {%- assign formId = 'RegisterForm' -%}
         {% form 'create_customer', id: formId, novalidate: 'novalidate' %}
           {% include 'form-status', form: form, form_id: formId %}
+          <input type="hidden" name="return_to" value="/account">
 
           <div class="form-group form-group__with-icon">
             <span class="form-control__icon">
@@ -101,7 +102,7 @@
 
           <p class="text-center mt-5 mb-0">
             <button type="submit" class="btn btn-primary d-block btn--no-arrow w-100">
-              {{ 'customer.register.submit' | t }}
+              Create account
             </button>
           </p>
 

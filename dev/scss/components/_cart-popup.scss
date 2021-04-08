@@ -36,6 +36,10 @@
   &__footer {
     padding: 40px 32px 84px;
     background: #F7F7F7;
+
+    @include media-breakpoint-down(sm) {
+      padding: 40px 16px;
+    }
   }
 
   .cart {
@@ -48,6 +52,7 @@
     }
 
     hr {
+      border-top: 1px solid;
       border-color: #EAEAEA;
       opacity: 0.3;
       border-bottom: none;
