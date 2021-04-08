@@ -78,7 +78,7 @@
     }
   </script>
 
-  {% if request.page_type == 'product' or request.page_type == 'cart' %}
+  {% if request.page_type == 'product' or request.page_type == 'cart' or request.page_type == 'article' %}
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';onLoadStylesheet()">
     <link rel="stylesheet" href="{{ 'product.min.css' | asset_url }}" type="text/css" media="print" onload="this.media='all';">
   {% endif %}
