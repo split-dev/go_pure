@@ -1,35 +1,23 @@
-<div class="article__position d-flex w-100">
+<div class="section-header text-center">
+  <h1 class="article__title" id="title-0">{{ article.title }}</h1>
+  {% if section.settings.blog_show_author %}
+    <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+  {% endif %}
 
-  <div class="article__block mt-2">
-    {% if article.tags %}
-      {% for tag in article.tags %}
-        <span class="article__tag d-flex justify-content-center align-items-center text-center">{{ tag }}</span>
-      {% endfor %}
-    {% endif %}
-    <h2 class="text-35px">{{ article.title }}</h2>
-    <div class="article__date">
-      <span class="text-15px font-weight-semibold text-primary d-flex align-items-center">
-        <svg class="mr-2 mb-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.416626 7.79183H14.5833V14.1668C14.5833 14.3547 14.5087 14.5349 14.3758 14.6677C14.243 14.8005 14.0628 14.8752 13.875 14.8752H1.12496C0.937098 14.8752 0.75693 14.8005 0.624092 14.6677C0.491254 14.5349 0.416626 14.3547 0.416626 14.1668V7.79183ZM11.0416 2.12516H13.875C14.0628 2.12516 14.243 2.19979 14.3758 2.33263C14.5087 2.46547 14.5833 2.64563 14.5833 2.8335V6.37516H0.416626V2.8335C0.416626 2.64563 0.491254 2.46547 0.624092 2.33263C0.75693 2.19979 0.937098 2.12516 1.12496 2.12516H3.95829V0.708496H5.37496V2.12516H9.62496V0.708496H11.0416V2.12516Z" fill="#00BAF2"/>
-        </svg>
-        {{ article.published_at | time_tag: format: 'date' }}
-      </span>
-    </div>
-    <div class="mb-4">
-      <div class="article__image w-100" style="background-image: url('{{ article.image | img_url: 'master' }}')"></div>
-    </div>
-    <div class="article__blok-text pt-4 text-15px text-dark">
-      {{ article.content }}
-    </div>
-  </div>
-
-  <div class="article__sidebar">
-    <div class="article__sidebar-box p-4">
-      <h3>GOpure Pod Water Purifier</h3>
-    </div>
-  </div>
+  {% if section.settings.blog_show_date %}
+    <span class="article__date">
+      {{ article.published_at | time_tag: format: 'date' }}
+    </span>
+  {% endif %}
 </div>
 
+<div class="rte">
+  {{ article.content }}
+</div>
+
+{% if section.settings.show_share_buttons %}
+  {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+{% endif %}
 
 
 
