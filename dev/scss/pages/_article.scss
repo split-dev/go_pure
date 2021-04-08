@@ -1,0 +1,86 @@
+.article {
+  &__position {
+    padding: 33px 0 110px;
+    @include media-breakpoint-down(xs) {
+      padding: 48px 0 80px;
+    }
+    p {
+      @include text-15px;
+    }
+  }
+  &__block {
+    width: calc(60% - 30px);
+    margin-right: 30px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  &__tag {
+    background-color: $info;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 48px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    margin-right: 10px;
+    padding: 6px 15px;
+    width: fit-content;
+  }
+  &__image {
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__date {
+    margin: 20px 0 48px;
+  }
+  &__blok-text {
+    font-family: "Montserrat" !important;
+    a {
+      color: $info;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Montserrat" !important;
+    }
+    h2 {
+      font-weight: 400;
+      @include text-24px;
+      margin: 40px 0 24px;
+    }
+  }
+  &__sidebar {
+    width: calc(40% - 30px);
+    margin-left: 30px;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+  &__sidebar-box {
+    box-shadow: 0 0 27px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  }
+}
+#shopify-section-featured-blog {
+  margin-bottom: 75px;
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 45px;
+  }
+  .page-hero__label {
+    left: 15px;
+    top: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .section-header {
+    margin-bottom: 60px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 48px;
+    }
+  }
+}

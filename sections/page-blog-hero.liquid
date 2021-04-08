@@ -1,0 +1,59 @@
+{% liquid
+  if title_override != blank
+  assign text_hero = title_override
+  else
+  assign text_hero = title
+  endif
+%}
+{% assign blog = blogs[section.settings.blog] %}
+
+{% for article in blog.articles limit:1 %}
+<div class="lazyload bg-muted overlay bg-center"
+     data-bgset="{%- render 'bgset', image: article.image.src -%}"
+     {% if section.settings.mobile_image %}data-bg-mobile="{{ article.image.src | img_url: 'master' }}{% endif %}">
+  <div class="container h-100">
+    <div class="page-hero mx-auto flex-center flex-column h-100">
+      {% for tag in article.tags %}
+        <span class="page-hero__label d-flex justify-content-center align-items-center text-center">{{ tag }}</span>
+      {% endfor %}
+      <h1 class="mb-0 text-35px text-light text-center">{{ article.title }}</h1>
+
+        <div class="page-hero__description mx-auto mt-3 mt-md-4 text-center text-light text-15px">
+          {% if article.excerpt.size > 0 %}
+            {{ article.excerpt }}
+          {% else %}
+            {{ article.content | strip_html | truncate: 150 }}
+          {% endif %}
+        </div>
+        <a href="{{ article.url }}" class="page-hero__link mt-3 d-flex justify-content-center align-items-center text-light">Read more <svg class="ml-2" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.833496L5.125 5.00016L0.75 9.16683" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+
+  {%- if section.settings.scroll_btn -%}
+    <button class="page-hero__scroll-down bg-light border-0 rounded-circle position-absolute"
+            data-scroll-down>
+      {%- render 'icon-chevron-down' -%}
+    </button>
+  {%- endif -%}
+</div>
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Blog Hero",
+  "tag": "section",
+  "settings": [
+    {
+    "type": "blog",
+    "id": "blog",
+    "label": "Blog"
+    },
+    {
+       "type": "checkbox",
+       "id": "scroll_btn",
+       "label": "Enable Scroll Button",
+       "default": false
+    }
+  ]
+}
+{% endschema %}
