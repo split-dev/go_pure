@@ -1,5 +1,6 @@
 @import "./spr";
 @import "./bold";
+@import "../../sections/featured-product";
 
 .product-template {
   &__container {
@@ -98,10 +99,10 @@
     }
     label {
       flex-basis: 100%;
-      padding: 17px 0;
+      padding: 17px 15px;
       text-align: center;
       border: 1px solid $primary;
-      font-weight: 600;
+      font-weight: 500;
       margin: 0 -1px -1px 0;
       @include text-15px;
 
