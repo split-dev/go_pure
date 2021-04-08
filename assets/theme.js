@@ -8364,7 +8364,7 @@ theme.Product = (function() {
                   </ul>
 
                   <div class="d-flex align-items-center">
-                <div class="cart-popup-item__quantity d-flex">
+                <div class="cart-popup-item__quantity ml-auto d-flex">
                 <span class="visually-hidden" data-cart-popup-quantity-label=""></span>
                 <button data-qty="-">-</button>
                 <input class="cart-popup-item__quantity__input" min="1" type="number" aria-hidden="true" value="${item.quantity}" data-cart-popup-quantity="">
