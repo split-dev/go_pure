@@ -62,6 +62,7 @@ page.burger.addEventListener('click', () => {
            })
         });
     }
+    window.initQtyBtns = initQtyBtns;
 
     function updateCart(lineString, qty = 0) {
         fetch('/cart/change.js', {
@@ -89,20 +90,28 @@ page.burger.addEventListener('click', () => {
         }, 800);
     }
 
+    function BoldCartFix(cart) {
+        return BOLD.common.cartDoctor.fix(cart);
+    }
+    window.BoldCartFix = BoldCartFix;
+
+    function formatMoney(money) {
+        return window.BOLD.common.Shopify.formatMoney(money)
+    }
+    window.formatMoney = formatMoney;
+
     function reRenderCart(state) {
         let state_old = state;
         let cartItems = document.querySelectorAll('[data-cart-item]');
 
-        state = BOLD.common.cartDoctor.fix(state);
+        state = window.BoldCartFix(state);
         cartSubtotal.textContent = window.BOLD.common.Shopify.formatMoney(state.items_subtotal_price);
         BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded', state);
 
         cartItems.forEach((item, index) => {
             let priceWithoutSubscription = item.querySelector('[data-without-subscription]');
-            priceWithoutSubscription.textContent = window.BOLD.common.Shopify.formatMoney(state_old.items[index].final_line_price);
+            priceWithoutSubscription.textContent = window.formatMoney(state_old.items[index].final_line_price);
         });
-        console.log(state_old);
-        console.log(state);
 
         state.item_count === 0
            ? cartEmpty.classList.remove('d-none')
@@ -129,6 +138,7 @@ page.burger.addEventListener('click', () => {
             })
         });
     }
+    window.initRemoveLine = initRemoveLineItemBtns;
     initQtyBtns();
     initRemoveLineItemBtns();
 }());

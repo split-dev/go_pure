@@ -6985,13 +6985,6 @@ theme.Cart = (function() {
 
         discountWrapper.classList.remove(classes.hide);
       }
-
-      this.container.querySelector(
-        selectors.cartSubtotal
-      ).innerHTML = theme.Currency.formatMoney(
-        state.total_price,
-        theme.moneyFormatWithCurrency
-      );
     },
 
     _createCartDiscountList: function(cart) {
@@ -8321,6 +8314,90 @@ theme.Product = (function() {
         })
       );
     },
+    _renderCartContent: function() {
+
+      fetch('/cart.js')
+        .then((response) => {
+          return response.json();
+        })
+        .then(state => {
+          let state_old = state;
+          state = window.BoldCartFix(state);
+
+          var cartInnerHtml = '';
+
+          state.items.forEach((item, index) => {
+            let isSubscriptionClass = '';
+            let frequency_num = 0;
+            let discounted_price = 0;
+
+            // Define is there a need to hide BOLD status
+            if (item.properties_all !== null && item.properties_all !== undefined) {
+              if (item.properties_all.frequency_num !== undefined) {
+                isSubscriptionClass = '';
+                frequency_num = item.properties_all.frequency_num;
+                discounted_price = item.properties_all.discounted_price;
+              } else {
+                  isSubscriptionClass = 'd-none';
+              }
+            } else {
+              isSubscriptionClass = 'd-none';
+            }
+
+            // Define is a need of hiding Sale price
+            let salePrice = '';
+            state_old.items[index].final_line_price > item.final_line_price
+              ? salePrice = window.formatMoney(state_old.items[index].final_line_price)
+              : salePrice = '';
+
+            cartInnerHtml += `<div class="cart-popup-item d-flex" data-cart-item="" data-cart-item-key="${item.key}" data-cart-item-url="${item.url}" data-cart-item-title="${item.title}" data-cart-item-index="${index + 1}" data-cart-item-quantity="${item.quantity}">
+                <div class="cart-popup-item__image-wrapper" data-cart-popup-image-wrapper="">
+                  <img class="cart__image" src="${item.image}" alt="${item.variant_title}" data-cart-item-image>
+                </div>
+                <div class="cart-popup-item__description w-100 position-relative pl-2">
+                  <h3 class="mb-1 text-15px font-montserat font-weight-semibold" data-cart-popup-title="">
+                    ${item.product_title}
+                  </h3>
+                  <ul class="product-details list-unstyled pl-0 mb-2 text-11px" aria-label="Product details" data-cart-popup-product-details="">
+                    <li>${item.variant_title}</li>
+                    <li class="${isSubscriptionClass}">Deliver every ${frequency_num} Month(s) ${discounted_price} each</li>
+                  </ul>
+
+                  <div class="d-flex align-items-center">
+                <div class="cart-popup-item__quantity d-flex">
+                <span class="visually-hidden" data-cart-popup-quantity-label=""></span>
+                <button data-qty="-">-</button>
+                <input class="cart-popup-item__quantity__input" min="1" type="number" aria-hidden="true" value="${item.quantity}" data-cart-popup-quantity="">
+                <button data-qty="+">+</button>
+                </div>
+
+                <div class="text-15px text-primary ml-auto">
+
+                <s class="mr-2" data-cart-item-original-price="" data-without-subscription="">
+                <span>${salePrice}</span>
+            </s>
+
+
+            <span class="font-weight-semibold" data-cart-item-final-price="">
+                <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="31923688243243:d830828c2ab8bc788f8a2e5a004e71d3" style="display:none !important;"></span>
+                <span>${window.formatMoney(item.final_line_price)}</span>
+            </span>
+            </div>
+            </div>
+            
+                  <a class="cart-popup-item__remove position-absolute" href="/cart/change?line=${index + 1}&amp;quantity=0" data-cart-remove="" data-role="product-remove">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"><defs></defs><path fill="#004B83" d="M9 18a9 9 0 01-9-9 9 9 0 019-9 9 9 0 019 9 9 9 0 01-9 9zm0-1.8A7.2 7.2 0 109 1.8a7.2 7.2 0 000 14.4zm0-8.473l2.545-2.546 1.274 1.274L10.273 9l2.546 2.545-1.274 1.274L9 10.273l-2.545 2.546-1.274-1.274L7.727 9 5.181 6.455 6.455 5.18 9 7.727z"></path></svg>
+            </a>
+                </div>
+              </div>`
+          });
+          document.querySelector('.cart').innerHTML = cartInnerHtml;
+          window.initRemoveLine();
+          window.initQtyBtns();
+          BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded', state);
+          this._showCartPopup();
+        });
+    },
 
     _addItemToCart: function(form) {
       var self = this;
@@ -8343,8 +8420,8 @@ theme.Product = (function() {
             error.isFromServer = true;
             throw error;
           }
+          self._renderCartContent();
           self._hideErrorMessage();
-          self._showCartPopup();
         })
         .catch(function(error) {
           self.previouslyFocusedElement.focus();
@@ -8650,7 +8727,6 @@ theme.Product = (function() {
       if (e !== undefined) {
         e.preventDefault();
       }
-      console.log(this.cartPopupWrapper);
       theme.Helpers.prepareTransition(this.cartPopupWrapper);
 
       this.cartPopupWrapper.classList.remove(
