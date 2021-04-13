@@ -27,7 +27,7 @@
         {%- if block.type == 'menu' -%}
           {%- assign menu = linklists[block.settings.menu] -%}
           <nav class="text-15px text-light pt-5 mt-n2 mt-lg-0 pt-lg-0">
-            <p class="font-weight-bold text-uppercase">{{ menu.title }}</p>
+            <p class="font-weight-bold text-uppercase">{{ menu.title | replace: '| New', '' }}</p>
             {%- for link in menu.links -%}
               <a href="{{ link.url }}"
                  class="d-block text-light {% unless forloop.last %}mb-4{% endunless %}">{{ link.title }}</a>

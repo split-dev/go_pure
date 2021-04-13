@@ -29,13 +29,13 @@
           "db23e760-8ee5-4afb-9d8c-51ffefb8f8ff": {
             "type": "menu",
             "settings": {
-              "menu": "company"
+              "menu": "company-new"
             }
           },
           "34e61fbd-5252-4a5a-ba5f-04eb662323b3": {
             "type": "menu",
             "settings": {
-              "menu": "account"
+              "menu": "account-new"
             }
           },
           "14029d78-a14c-49ad-a0cc-c31ef3e3e69d": {
@@ -114,7 +114,7 @@
           "description": "<p>Say hello to the smallest, most convenient portable water purifier on the planet, ever. Say goodbye to buying disposable plastic water bottles on the go, forever.<\/p>",
           "enable_button": true,
           "button_text": "Shop now",
-          "button_link": "shopify:\/\/collections"
+          "button_link": "shopify:\/\/products\/gopure-pod-water-purifier"
         }
       },
       "161434311727521ded": {
@@ -125,7 +125,7 @@
           "heading": "Join the Movement. Help save the world one sip at a time",
           "text": "<p>Every ocean, river, stream, landfill, forest, park, trail, mountain, and valley (and all the creatures that inhabit them). Because the power to save the environment from another 2,000 plastic water bottles comes in every Pod<\/p>",
           "button_text": "Shop now",
-          "button_link": "shopify:\/\/collections",
+          "button_link": "shopify:\/\/products\/gopure-pod-water-purifier",
           "small-text": "@thegopurepod"
         }
       },
@@ -134,7 +134,9 @@
         "settings": {
           "title": "Ready to Get Started? Get Your GOpure Today!",
           "link_text": "Purchase Now",
-          "secondary_link_text": "See It In Action"
+          "link_url": "shopify:\/\/products\/gopure-pod-water-purifier",
+          "secondary_link_text": "See It In Action",
+          "secondary_link_url": "https:\/\/www.youtube.com\/watch?v=Zp0AIoWfL_g"
         }
       },
       "1614594263644fcc39": {
@@ -181,7 +183,7 @@
         "settings": {
           "title": "GOpure is perfect if…",
           "button_text": "Get Your GOpure",
-          "button_link": "#",
+          "button_link": "shopify:\/\/products\/gopure-pod-water-purifier",
           "img": "shopify:\/\/shop_images\/image_2.png"
         }
       },
@@ -221,8 +223,7 @@
           "e49fa74a-eea0-4a6b-99a3-51abc853b0f5",
           "0c9d013e-0872-4bdc-a5dc-86a005055686"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "social": {
         "type": "social",
@@ -232,7 +233,7 @@
           "heading": "Join the Movement. Help save the world one sip at a time",
           "text": "<p>Every ocean, river, stream, landfill, forest, park, trail, mountain, and valley (and all the creatures that inhabit them). Because the power to save the environment from another 2,000 plastic water bottles comes in every Pod<\/p>",
           "button_text": "Shop Now",
-          "button_link": "#",
+          "button_link": "shopify:\/\/products\/gopure-pod-water-purifier",
           "small-text": "@thegopurepod"
         }
       },
@@ -240,7 +241,8 @@
         "type": "page-contact-hero",
         "settings": {
           "desktop_image": "shopify:\/\/shop_images\/image_33_874b351a-b32d-46fc-a80c-8be96cde9437.jpg",
-          "mobile_image": "shopify:\/\/shop_images\/image_33_083811f8-7c56-4100-919d-4877a60a0c23.jpg"
+          "mobile_image": "shopify:\/\/shop_images\/image_33_083811f8-7c56-4100-919d-4877a60a0c23.jpg",
+          "scroll_btn": false
         }
       },
       "page-contact-content": {
@@ -321,8 +323,7 @@
           "381cc302-49b9-4fcc-8acb-e54c8e79f091",
           "687f22e8-2393-44ed-a1aa-2e78d729c9c5"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "table": {
         "type": "table",
@@ -336,7 +337,7 @@
           "913edc72-c44f-45ef-9fb3-6a544e67aa8a": {
             "type": "column-1",
             "settings": {
-              "content": "<h3>Voc<\/h3>\n<hr>\n<div>\n  trans-1, 2-Dichloroethene <span>92.40%<\/span>\n<\/div>\n<div>\n  Benzene <span>92.40%<\/span>\n<\/div>\n<div>\n  Benzene <span>92.40%<\/span>\n<\/div>\n<h3>Antibacterial<\/h3>\n<hr>\n<div>E.Coli <span>99.97%<\/span>\n<\/div>"
+              "content": "<h3>Voc<\/h3>\n<hr>\n<div>\n  trans-1, 2-Dichloroethene <span>92.40%<\/span>\n<\/div>\n<div>\n  Benzene <span>92.40%<\/span>\n<\/div>\n\n<h3>Antibacterial<\/h3>\n<hr>\n<div>E.Coli <span>99.97%<\/span>\n<\/div>"
             }
           },
           "829cea82-7694-4092-9b6b-239f553b85e8": {
@@ -454,7 +455,7 @@
         "settings": {
           "title": "Benefits of Daily Use",
           "link_text": "Get Your GOpure",
-          "link_url": "#"
+          "link_url": "shopify:\/\/products\/gopure-pod-water-purifier"
         }
       },
       "161649263130577a03": {
@@ -584,16 +585,12 @@
       },
       "blog-template": {
         "type": "blog-template",
-        "settings": {
-          "layout": "list",
-          "blog_show_author": true,
-          "blog_show_date": true
-        }
+        "settings": {}
       },
       "product-template": {
         "type": "product-template",
         "settings": {
-          "enable_payment_button": true,
+          "enable_payment_button": false,
           "enable_image_zoom": true,
           "enable_video_looping": false
         }
@@ -624,8 +621,7 @@
           "4331a8ac-7e74-49a6-8d65-6ef9e9572899",
           "1f005210-ea61-460b-8a18-54461bfb2f39"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "features": {
         "type": "features",
@@ -634,7 +630,7 @@
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_6a9bde0b-2f97-4f7c-9067-a4597c9ffe92.png",
-              "title": "<p><strong>Earth Friendly<\/strong><\/p><p>GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature&#x27;s &quot;perfect filter&quot;<\/p>",
+              "title": "<p><strong>EARTH FRIENDLY<\/strong><\/p><p>GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature&#x27;s &quot;perfect filter&quot;<\/p>",
               "width": 53,
               "height": 58
             }
@@ -643,7 +639,7 @@
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_3b6a3428-0ce1-450c-b58a-87580516c677.png",
-              "title": "<p><strong>PuriBloc Technology<\/strong><\/p><p>GOpure&#x27;s innovative purification process introduces a revolutionary advanced ceramic technology<\/p>",
+              "title": "<p><strong>PURIBLOC TECHNOLOGY<\/strong><\/p><p>GOpure&#x27;s innovative purification process introduces a revolutionary advanced ceramic technology<\/p>",
               "width": 48,
               "height": 24
             }
@@ -652,7 +648,7 @@
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_1.png",
-              "title": "<p><strong>Works in Any Сontainer<\/strong><\/p><p>The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker<\/p>",
+              "title": "<p><strong>WORKS IN ANY СONTANER<\/strong><\/p><p>The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker<\/p>",
               "width": 50,
               "height": 30
             }
@@ -661,7 +657,7 @@
             "type": "IconAndText",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_11e5e136-af2e-440a-9546-00c7dc9bb0e3.png",
-              "title": "<p><strong>Reduce Pollution<\/strong><\/p><p>Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles<\/p>",
+              "title": "<p><strong>REDUCE POLLUTION<\/strong><\/p><p>Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles<\/p>",
               "width": 61,
               "height": 73
             }
@@ -856,8 +852,7 @@
           "28982884-9b62-4064-a115-1f5e1b192248",
           "10259103-577a-495f-a8c7-2efd7b00061f"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "page-works-hero": {
         "type": "page-works-hero",
@@ -961,8 +956,7 @@
           "25c41ef2-9866-4480-96c6-ddd4680ef336",
           "d38f0928-ed5d-4900-a8a2-b44be0e4e5e7"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "page-works-features": {
         "type": "page-works-features",
@@ -1008,7 +1002,7 @@
           "title": "Drop In, Drink Up.",
           "primary_link_url": "shopify:\/\/products\/gopure-pod-water-purifier",
           "primary_link_text": "Shop Now",
-          "secondary_link_url": "#",
+          "secondary_link_url": "https:\/\/www.youtube.com\/watch?v=Zp0AIoWfL_g",
           "secondary_link_text": "See It In Action"
         }
       },
@@ -1021,6 +1015,67 @@
           "video_url": "https:\/\/www.youtube.com\/embed\/KK9bwTlAvgo?autoplay=1",
           "poster_desktop": "shopify:\/\/shop_images\/image_21-2.jpg",
           "poster_mobile": "shopify:\/\/shop_images\/image_21.jpg"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {}
+      },
+      "featured-blog": {
+        "type": "featured-blog",
+        "settings": {
+          "title": "YOU MAY ALSO LIKE",
+          "blog": "travel",
+          "post_limit": 2
+        }
+      },
+      "spr-reviews": {
+        "type": "spr-reviews",
+        "settings": {}
+      },
+      "page-store-locator-hero": {
+        "type": "page-store-locator-hero",
+        "settings": {
+          "desktop_image": "shopify:\/\/shop_images\/image_31_ba8148c5-7c7e-491e-bf4a-cbec11604c24.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/image_32_4352f11a-9b38-4493-bb64-b6d70df3edfb.jpg",
+          "heading_override": "Store Locator",
+          "description": "",
+          "scroll_btn": true
+        }
+      },
+      "page-shipping-hero": {
+        "type": "page-shipping-hero",
+        "settings": {
+          "desktop_image": "shopify:\/\/shop_images\/image_31_711ba208-ee1b-402c-8be6-119005c58395.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/image_31_964432a6-e30e-47bd-8d6a-5650ae3634c7.jpg",
+          "heading_override": "Shipping and Returns",
+          "description": "",
+          "scroll_btn": true
+        }
+      },
+      "page-privacy-hero": {
+        "type": "page-privacy-hero",
+        "settings": {
+          "desktop_image": "shopify:\/\/shop_images\/image_31_bb8db512-be70-4dc3-b33f-855105e1bb5a.jpg",
+          "mobile_image": "shopify:\/\/shop_images\/image_32_90dfe01a-6f09-4baa-961c-2c011ab372da.jpg",
+          "description": "",
+          "scroll_btn": true
+        }
+      },
+      "page-blog-hero": {
+        "type": "page-blog-hero",
+        "settings": {
+          "blog": "favorites",
+          "scroll_btn": false
+        }
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "settings": {
+          "featured_product": "gopure-pod-water-purifier",
+          "enable_payment_button": false,
+          "enable_image_zoom": true,
+          "enable_video_looping": false
         }
       }
     },

@@ -5,6 +5,9 @@
     @include media-breakpoint-up(sm) {
       height: calc(100vh - 111px);
     }
+    @include media-breakpoint-up(lg) {
+      min-height: 913px;
+    }
     & > .container {
       height: 100%;
       @include media-breakpoint-up(lg) {
@@ -22,6 +25,7 @@
   }
   &__icons {
     padding: 32px 0;
+    background-color: #004B83;
     backdrop-filter: blur(16px);
   }
 }

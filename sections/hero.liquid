@@ -16,14 +16,14 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="hero__icons d-none d-lg-block">
-      <div class="container">
-        <div class="d-flex align-items-center justify-content-between">
-          {%- for block in section.blocks -%}
-            <img class="lazyload" data-src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
-          {%- endfor -%}
-        </div>
-      </div>
+  </div>
+</div>
+<div class="hero__icons d-none d-lg-block">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+      {%- for block in section.blocks -%}
+        <img class="lazyload" data-src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}">
+      {%- endfor -%}
     </div>
   </div>
 </div>
