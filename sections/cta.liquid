@@ -1,5 +1,7 @@
 <div class="container text-center">
-  <h2 class="mb-5 text-35px">{{ section.settings.title }}</h2>
+  {%- if section.settings.title != blank -%}
+    <h2 class="mb-5 text-35px">{{ section.settings.title }}</h2>
+  {%- endif -%}
   
   {%- if section.settings.link_text != blank -%}
     <a href="{{ section.settings.link_url }}" class="btn btn-primary d-block d-sm-inline-block">

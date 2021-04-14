@@ -107,7 +107,7 @@
           "75b76a74-3769-44e2-a71a-6a2a5b2e38c4"
         ],
         "settings": {
-          "bg_image": "shopify:\/\/shop_images\/hero-image-x2.jpg",
+          "bg_image": "shopify:\/\/shop_images\/Screen_Shot_2021-04-12_at_11.36_1.jpg",
           "enable_overlay": true,
           "overlay": 30,
           "heading": "The Power To Purify Tap <br class=\"d-none d-sm-inline\"> Water, Everywhere.",
@@ -145,31 +145,31 @@
           "e52ac6fa-c463-4c20-83f8-03d0e8f6df71": {
             "type": "text",
             "settings": {
-              "title": "You want to support your nutritional needs every day"
+              "title": "You travel frequently and need a clean water on the go"
             }
           },
           "9811b95b-9cb2-43a5-b1c1-b762767f2de8": {
             "type": "text",
             "settings": {
-              "title": "You want to encourage a healthy gut and nutrient absorption"
+              "title": "You dislike the taste of tap water, yuck!"
             }
           },
           "5d1d9f5d-b4fe-4d38-b543-3c8214169750": {
             "type": "text",
             "settings": {
-              "title": "You travel frequently and struggle to eat well on the road"
+              "title": "You are sick of wasting money on bottled water"
             }
           },
           "f9c5a727-3e67-41f0-9f20-2e3c3673864b": {
             "type": "text",
             "settings": {
-              "title": "You just don’t feel as energetic as you used to"
+              "title": "You want to encourage a healthy gut and nutrient absorption"
             }
           },
           "ff24ef76-1b30-4331-ad00-9ac671831dfc": {
             "type": "text",
             "settings": {
-              "title": "You’re an athlete seeking enhanced performance"
+              "title": "You are sick of cleaning your water bottles so often!"
             }
           }
         },
@@ -193,28 +193,28 @@
           "03ee816b-67da-4226-9bc9-960ccdc9521b": {
             "type": "quote",
             "settings": {
-              "image": "shopify:\/\/shop_images\/bridget_33ec656a-6941-4b23-80f3-592c490082b3.jpg",
+              "image": "shopify:\/\/shop_images\/autri-taheri-UmzHZeu9o_M-unsplash_1.jpg",
               "rating": 5,
-              "content": "Sed in malesuada quam. Morbi placerat enim lacus, vitae ultricies mauris malesuada eget. Sed ut vestibulum enim. Nam tempor velit lectus, eget ornare nunc malesuada sed. Praesent viverra et massa vel interdum.",
-              "title": "BRIDGET"
+              "content": "As I drink A LOT of water, buying water bottles became very costly. I found out about the Go Pure Pod filter and got immediately interested due to its efficiency, that it gets rid of bacterias and viruses and that it is so small so I can just drop it in my bottle and it's very easy! The water tastes better than the water bottles I used to buy. In addition, it is eco-friendly. I recommend it 100%.",
+              "title": "Roxanne"
             }
           },
           "e49fa74a-eea0-4a6b-99a3-51abc853b0f5": {
             "type": "quote",
             "settings": {
-              "image": "shopify:\/\/shop_images\/bridget_33ec656a-6941-4b23-80f3-592c490082b3.jpg",
-              "rating": 4,
-              "content": "Sed in malesuada quam. Morbi placerat enim lacus, vitae ultricies mauris malesuada eget. Sed ut vestibulum enim. Nam tempor velit lectus, eget ornare nunc malesuada sed. Praesent viverra et massa vel interdum.",
-              "title": "Scarlet"
+              "image": "shopify:\/\/shop_images\/alexander-milano--EkrWz7KffM-unsplash_1.jpg",
+              "rating": 5,
+              "content": "This product is a game changer. The water is delicious and clean as it gets. I barely have to wash my water bottles and humidifiers when I use this product. Just drop it in and it cleans the water instantly. Will never use Brita or buy plastic bottles again!",
+              "title": "Caroline"
             }
           },
           "0c9d013e-0872-4bdc-a5dc-86a005055686": {
             "type": "quote",
             "settings": {
-              "image": "shopify:\/\/shop_images\/bridget_33ec656a-6941-4b23-80f3-592c490082b3.jpg",
+              "image": "shopify:\/\/shop_images\/zahra-amiri-3GUn7wUs52I-unsplash_1.jpg",
               "rating": 5,
-              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.",
-              "title": "Einstein"
+              "content": "I absolutely love this little pod. I hate the waste of buying bottled water, but the tap water tastes awful. I bought this, and the improvement was drastic. Filtered tap water tastes just as good as bottled! The biggest improvement was in my cup of tea. Very happy with it.",
+              "title": "B.E."
             }
           }
         },
@@ -421,6 +421,20 @@
             "type": "advantage",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle.jpg",
+              "title": "Helps with Digestion"
+            }
+          },
+          "bb0f9449-0c8b-4196-8dde-354e9517fbbe": {
+            "type": "advantage",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle3.jpg",
+              "title": "Supports Recovery"
+            }
+          },
+          "c6b5acee-fe16-4074-9da5-06f8c0514697": {
+            "type": "advantage",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ashleynelltipton_1_1_1.jpg",
               "title": "Increases Energy"
             }
           },
@@ -428,33 +442,19 @@
             "type": "advantage",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle2.jpg",
-              "title": "Supports Recovery"
-            }
-          },
-          "bb0f9449-0c8b-4196-8dde-354e9517fbbe": {
-            "type": "advantage",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Rectangle3.jpg",
               "title": "Improves Immunity"
-            }
-          },
-          "c6b5acee-fe16-4074-9da5-06f8c0514697": {
-            "type": "advantage",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Rectangle4.jpg",
-              "title": "Helps with Digestion"
             }
           }
         },
         "block_order": [
           "fb0c6981-92d8-4fc6-a53d-08f27627a66e",
-          "fa7f6f6a-c363-4815-a00d-ef4802e17521",
           "bb0f9449-0c8b-4196-8dde-354e9517fbbe",
-          "c6b5acee-fe16-4074-9da5-06f8c0514697"
+          "c6b5acee-fe16-4074-9da5-06f8c0514697",
+          "fa7f6f6a-c363-4815-a00d-ef4802e17521"
         ],
         "settings": {
-          "title": "Benefits of Daily Use",
-          "link_text": "Get Your GOpure",
+          "title": "Benefits of Clean Water using GOpure Pods",
+          "link_text": "Shop Now",
           "link_url": "shopify:\/\/products\/gopure-pod-water-purifier"
         }
       },
