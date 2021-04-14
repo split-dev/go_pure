@@ -1,11 +1,11 @@
 {%- if section.settings.enable_bar -%}
-  <div class="header__bar bg-secondary text-light position-relative">
+  <a class="header__bar d-block bg-secondary text-light position-relative" href="{{ section.settings.bar_url | default: '#' }}">
     <div class="container">
       <p class="mb-0 text-15px text-light text-center">
         {{- section.settings.bar_text -}}
       </p>
     </div>
-  </div>
+  </a>
     {% style %}
     .header {
       top: -31px;
@@ -102,6 +102,11 @@
       "type": "text",
       "id": "bar_text",
       "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "bar_url",
+      "label": "Bar URL"
     },
     {
       "type": "header",

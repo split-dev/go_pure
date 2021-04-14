@@ -60,6 +60,10 @@
     @include media-breakpoint-down(md) {
       display: none;
     }
+    .shopify-section {
+      position: sticky;
+      top: 89px;
+    }
   }
   &__sidebar-box {
     box-shadow: 0 0 27px rgba(0, 0, 0, 0.1);
