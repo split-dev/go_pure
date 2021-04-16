@@ -1,0 +1,28 @@
+{% assign link_class = 'text-light' %}
+
+{% if request.page_type == 'product' or request.page_type == 'article' %}
+  {% assign link_class = 'text-primary' %}
+{% endif %}
+
+<nav class="breadcrumbs d-flex align-items-center pt-4 mb-n3 text-12px text-nowrap text-truncate">
+  <a href="{{ routes.root_url }}" class="font-weight-semibold text-12px {{ link_class }}">Home</a>
+
+  <span class="px-1 {{ link_class }}">
+    {%- render 'icon-chevron-right' -%}
+  </span>
+
+  {% case request.page_type %}
+    {% when 'product' %}
+      <span class="{{ link_class }} text-truncate"> {{ product.title }}</span>
+    {% when 'blog' %}
+      <span class="{{ link_class }}">{{ blog.title }}</span>
+    {% when 'article' %}
+      <a href="{{ blog.url }}" class="font-weight-semibold text-12px {{ link_class }}">{{ blog.title }}</a>
+      <span class="px-1 {{ link_class }}">
+        {%- render 'icon-chevron-right' -%}
+      </span>
+      <span class="{{ link_class }} text-truncate"> {{ article.title }}</span>
+    {% else %}
+      <span class="{{ link_class }} text-truncate"> {{ page.title }}</span>
+  {% endcase %}
+</nav>

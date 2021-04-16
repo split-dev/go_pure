@@ -12,6 +12,8 @@
      data-bgset="{%- render 'bgset', image: article.image.src -%}"
      {% if section.settings.mobile_image %}data-bg-mobile="{{ article.image.src | img_url: 'master' }}{% endif %}">
   <div class="container h-100">
+    {%- render 'breadcrumbs' -%}
+
     <div class="page-hero mx-auto flex-center flex-column h-100">
       {% for tag in article.tags %}
         <span class="page-hero__label d-flex justify-content-center align-items-center text-center">{{ tag }}</span>

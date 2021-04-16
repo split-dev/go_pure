@@ -4,7 +4,7 @@
 
 .product-template {
   &__container {
-    padding: 40px 0 80px;
+    padding: 60px 0 80px;
     @include media-breakpoint-up(md) {
       padding: 110px 0;
     }
@@ -85,6 +85,17 @@
   }
   &__reviews-badge {
     min-height: 26px;
+  }
+
+  .breadcrumbs {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: -34px;
+    padding-top: 0 !important;
+    @include media-breakpoint-up(md) {
+      top: -86px;
+    }
   }
 }
 

@@ -38,6 +38,9 @@
   font-size: 13px;
   line-height: 22px;
 }
+@mixin text-12px {
+  font-size: 12px;
+}
 @mixin text-11px {
   font-size: 11px;
   line-height: 16px;

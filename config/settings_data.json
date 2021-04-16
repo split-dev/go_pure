@@ -537,42 +537,48 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle_5cc7ff4c-62ca-4ad7-9963-5bf8b8388114.jpg",
-              "title": "Eliminates Fluoride"
+              "title": "Eliminates Fluoride",
+              "link_url": "\/products\/gopure-pod-water-purifier#shopify-section-table"
             }
           },
           "fd25fff4-b48b-4cc8-866c-ec60f82452ba": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle-2.jpg",
-              "title": "Eliminates Lead"
+              "title": "Eliminates Lead",
+              "link_url": "\/products\/gopure-pod-water-purifier#shopify-section-table"
             }
           },
           "2a2c5099-0069-4572-bdb0-03cb86bbdc2c": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle-3.jpg",
-              "title": "Eliminates Arsenic"
+              "title": "Eliminates Arsenic",
+              "link_url": "\/products\/gopure-pod-water-purifier#shopify-section-table"
             }
           },
           "46cc692e-7049-453f-a177-33dd2946265d": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle-4.jpg",
-              "title": "Eliminates PFOAs"
+              "title": "Eliminates PFOAs",
+              "link_url": "\/products\/gopure-pod-water-purifier#shopify-section-table"
             }
           },
           "6f292899-6c70-4fc6-b212-c7b4ec99d476": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle-5.jpg",
-              "title": "Eliminates Microplastics"
+              "title": "Eliminates Microplastics",
+              "link_url": "\/products\/gopure-pod-water-purifier#shopify-section-table"
             }
           },
           "79b914b6-349a-47fc-aee3-ef5d14088447": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Rectangle-6.jpg",
-              "title": "Eliminates Chlorine"
+              "title": "Eliminates Chlorine",
+              "link_url": "\/products\/gopure-pod-water-purifier#shopify-section-table"
             }
           }
         },
