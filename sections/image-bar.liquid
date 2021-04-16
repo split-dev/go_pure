@@ -6,11 +6,11 @@
   <div class="row justify-content-center">
     {%- for block in section.blocks -%}
       <div class="col-6 col-sm-4 col-lg-2">
-        <div class="image-bar__block">
+        <a href="{{ block.settings.link_url | default: '#' }}" target="_self" class="image-bar__block d-block">
           <img class="lazyload d-block mx-auto"
                data-src="{{ block.settings.image | img_url: '48x48' }}" alt="{{ block.settings.image.alt }}">
-          <p class="image-bar__text mb-0 mt-4 mx-auto text-primary text-15px font-weight-bold text-center">{{ block.settings.title | upcase }}</p>
-        </div>
+          <span class="image-bar__text d-block mb-0 mt-4 mx-auto text-primary text-15px font-weight-bold text-center">{{ block.settings.title | upcase }}</span>
+        </a>
       </div>
     {%- endfor -%}
   </div>
@@ -43,6 +43,11 @@
           "type": "text",
           "id": "title",
           "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link to"
         }
       ]
     }

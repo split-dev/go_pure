@@ -12,7 +12,8 @@
         "type": "header",
         "settings": {
           "enable_bar": true,
-          "bar_text": "Free Shipping on Orders Over $50",
+          "bar_text": "Free Shipping on Orders Over $60",
+          "bar_url": "shopify:\/\/products\/gopure-pod-water-purifier",
           "logo": "<svg width=\"115\" height=\"32\" viewbox=\"0 0 115 32\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M41.7763 8.99854C39.9774 12.8259 37.4111 13.8956 37.4111 16.6265C37.4111 18.9577 39.2111 20.8678 41.7763 20.8678C44.3412 20.8678 46.1408 18.9577 46.1408 16.6265C46.1408 13.8956 43.5755 12.8259 41.7763 8.99854Z\" fill=\"#00BAF2\"><\/path> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M41.7762 30.3631C38.9023 30.3631 36.0984 29.562 33.6675 28.0468L33.509 27.9484V20.4499L34.1175 21.2213C35.9755 23.5746 38.7672 24.9241 41.7762 24.9241C47.1267 24.9241 51.4794 20.6337 51.4794 15.3598C51.4794 10.086 47.1267 5.79523 41.7762 5.79523C36.7912 5.79523 32.6425 9.47795 32.1263 14.3617L32.0948 14.6626H26.5728L26.598 14.3031C27.1529 6.48323 33.8202 0.356934 41.7762 0.356934C50.1688 0.356934 56.9966 7.08715 56.9966 15.3598C56.9966 23.6325 50.1688 30.3631 41.7762 30.3631Z\" fill=\"#1675BB\"><\/path> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.2472 15.9543C18.6417 15.9543 17.335 17.2414 17.335 18.8248C17.335 20.4071 18.6417 21.6949 20.2472 21.6949H22.4695C20.6741 23.6772 18.0667 24.9078 15.237 24.9078C9.89656 24.9078 5.55143 20.6242 5.55143 15.3599C5.55143 10.0952 9.89656 5.81199 15.237 5.81199C17.5698 5.81199 19.8228 6.64059 21.583 8.14595C22.0879 8.57761 22.7337 8.81557 23.4016 8.81557C24.2066 8.81557 24.9709 8.47242 25.4986 7.87395C25.9845 7.32144 26.2235 6.61574 26.1713 5.88723C26.1195 5.15769 25.7814 4.49318 25.2216 4.0142C22.4537 1.64518 18.9073 0.340332 15.237 0.340332C6.83507 0.340332 0 7.07803 0 15.3599C0 23.6418 6.83507 30.3802 15.237 30.3802C19.5814 30.3802 23.5688 28.5422 26.3744 25.5815V28.5653C26.3744 30.1476 27.6808 31.4365 29.2867 31.4365C30.8922 31.4365 32.1983 30.1476 32.1983 28.5653V15.9543H20.2472Z\" fill=\"#1675BB\"><\/path> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M107.111 14.8973C109.177 14.8973 110.917 16.2236 111.48 18.0442H102.716C103.297 16.2304 105.056 14.8973 107.111 14.8973ZM110.459 22.3189C109.628 23.2023 108.437 23.7623 107.111 23.7623C105.067 23.7623 103.357 22.4997 102.751 20.7495H114.849C114.938 20.2947 114.987 19.8263 114.987 19.3466C114.987 15.1737 111.422 11.7603 107.074 11.7603C102.761 11.7603 99.1978 15.1737 99.1978 19.3466C99.1978 23.4848 102.726 26.8639 107.074 26.8639C110.348 26.8639 113.142 25.0001 114.349 22.3189H110.459Z\" fill=\"#1675BB\"><\/path> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M79.8427 12.4556V19.0108C79.8427 22.1223 80.6687 23.4411 82.755 23.4411C84.806 23.4411 85.7394 22.1563 85.7394 19.2481V12.4556H89.2651V20.1945C89.2651 24.0171 86.6042 26.6554 82.755 26.6554C80.8134 26.6554 78.9786 25.8775 77.7564 24.5233C76.6406 23.2729 76.3174 22.1907 76.3174 19.9575V12.4556H79.8427Z\" fill=\"#1675BB\"><\/path> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M66.9653 23.4407C64.4467 23.4407 62.5408 21.6484 62.5408 19.2811C62.5408 16.9137 64.4837 15.087 66.9294 15.087C69.4114 15.087 71.3899 16.9471 71.3899 19.248C71.3899 21.6154 69.447 23.4407 66.9653 23.4407ZM66.9653 11.8394C64.34 11.8394 61.7499 13.1251 60.3824 15.1207C59.376 16.6428 59.1602 17.6242 59.1602 20.6005C59.1602 20.6005 59.1567 30.1485 59.1567 30.1624C59.1567 31.1224 59.9462 31.9017 60.9208 31.9017C61.8953 31.9017 62.6858 31.1224 62.6858 30.1624V25.1323C64.0879 26.1808 65.5625 26.655 67.1453 26.655C71.3526 26.655 74.9152 23.2729 74.9152 19.248C74.9152 15.1888 71.3184 11.8394 66.9653 11.8394Z\" fill=\"#1675BB\"><\/path> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M98.3908 11.9406C97.9449 11.9072 97.7588 11.9072 97.4977 11.9072C93.5155 11.9072 91.2832 14.0717 91.2832 17.9614V26.1128H94.9294V18.8747C94.9294 16.1037 95.6732 15.29 98.3856 15.1212H98.3908C99.2824 15.1212 100.004 14.409 100.004 13.5314C100.004 12.6534 99.2824 11.9406 98.3908 11.9406Z\" fill=\"#1675BB\"><\/path> <\/svg>",
           "menu": "new-menu"
         }
@@ -212,6 +213,7 @@
             "type": "quote",
             "settings": {
               "image": "shopify:\/\/shop_images\/zahra-amiri-3GUn7wUs52I-unsplash_1.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/zahra-amiri-3GUn7wUs52I-unsplash_1_3f10d231-d184-4fb8-9c77-366e4d9fb31d.jpg",
               "rating": 5,
               "content": "I absolutely love this little pod. I hate the waste of buying bottled water, but the tap water tastes awful. I bought this, and the improvement was drastic. Filtered tap water tastes just as good as bottled! The biggest improvement was in my cup of tea. Very happy with it.",
               "title": "B.E."
@@ -258,6 +260,7 @@
         "settings": {
           "desktop_image": "shopify:\/\/shop_images\/image_31.jpg",
           "mobile_image": "shopify:\/\/shop_images\/image_31-2.jpg",
+          "description": "",
           "scroll_btn": true
         }
       },
@@ -268,49 +271,49 @@
             "type": "question",
             "settings": {
               "title": "What is inside the GOpure Pod?",
-              "content": "<p>The power within every Pod comes from an unlimited and renewable resource that has been trusted by Mother Nature for over 20 million years. She calls it <a href=\"#\" title=\"#\" target=\"_blank\">diatomaceous earth<\/a> (DE). We call it revolutionary technology. Every Pod features an “advanced ceramic” core made from DE and trace silver that performs like a magnet to continuously attract, bind and adsorb every heavy metal, inorganic, bacteria, impure chemicals and more.<\/p>"
+              "content": "<p>The power within every Pod comes from an unlimited and renewable resource that has been trusted by Mother Nature for over 20 million years. She calls it <a href=\"\/pages\/how-it-works\" target=\"_blank\" title=\"How It Works\">diatomaceous earth<\/a> (DE). We call it revolutionary technology. Every Pod features an “advanced ceramic” core made from DE and trace silver that performs like a magnet to continuously attract, bind and adsorb every heavy metal, inorganic, bacteria, impure chemicals and more.<\/p>"
             }
           },
           "42529d16-2992-446b-8709-5bbb443fe8c1": {
             "type": "question",
             "settings": {
               "title": "How do I use my GOpure Pod?",
-              "content": "<p><strong>Lorem ipsum<\/strong> <em>dolor sit ame<\/em>t, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>A simple little cleansing ritual is all that’s required for the first use of every Pod.<\/p><p>Step 1: Rinse the Pod under cold water for 10 seconds.<\/p><p>Step 2: Clean your bottle or water container thoroughly before filling with water and using your Pod for the first time.<\/p><p>Step 3: Repeat every two weeks for optimal performance. Yep, preparation and maintenance of your Pod and your bottle is that simple.<\/p>"
             }
           },
           "75032d0a-787e-41b3-8508-3d9e7fb308d1": {
             "type": "question",
             "settings": {
               "title": "How long does it take to purify my water?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>Within the first two minutes of dropping your Pod into your bottle or container, your water becomes fresh tasting and ready to drink. The Pod will continuously purify your water, including every time you refill it. Now you might be wondering – <em>do I still need to wait up to two minutes on refills?<\/em> Yeppers.<\/p><p>PS: an occasional swirl of the Pod in the water will speed up the purification process.<\/p>"
             }
           },
           "d790a8b5-92fc-4443-b0ae-e36e93772063": {
             "type": "question",
             "settings": {
               "title": "How long will my GOpure Pod last?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>Every Pod. Every six months. That’s our playbook. Why does it last so darn long? Unlike your old school carbon filter that has to be replaced every 40 gallons, our advanced ceramic technology lasts up to six months, purifying up to 264 gallons of water (6x more than carbon filters). For those who like math, this will save the planet from 2,000 single-use plastic water bottles while saving you money, too.<\/p>"
             }
           },
           "8cb8c193-69f3-4cf1-935e-7ffd278f9bf0": {
             "type": "question",
             "settings": {
               "title": "Where is it safe to use my GOpure Pod?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>If there’s a tap, there’s purified water. Every drop of potable water from every tap is now safe to drink everywhere you go with your GOpure Pod. Every town, every city, every country. While the Pod has been proven to remove <em>E.coli <\/em>and other dangerous bacteria, it is not recommended as the sole source for purification of backcountry water (lakes, streams, etc) and should be used with potable water only.<\/p>"
             }
           },
           "381cc302-49b9-4fcc-8acb-e54c8e79f091": {
             "type": "question",
             "settings": {
               "title": "How do I know when it’s time to get a new GOpure Pod?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>Easy! We can send you a new Pod every six months. Just sign up for our subscription program and we’ll take care of the rest. Commitment issues? No worries. We’ll send you an email reminder instead, 30 days before your replacement date so you can reorder at your leisure. Our packaging is earth-friendly, but you can go even greener with our package-free Pod delivery service. Speaking of green, every Pod is fully recyclable after use, or you can send it back to us and we will repurpose it.<\/p>"
             }
           },
           "687f22e8-2393-44ed-a1aa-2e78d729c9c5": {
             "type": "question",
             "settings": {
               "title": "What else can my Pod do?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>GOpure is equally effective in cold or hot water and optimizes pH to 7.4 creating healthier joints, bones, heart and skin. The Pod keeps your bottle, pitcher, hydration pack and more, clean from slime and stinkiness too!<\/p>"
             }
           }
         },
@@ -331,7 +334,7 @@
           "34019f92-28e0-4d65-aa53-920362c7e9c3": {
             "type": "column-1",
             "settings": {
-              "content": "<h3>Inorganics<\/h3>\n<hr>\n<div>\n  Chlorine<span>97.00%<\/span>\n<\/div>\n<div>\n  Nitrate<span>97.00%<\/span>\n<\/div>\n<div>\n  Nitrite<span>97.00%<\/span>\n<\/div>\n<div>\n  Nitrite<span>97.00%<\/span>\n<\/div>"
+              "content": "<h3>Inorganics<\/h3>\n<hr>\n<div>\n  Chlorine<span>97.00%<\/span>\n<\/div>\n<div>\n  Nitrate<span>97.00%<\/span>\n<\/div>\n<div>\n  Nitrite<span>97.00%<\/span>\n<\/div>\n<div>\n  Fluoride<span>97.00%<\/span>\n<\/div>"
             }
           },
           "913edc72-c44f-45ef-9fb3-6a544e67aa8a": {
@@ -357,7 +360,7 @@
           "enable_overlay": true,
           "overlay": 80,
           "title": "GOpureWater Purification Capability",
-          "subheading": "<p>These figures show the quantitative removal of contaminants from water by PuriBlocadvanced ceramic technology when tested in filtration device in a laboratory setting usinga heavy load of the various chemicals\/toxins listed.<\/p>",
+          "subheading": "<p>These figures show the quantitative removal of contaminants from water by PuriBlocadvanced ceramic technology when tested in filtration device in a laboratory setting using a heavy load of the various chemicals\/toxins listed.<\/p>",
           "ps": "*Source: The Potable water & Hygiene Laboratory, Gottingen University, Germany (April 2014)."
         }
       },
@@ -420,7 +423,7 @@
           "fb0c6981-92d8-4fc6-a53d-08f27627a66e": {
             "type": "advantage",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Rectangle.jpg",
+              "image": "shopify:\/\/shop_images\/Rectangle_a7dacfab-a204-4dde-a57c-e7bb4f949bbb.jpg",
               "title": "Helps with Digestion"
             }
           },
@@ -455,7 +458,9 @@
         "settings": {
           "title": "Benefits of Clean Water using GOpure Pods",
           "link_text": "Shop Now",
-          "link_url": "shopify:\/\/products\/gopure-pod-water-purifier"
+          "link_url": "shopify:\/\/products\/gopure-pod-water-purifier",
+          "link_secondary_text": "<svg class=\"pr-1\" width=\"20\" height=\"20\" viewbox=\"0 0 20 20\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"> <path d=\"M3.05944 2.36035C3.0589 2.36035 3.0583 2.36035 3.05776 2.36035C2.8686 2.36035 2.69069 2.43409 2.55634 2.5681C2.42052 2.70358 2.3457 2.88399 2.3457 3.07604V13.8077C2.3457 14.2013 2.66712 14.5222 3.06227 14.5232C4.72814 14.5272 7.51913 14.8744 9.44452 16.8893V5.65827C9.44452 5.52487 9.41045 5.39955 9.34614 5.29585C7.76586 2.75092 4.72908 2.36426 3.05944 2.36035Z\" fill=\"#1675BB\"><\/path> <path d=\"M17.6544 13.8078V3.07604C17.6544 2.88399 17.5796 2.70358 17.4438 2.5681C17.3094 2.43409 17.1314 2.36035 16.9424 2.36035C16.9418 2.36035 16.9412 2.36035 16.9407 2.36035C15.2711 2.36432 12.2343 2.75099 10.654 5.29592C10.5897 5.39962 10.5557 5.52494 10.5557 5.65834V16.8893C12.4811 14.8744 15.272 14.5272 16.9379 14.5232C17.333 14.5222 17.6544 14.2013 17.6544 13.8078Z\" fill=\"#1675BB\"><\/path> <path d=\"M19.2846 4.83496H18.7657V13.8074C18.7657 14.8122 17.9471 15.6316 16.9407 15.6341C15.5277 15.6374 13.1979 15.9137 11.5479 17.4754C14.4016 16.7767 17.41 17.2309 19.1244 17.6216C19.3385 17.6704 19.5597 17.62 19.7312 17.4833C19.9022 17.3469 20.0002 17.1431 20.0002 16.9243V5.55052C20.0003 5.15597 19.6792 4.83496 19.2846 4.83496Z\" fill=\"#1675BB\"><\/path> <path d=\"M1.23448 13.8074V4.83496H0.715558C0.321079 4.83496 0 5.15597 0 5.55052V16.9241C0 17.143 0.0980475 17.3467 0.268957 17.4831C0.440338 17.6197 0.661349 17.6703 0.87576 17.6214C2.59024 17.2306 5.59867 16.7765 8.45228 17.4752C6.80231 15.9136 4.47247 15.6374 3.05947 15.634C2.05321 15.6316 1.23448 14.8122 1.23448 13.8074Z\" fill=\"#1675BB\"><\/path> <\/svg> Find out how in our blogs!",
+          "link_secondary_url": "https:\/\/blog.gopurepod.com\/"
         }
       },
       "161649263130577a03": {
@@ -465,49 +470,49 @@
             "type": "text",
             "settings": {
               "title": "What is inside the GOpure Pod?",
-              "content": "<p>The power within every Pod comes from an unlimited and renewable resource that has been trusted by Mother Nature for over 20 million years. She calls it <a href=\"#\" title=\"#\" target=\"_blank\">diatomaceous earth (DE)<\/a>. We call it revolutionary technology. Every Pod features an “advanced ceramic” core made from DE and trace silver that performs like a magnet to continuously attract, bind and adsorb every heavy metal, inorganic, bacteria, impure chemicals and more.<\/p>"
+              "content": "<p>The power within every Pod comes from an unlimited and renewable resource that has been trusted by Mother Nature for over 20 million years. She calls it <a href=\"\/pages\/how-it-works\" target=\"_blank\" title=\"How It Works\">diatomaceous earth (DE)<\/a>. We call it revolutionary technology. Every Pod features an “advanced ceramic” core made from DE and trace silver that performs like a magnet to continuously attract, bind and adsorb every heavy metal, inorganic, bacteria, impure chemicals and more.<\/p>"
             }
           },
           "814e5d42-a18c-4b94-9f2f-a31a6bdfaadf": {
             "type": "text",
             "settings": {
               "title": "How do I use my GOpure Pod?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>A simple little cleansing ritual is all that’s required for the first use of every Pod.<\/p><p>Step 1: Rinse the Pod under cold water for 10 seconds.<\/p><p>Step 2: Clean your bottle or water container thoroughly before filling with water and using your Pod for the first time.<\/p><p>Step 3: Repeat every two weeks for optimal performance. Yep, preparation and maintenance of your Pod and your bottle is that simple.<\/p>"
             }
           },
           "a9a43b3d-7aac-4c12-b17d-ede1cfa94913": {
             "type": "text",
             "settings": {
               "title": "How long does it take to purify my water?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>Within the first two minutes of dropping your Pod into your bottle or container, your water becomes fresh tasting and ready to drink. The Pod will continuously purify your water, including every time you refill it. Now you might be wondering – <em>do I still need to wait up to two minutes on refills?<\/em> Yeppers.<\/p><p>PS: an occasional swirl of the Pod in the water will speed up the purification process.<\/p>"
             }
           },
           "d751f128-c70f-411a-830c-fd19e6a969c9": {
             "type": "text",
             "settings": {
               "title": "How long will my GOpure Pod last?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>Every Pod. Every six months. That’s our playbook. Why does it last so darn long? Unlike your old school carbon filter that has to be replaced every 40 gallons, our advanced ceramic technology lasts up to six months, purifying up to 264 gallons of water (6x more than carbon filters). For those who like math, this will save the planet from 2,000 single-use plastic water bottles while saving you money, too.<\/p>"
             }
           },
           "bf9007ba-3a48-4f55-b667-30bbc928ef29": {
             "type": "text",
             "settings": {
               "title": "Where is it safe to use my GOpure Pod?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>If there’s a tap, there’s purified water. Every drop of potable water from every tap is now safe to drink everywhere you go with your GOpure Pod. Every town, every city, every country. While the Pod has been proven to remove <em>E.coli <\/em>and other dangerous bacteria, it is not recommended as the sole source for purification of backcountry water (lakes, streams, etc) and should be used with potable water only.<\/p>"
             }
           },
           "8f71825a-ce63-4c7f-baf4-98383aaf1ca9": {
             "type": "text",
             "settings": {
               "title": "How do I know when it’s time to get a new GOpure Pod?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>Easy! We can send you a new Pod every six months. Just sign up for our subscription program and we’ll take care of the rest. Commitment issues? No worries. We’ll send you an email reminder instead, 30 days before your replacement date so you can reorder at your leisure. Our packaging is earth-friendly, but you can go even greener with our package-free Pod delivery service. Speaking of green, every Pod is fully recyclable after use, or you can send it back to us and we will repurpose it.<\/p>"
             }
           },
           "e7be7a8b-287f-4081-9a15-84a11e6af65a": {
             "type": "text",
             "settings": {
               "title": "What else can my Pod do?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>GOpure is equally effective in cold or hot water and optimizes pH to 7.4 creating healthier joints, bones, heart and skin. The Pod keeps your bottle, pitcher, hydration pack and more, clean from slime and stinkiness too!<\/p>"
             }
           }
         },
@@ -601,25 +606,36 @@
           "4331a8ac-7e74-49a6-8d65-6ef9e9572899": {
             "type": "quote",
             "settings": {
-              "image": "shopify:\/\/shop_images\/bridget.jpg",
+              "image": "shopify:\/\/shop_images\/autri-taheri-UmzHZeu9o_M-unsplash_1.jpg",
               "rating": 5,
-              "content": "Sed in malesuada quam. Morbi placerat enim lacus, vitae ultricies mauris malesuada eget. Sed ut vestibulum enim. Nam tempor velit lectus, eget ornare nunc malesuada sed. Praesent viverra et massa vel interdum.",
-              "title": "BRIDGET"
+              "content": "As I drink A LOT of water, buying water bottles became very costly. I found out about the Go Pure Pod filter and got immediately interested due to its efficiency, that it gets rid of bacterias and viruses and that it is so small so I can just drop it in my bottle and it's very easy! The water tastes better than the water bottles I used to buy. In addition, it is eco-friendly. I recommend it 100%.",
+              "title": "Roxanne"
             }
           },
           "1f005210-ea61-460b-8a18-54461bfb2f39": {
             "type": "quote",
             "settings": {
-              "image": "shopify:\/\/shop_images\/bridget.jpg",
-              "rating": 3,
-              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-              "title": "Scarlet"
+              "image": "shopify:\/\/shop_images\/alexander-milano--EkrWz7KffM-unsplash_1.jpg",
+              "rating": 5,
+              "content": "This product is a game changer. The water is delicious and clean as it gets. I barely have to wash my water bottles and humidifiers when I use this product. Just drop it in and it cleans the water instantly. Will never use Brita or buy plastic bottles again!",
+              "title": "Caroline"
+            }
+          },
+          "7d53da76-32f5-41ad-a482-bb702d942e93": {
+            "type": "quote",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/zahra-amiri-3GUn7wUs52I-unsplash_1.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/zahra-amiri-3GUn7wUs52I-unsplash_1_edbba7df-3000-49f9-9394-162783f556e1.jpg",
+              "rating": 5,
+              "content": "I absolutely love this little pod. I hate the waste of buying bottled water, but the tap water tastes awful. I bought this, and the improvement was drastic. Filtered tap water tastes just as good as bottled! The biggest improvement was in my cup of tea. Very happy with it.",
+              "title": "B.E."
             }
           }
         },
         "block_order": [
           "4331a8ac-7e74-49a6-8d65-6ef9e9572899",
-          "1f005210-ea61-460b-8a18-54461bfb2f39"
+          "1f005210-ea61-460b-8a18-54461bfb2f39",
+          "7d53da76-32f5-41ad-a482-bb702d942e93"
         ],
         "settings": {}
       },
@@ -683,49 +699,49 @@
             "type": "text",
             "settings": {
               "title": "What is inside the GOpure Pod?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>The power within every Pod comes from an unlimited and renewable resource that has been trusted by Mother Nature for over 20 million years. She calls it <a href=\"https:\/\/www.gopurepod.com\/pages\/how-it-works\" title=\"How The GOpure Pod Works\">diatomaceous earth<\/a> (DE). We call it revolutionary technology. Every Pod features an “advanced ceramic” core made from DE and trace silver that performs like a magnet to continuously attract, bind and adsorb every heavy metal, inorganic, bacteria, impure chemicals and more.<\/p>"
             }
           },
           "d63eb0b2-ad53-46bb-ada4-0233ec14579f": {
             "type": "text",
             "settings": {
               "title": "How do I use my GOpure Pod?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>A simple little cleansing ritual is all that’s required for the first use of every Pod.<\/p><p>Step 1: Rinse the Pod under cold water for 10 seconds.<\/p><p>Step 2: Clean your bottle or water container thoroughly before filling with water and using your Pod for the first time.<\/p><p>Step 3: Repeat every two weeks for optimal performance. Yep, preparation and maintenance of your Pod and your bottle is that simple.<\/p>"
             }
           },
           "e52bab93-6f6e-4716-adc6-1ea7bebd144c": {
             "type": "text",
             "settings": {
               "title": "How long does it take to purify my water?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>Within the first two minutes of dropping your Pod into your bottle or container, your water becomes fresh tasting and ready to drink. The Pod will continuously purify your water, including every time you refill it. Now you might be wondering – <em>do I still need to wait up to two minutes on refills?<\/em> Yeppers.<\/p><p>PS: an occasional swirl of the Pod in the water will speed up the purification process.<\/p>"
             }
           },
           "f8c58542-477e-467f-ace7-5359379dc6e7": {
             "type": "text",
             "settings": {
               "title": "How long will my GOpure Pod last?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>Every Pod. Every six months. That’s our playbook. Why does it last so darn long? Unlike your old school carbon filter that has to be replaced every 40 gallons, our advanced ceramic technology lasts up to six months, purifying up to 264 gallons of water (6x more than carbon filters). For those who like math, this will save the planet from 2,000 single-use plastic water bottles while saving you money, too.<\/p>"
             }
           },
           "a7db338d-833d-4b03-9c47-ce263589071b": {
             "type": "text",
             "settings": {
               "title": "Where is it safe to use my GOpure Pod?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>If there’s a tap, there’s purified water. Every drop of potable water from every tap is now safe to drink everywhere you go with your GOpure Pod. Every town, every city, every country. While the Pod has been proven to remove <em>E.coli <\/em>and other dangerous bacteria, it is not recommended as the sole source for purification of backcountry water (lakes, streams, etc) and should be used with potable water only.<\/p>"
             }
           },
           "971a174d-393d-4721-8d60-fc62c5c7e867": {
             "type": "text",
             "settings": {
               "title": "How do I know when it’s time to get a new GOpure Pod?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>Easy! We can send you a new Pod every six months. Just sign up for our subscription program and we’ll take care of the rest. Commitment issues? No worries. We’ll send you an email reminder instead, 30 days before your replacement date so you can reorder at your leisure. Our packaging is earth-friendly, but you can go even greener with our package-free Pod delivery service. Speaking of green, every Pod is fully recyclable after use, or you can send it back to us and we will repurpose it.<\/p>"
             }
           },
           "54e30a93-5d26-4c23-a49b-7d01ffd2ef69": {
             "type": "text",
             "settings": {
               "title": "What else can my Pod do?",
-              "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+              "content": "<p>GOpure is equally effective in cold or hot water and optimizes pH to 7.4 creating healthier joints, bones, heart and skin. The Pod keeps your bottle, pitcher, hydration pack and more, clean from slime and stinkiness too!<\/p>"
             }
           }
         },
@@ -1077,6 +1093,16 @@
           "enable_image_zoom": true,
           "enable_video_looping": false
         }
+      },
+      "16184040367fe1ae30": {
+        "type": "cta",
+        "settings": {
+          "title": "",
+          "link_text": "Purchase Now",
+          "link_url": "shopify:\/\/products\/gopure-pod-water-purifier",
+          "secondary_link_text": "To learn more",
+          "secondary_link_url": "shopify:\/\/pages\/how-it-works"
+        }
       }
     },
     "content_for_index": [
@@ -1086,6 +1112,7 @@
       "16148582662c4d52bf",
       "161649263130577a03",
       "16165003181cd76676",
+      "16184040367fe1ae30",
       "1615369276a9fcbfee",
       "1614594263644fcc39",
       "161434311727521ded"
