@@ -19,6 +19,11 @@
     &.open {
       display: block;
     }
+    @include media-breakpoint-only(md) {
+      [data-read-more] {
+        display: none;
+      }
+    }
     h4 {
       margin-top: 0;
       margin-bottom: 16px;
