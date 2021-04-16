@@ -1,9 +1,10 @@
 .quotes {
   &__single-quote {
-    background: linear-gradient(90.22deg, rgba(20, 20, 20, 0.35) 0.21%, rgba(0, 0, 0, 0.14) 99.83%);
+    background: linear-gradient(90.22deg, rgba(20, 20, 20, 0.67) 0.21%, rgba(0, 0, 0, 0.35) 99.83%);
     padding: 80px 0;
     @include media-breakpoint-up(sm) {
       padding: 130px 0;
+      background: linear-gradient(90.22deg, rgba(20, 20, 20, 0.35) 0.21%, rgba(0, 0, 0, 0.14) 99.83%);
     }
     &__author {
       font-style: normal;
