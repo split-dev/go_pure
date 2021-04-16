@@ -195,6 +195,7 @@
             "type": "quote",
             "settings": {
               "image": "shopify:\/\/shop_images\/autri-taheri-UmzHZeu9o_M-unsplash_1.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/autri-taheri-UmzHZeu9o_M-unsplash_1_6817b7e3-e9c5-4ad2-98b5-82a0b6baa496.jpg",
               "rating": 5,
               "content": "As I drink A LOT of water, buying water bottles became very costly. I found out about the Go Pure Pod filter and got immediately interested due to its efficiency, that it gets rid of bacterias and viruses and that it is so small so I can just drop it in my bottle and it's very easy! The water tastes better than the water bottles I used to buy. In addition, it is eco-friendly. I recommend it 100%.",
               "title": "Roxanne"
@@ -203,7 +204,8 @@
           "e49fa74a-eea0-4a6b-99a3-51abc853b0f5": {
             "type": "quote",
             "settings": {
-              "image": "shopify:\/\/shop_images\/alexander-milano--EkrWz7KffM-unsplash_1.jpg",
+              "image": "shopify:\/\/shop_images\/3_1.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/3_1_33f56e58-414a-465c-a993-a1de5e339bdb.jpg",
               "rating": 5,
               "content": "This product is a game changer. The water is delicious and clean as it gets. I barely have to wash my water bottles and humidifiers when I use this product. Just drop it in and it cleans the water instantly. Will never use Brita or buy plastic bottles again!",
               "title": "Caroline"
@@ -212,8 +214,8 @@
           "0c9d013e-0872-4bdc-a5dc-86a005055686": {
             "type": "quote",
             "settings": {
-              "image": "shopify:\/\/shop_images\/zahra-amiri-3GUn7wUs52I-unsplash_1.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/zahra-amiri-3GUn7wUs52I-unsplash_1_3f10d231-d184-4fb8-9c77-366e4d9fb31d.jpg",
+              "image": "shopify:\/\/shop_images\/image_44-2.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/image_44.jpg",
               "rating": 5,
               "content": "I absolutely love this little pod. I hate the waste of buying bottled water, but the tap water tastes awful. I bought this, and the improvement was drastic. Filtered tap water tastes just as good as bottled! The biggest improvement was in my cup of tea. Very happy with it.",
               "title": "B.E."
@@ -360,7 +362,7 @@
           "enable_overlay": true,
           "overlay": 80,
           "title": "GOpureWater Purification Capability",
-          "subheading": "<p>These figures show the quantitative removal of contaminants from water by PuriBlocadvanced ceramic technology when tested in filtration device in a laboratory setting using a heavy load of the various chemicals\/toxins listed.<\/p>",
+          "subheading": "<p>These figures show the quantitative removal of contaminants from water by PuriBloc advanced ceramic technology when tested in filtration device in a laboratory setting using a heavy load of the various chemicals\/toxins listed. The Pod’s core traps\/eliminates bacteria down as low as 0.22 microns in particle size. A filtrate of 0.45 microns is considered bacteriologically sterile in a laboratory setting. Microplastics are 0.5 microns or more.<\/p>",
           "ps": "*Source: The Potable water & Hygiene Laboratory, Gottingen University, Germany (April 2014)."
         }
       },
@@ -613,6 +615,7 @@
             "type": "quote",
             "settings": {
               "image": "shopify:\/\/shop_images\/autri-taheri-UmzHZeu9o_M-unsplash_1.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/autri-taheri-UmzHZeu9o_M-unsplash_1_e7e70a78-6050-4d99-bd3d-0ae79a512db6.jpg",
               "rating": 5,
               "content": "As I drink A LOT of water, buying water bottles became very costly. I found out about the Go Pure Pod filter and got immediately interested due to its efficiency, that it gets rid of bacterias and viruses and that it is so small so I can just drop it in my bottle and it's very easy! The water tastes better than the water bottles I used to buy. In addition, it is eco-friendly. I recommend it 100%.",
               "title": "Roxanne"
@@ -621,7 +624,8 @@
           "1f005210-ea61-460b-8a18-54461bfb2f39": {
             "type": "quote",
             "settings": {
-              "image": "shopify:\/\/shop_images\/alexander-milano--EkrWz7KffM-unsplash_1.jpg",
+              "image": "shopify:\/\/shop_images\/image_44-2.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/image_44.jpg",
               "rating": 5,
               "content": "This product is a game changer. The water is delicious and clean as it gets. I barely have to wash my water bottles and humidifiers when I use this product. Just drop it in and it cleans the water instantly. Will never use Brita or buy plastic bottles again!",
               "title": "Caroline"
@@ -630,8 +634,8 @@
           "7d53da76-32f5-41ad-a482-bb702d942e93": {
             "type": "quote",
             "settings": {
-              "image": "shopify:\/\/shop_images\/zahra-amiri-3GUn7wUs52I-unsplash_1.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/zahra-amiri-3GUn7wUs52I-unsplash_1_edbba7df-3000-49f9-9394-162783f556e1.jpg",
+              "image": "shopify:\/\/shop_images\/3_1.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/3_1_33f56e58-414a-465c-a993-a1de5e339bdb.jpg",
               "rating": 5,
               "content": "I absolutely love this little pod. I hate the waste of buying bottled water, but the tap water tastes awful. I bought this, and the improvement was drastic. Filtered tap water tastes just as good as bottled! The biggest improvement was in my cup of tea. Very happy with it.",
               "title": "B.E."
