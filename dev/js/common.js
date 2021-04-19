@@ -110,7 +110,14 @@ page.burger.addEventListener('click', () => {
 
         cartItems.forEach((item, index) => {
             let priceWithoutSubscription = item.querySelector('[data-without-subscription]');
-            priceWithoutSubscription.textContent = window.formatMoney(state_old.items[index].final_line_price);
+
+            let salePrice = '';
+            state_old.items[index].final_line_price > state.items[index].final_line_price
+                ? salePrice = window.formatMoney(state_old.items[index].final_line_price)
+                : salePrice = '';
+
+            if (salePrice !== '')
+                priceWithoutSubscription.textContent = salePrice;
         });
 
         state.item_count === 0

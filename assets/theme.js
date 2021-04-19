@@ -8345,6 +8345,8 @@ theme.Product = (function() {
             }
 
             // Define is a need of hiding Sale price
+            console.log(state_old.items[index].final_line_price);
+            console.log(item.final_line_price);
             let salePrice = '';
             state_old.items[index].final_line_price > item.final_line_price
               ? salePrice = window.formatMoney(state_old.items[index].final_line_price)

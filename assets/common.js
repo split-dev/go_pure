@@ -112,7 +112,11 @@ page.burger.addEventListener('click', function () {
 
         cartItems.forEach(function (item, index) {
             var priceWithoutSubscription = item.querySelector('[data-without-subscription]');
-            priceWithoutSubscription.textContent = window.formatMoney(state_old.items[index].final_line_price);
+
+            var salePrice = '';
+            state_old.items[index].final_line_price > state.items[index].final_line_price ? salePrice = window.formatMoney(state_old.items[index].final_line_price) : salePrice = '';
+
+            if (salePrice !== '') priceWithoutSubscription.textContent = salePrice;
         });
 
         state.item_count === 0 ? cartEmpty.classList.remove('d-none') : cartEmpty.classList.add('d-none');
