@@ -56,6 +56,10 @@
       border-color: #EAEAEA;
       opacity: 0.3;
       border-bottom: none;
+      margin: 0 -16px;
+      @include media-breakpoint-up(md) {
+        margin: 0 -32px;
+      }
     }
   }
 }
