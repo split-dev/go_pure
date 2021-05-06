@@ -1,11 +1,11 @@
-<div class="bg-muted text-center bg-center lazyload {% if section.settings.enable_overlay %} overlay{% endif %} overlay--{{ section.id }}"
+<div class="bg-muted text-center text-sm-left bg-center lazyload {% if section.settings.enable_overlay %} overlay{% endif %} overlay--{{ section.id }}"
      data-bgset="{%- render 'bgset', image: section.settings.bg_image -%}">
   <div class="hero__inner">
     <div class="container">
-      <div class="flex-center flex-column h-100">
+      <div class="d-flex align-items-start justify-content-center flex-column h-100">
         <h1 class="mb-4 text-light text-56px">{{- section.settings.heading -}}</h1>
 
-        <div class="hero__description mx-auto text-light text-20px font-weight-medium">
+        <div class="hero__description text-light text-20px font-weight-medium">
           {{- section.settings.description -}}
         </div>
 

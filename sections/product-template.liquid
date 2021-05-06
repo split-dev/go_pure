@@ -246,10 +246,10 @@
               </div>
             </div>
           {% endform %}
-          <p class="mb-0 d-flex justify-content-center text-center font-weight-semibold">
+          <a href="{{ section.settings.bold_cancel | default: '#' }}" class="mb-0 d-flex justify-content-center text-center font-weight-semibold">
             <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 pr-1" width="20" height="20" fill="none"><defs/><g fill="#1675BB" clip-path="url(#clip0)"><path d="M2.083 8.75A2.086 2.086 0 000 10.833V17.5c0 1.148.935 2.083 2.083 2.083h2.5c.47 0 .901-.158 1.25-.421V8.75h-3.75zM20 11.875c0-.501-.198-.968-.542-1.312.389-.426.587-.997.533-1.59-.097-1.06-1.052-1.89-2.173-1.89H12.67c.255-.774.664-2.193.664-3.333 0-1.808-1.536-3.333-2.5-3.333-.866 0-1.485.487-1.511.507a.419.419 0 00-.156.326v2.826l-2.4 5.199-.1.05v8.932c.678.32 1.537.493 2.083.493h7.65c.907 0 1.701-.612 1.888-1.456.096-.434.04-.872-.151-1.252a1.867 1.867 0 00.834-2.5 1.865 1.865 0 001.03-1.667z"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h20v20H0z"/></clipPath></defs></svg>
             Change or Cancel Anytime
-          </p>
+          </a>
         </div>
 
         <div
@@ -282,6 +282,11 @@
     "en": "Product pages"
   },
   "settings": [
+	{
+		"type": "url",
+		"id": "bold_cancel",
+		"label": "Bold Cancelation Policy"
+	},
     {
       "type": "checkbox",
       "id": "enable_payment_button",
